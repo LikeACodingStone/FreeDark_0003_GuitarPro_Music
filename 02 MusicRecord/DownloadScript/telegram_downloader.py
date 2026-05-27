@@ -4,9 +4,12 @@ import os
 import random
 from telethon import TelegramClient, events
 
+'''
+修复铭文安全隐患
+'''
 # --- CONFIGURATION ---
-API_ID = 32477142        
-API_HASH = '430f46a0a677da5820ab317a54a0375a'  
+API_ID =         
+API_HASH = ''  
 BOT_USERNAME = 'SQMP3'   
 FILE_NAME = 'NewDownload.txt'
 LOG_FILE = 'download_summary.log'
