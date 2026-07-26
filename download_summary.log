@@ -449,3 +449,24 @@
 [FAILED] Stonewall Jackson - Should I Go Home (Musicn error: No matching musicn result for: Stonewall Jackson - Should I Go Home)
 [FAILED] Stonewall Jackson - Should I Go Home (Musicn error: All Musicn services failed: migu: No matching musicn result for: Stonewall Jackson - Should I Go Home | wangyi: No matching musicn result for: Stonewall Jackson - Should I Go Home | kuwo: No matching musicn result for: Stonewall Jackson - Should I Go Home | kugou: No matching musicn result for: Stonewall Jackson - Should I Go Home)
 [FAILED] Stonewall Jackson - Should I Go Home (Timeout waiting for media)
+[2026-07-26T14:29:19+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | Registered message listeners for @DeezerMusicBot; response timeout=120s
+[2026-07-26T14:29:19+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | Sending search query to @DeezerMusicBot
+[2026-07-26T14:29:20+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | Search query sent; waiting for a result panel or matching media
+[2026-07-26T14:29:20+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | Received Event result panel version=1: message_id=943 buttons=10 labels=['1. Stonewall Jackson - Should I Go Home', '2. Stonewall Jackson - Should I Go Home', '3. Stonewall Jackson - Should I Go Home', 'Tracks ✅', 'Albums ☑️', 'Artists ☑️', 'Deezer ✅', 'SoundCloud ☑️', 'VK ☑️', 'Close']
+[2026-07-26T14:29:20+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | Search response received: kind=panel panel_version=1
+[2026-07-26T14:29:20+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | Selected matching track button: row=0 column=0 text='1. Stonewall Jackson - Should I Go Home'
+[2026-07-26T14:29:20+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | Clicking track result: row=0 column=0 text='1. Stonewall Jackson - Should I Go Home'
+[2026-07-26T14:29:20+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | Callback completed for track result; bot reply='downloading...'
+[2026-07-26T14:29:20+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | Track callback sent; waiting up to 119.0s for media
+[2026-07-26T14:31:19+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | FAILED during waiting for the selected track media: TimeoutError: 
+[2026-07-26T14:31:19+00:00] [DEEZER] Stonewall Jackson - Should I Go Home | Removed Deezer bot event handlers
+[FAILED] Stonewall Jackson - Should I Go Home (Timeout waiting for media)
+[2026-07-26T14:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T14:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Sending search query to @MusicsHuntersbot
+[2026-07-26T14:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Search query sent; waiting for a result panel or matching media
+[2026-07-26T14:39:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Received Event result panel version=1: message_id=945 buttons=16 labels=['1', '2', '3', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T14:39:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Search response received: kind=panel panel_version=1
+[2026-07-26T14:39:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | MusicsHuntersbot returned no matching track button
+[2026-07-26T14:39:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | FAILED during waiting for the search result panel: RuntimeError: MusicsHuntersbot returned no matching track result for "Stonewall Jackson - Should I Go Home".
+[2026-07-26T14:39:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Removed MusicsHuntersbot event handlers
+[FAILED] Stonewall Jackson - Should I Go Home (MusicsHuntersbot returned no matching track result for "Stonewall Jackson - Should I Go Home".)
