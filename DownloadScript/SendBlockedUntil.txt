@@ -1,2 +1,0 @@
-1785007256
-Telegram refused message sending. Retry after the timestamp above, or rerun with --force.
