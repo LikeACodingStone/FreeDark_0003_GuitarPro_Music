@@ -470,3 +470,56 @@
 [2026-07-26T14:39:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | FAILED during waiting for the search result panel: RuntimeError: MusicsHuntersbot returned no matching track result for "Stonewall Jackson - Should I Go Home".
 [2026-07-26T14:39:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Removed MusicsHuntersbot event handlers
 [FAILED] Stonewall Jackson - Should I Go Home (MusicsHuntersbot returned no matching track result for "Stonewall Jackson - Should I Go Home".)
+[2026-07-26T14:46:45+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T14:46:45+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Sending search query to @MusicsHuntersbot
+[2026-07-26T14:46:45+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Search query sent; waiting for a result panel or matching media
+[2026-07-26T14:46:46+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Received Event result panel version=1: message_id=948 buttons=16 labels=['1', '2', '3', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T14:46:46+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Search response received: kind=panel panel_version=1
+[2026-07-26T14:46:46+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Should I Go Home'
+[2026-07-26T14:46:46+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T14:46:46+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T14:47:01+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Callback completed for track result
+[2026-07-26T14:47:01+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Track callback sent; waiting up to 104.3s for media
+[2026-07-26T14:48:45+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | FAILED during waiting for the selected track media: TimeoutError: 
+[2026-07-26T14:48:45+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Removed MusicsHuntersbot event handlers
+[FAILED] Stonewall Jackson - Should I Go Home (Timeout waiting for media)
+[2026-07-26T14:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T14:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Sending search query to @MusicsHuntersbot
+[2026-07-26T14:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Search query sent; waiting for a result panel or matching media
+[2026-07-26T14:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Received Event result panel version=1: message_id=954 buttons=16 labels=['1', '2', '3', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T14:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Search response received: kind=panel panel_version=1
+[2026-07-26T14:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Should I Go Home'
+[2026-07-26T14:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T14:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T14:52:27+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Callback completed for track result
+[2026-07-26T14:52:27+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Track callback sent; waiting up to 104.2s for media
+[2026-07-26T14:52:49+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Removed MusicsHuntersbot event handlers
+[2026-07-26T14:53:14+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T14:53:14+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Sending search query to @MusicsHuntersbot
+[2026-07-26T14:53:14+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Search query sent; waiting for a result panel or matching media
+[2026-07-26T14:53:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Received Event result panel version=1: message_id=956 buttons=16 labels=['1', '2', '3', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T14:53:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Search response received: kind=panel panel_version=1
+[2026-07-26T14:53:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Should I Go Home'
+[2026-07-26T14:53:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T14:53:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T14:53:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Callback completed for track result; bot reply='Download started...'
+[2026-07-26T14:53:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Track callback sent; waiting up to 118.8s for media
+[2026-07-26T14:53:16+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Matched media from Event: message_id=957 file='17. Stonewall Jackson - Should I Go Home.mp3'
+[2026-07-26T14:53:16+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Downloading matched Telegram media: '17. Stonewall Jackson - Should I Go Home.mp3'
+[2026-07-26T14:53:39+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Telegram media downloaded to: /data/TMDownload/_incoming/17. Stonewall Jackson - Should I Go Home.mp3
+[2026-07-26T14:53:39+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | SUCCESS: saved as '17. Stonewall Jackson - Should I Go Home.mp3'
+[2026-07-26T14:53:39+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Should I Go Home | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - Should I Go Home (Saved as: 17. Stonewall Jackson - Should I Go Home.mp3)
+[2026-07-26T14:55:59+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T14:55:59+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Sending search query to @MusicsHuntersbot
+[2026-07-26T14:56:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Search query sent; waiting for a result panel or matching media
+[2026-07-26T14:56:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Received Event result panel version=1: message_id=959 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T14:56:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Search response received: kind=panel panel_version=1
+[2026-07-26T14:56:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Pick Me Up On Your Way Down'
+[2026-07-26T14:56:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T14:56:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T14:56:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Callback completed for track result
+[2026-07-26T14:56:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Track callback sent; waiting up to 104.3s for media
+[2026-07-26T14:57:59+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | FAILED during waiting for the selected track media: TimeoutError: 
+[2026-07-26T14:57:59+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Removed MusicsHuntersbot event handlers
+[FAILED] Stonewall Jackson - Pick Me Up On Your Way Down (Timeout waiting for media)
