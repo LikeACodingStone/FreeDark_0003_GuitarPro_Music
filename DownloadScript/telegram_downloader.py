@@ -39,6 +39,11 @@ AUDIO_EXTENSIONS = {
     ".wma",
 }
 
+MUSIC_HUNTERS_CLICK_ATTEMPTS = 3
+MUSIC_HUNTERS_INITIAL_CLICK_DELAY = (3.0, 5.0)
+MUSIC_HUNTERS_MEDIA_GRACE_SECONDS = 8.0
+MUSIC_HUNTERS_RETRY_DELAY = (4.0, 7.0)
+
 STOP_WORDS = {
     "a",
     "an",
@@ -1026,6 +1031,22 @@ def button_is_selected(text: str) -> bool:
     return "\u2705" in text
 
 
+def callback_answer_text(callback_answer) -> str:
+    return " ".join((getattr(callback_answer, "message", "") or "").split())
+
+
+def callback_confirms_download(callback_answer) -> bool:
+    text = callback_answer_text(callback_answer).lower()
+    return any(
+        phrase in text
+        for phrase in (
+            "download started",
+            "downloading",
+            "download is starting",
+        )
+    )
+
+
 async def click_message_button(config: Config, track: Track, message, button_location, purpose: str):
     row_index, column_index, text = button_location
     button = message_button_rows(message)[row_index][column_index]
@@ -1047,10 +1068,12 @@ async def click_message_button(config: Config, track: Track, message, button_loc
         )
         raise
 
-    callback_text = " ".join((getattr(callback_answer, "message", "") or "").split())
+    callback_text = callback_answer_text(callback_answer)
     details = f"Callback completed for {purpose}"
     if callback_text:
         details += f"; bot reply={callback_text[:200]!r}"
+    else:
+        details += "; bot reply=<empty>"
     write_deezer_log(config, track, details)
     return callback_answer
 
@@ -1164,6 +1187,75 @@ async def request_and_download_deezer(
                 await asyncio.gather(panel_wait, return_exceptions=True)
                 raise asyncio.TimeoutError
 
+    async def wait_for_matching_media(timeout_seconds: float):
+        if download_future.done():
+            return download_future.result()
+        try:
+            return await asyncio.wait_for(
+                asyncio.shield(download_future),
+                timeout=timeout_seconds,
+            )
+        except asyncio.TimeoutError:
+            return None
+
+    async def click_music_hunters_result(message, button_location):
+        initial_delay = random.uniform(*MUSIC_HUNTERS_INITIAL_CLICK_DELAY)
+        write_deezer_log(
+            config,
+            track,
+            f"Waiting {initial_delay:.1f}s before the first automatic click",
+        )
+        await asyncio.sleep(initial_delay)
+
+        if download_future.done():
+            return download_future.result()
+
+        for attempt in range(1, MUSIC_HUNTERS_CLICK_ATTEMPTS + 1):
+            if download_future.done():
+                return download_future.result()
+            write_deezer_log(
+                config,
+                track,
+                f"Automatic click attempt {attempt}/{MUSIC_HUNTERS_CLICK_ATTEMPTS}",
+            )
+            callback_answer = await click_message_button(
+                config,
+                track,
+                message,
+                button_location,
+                "track result",
+            )
+
+            if download_future.done():
+                return download_future.result()
+            if callback_confirms_download(callback_answer):
+                write_deezer_log(config, track, "Bot confirmed that the download started")
+                return None
+
+            write_deezer_log(
+                config,
+                track,
+                f"Click attempt {attempt} was not acknowledged; waiting "
+                f"{MUSIC_HUNTERS_MEDIA_GRACE_SECONDS:.0f}s for delayed media",
+            )
+            delayed_media = await wait_for_matching_media(MUSIC_HUNTERS_MEDIA_GRACE_SECONDS)
+            if delayed_media is not None:
+                return delayed_media
+
+            if attempt < MUSIC_HUNTERS_CLICK_ATTEMPTS:
+                retry_delay = random.uniform(*MUSIC_HUNTERS_RETRY_DELAY)
+                write_deezer_log(
+                    config,
+                    track,
+                    f"Retrying the same numbered button after {retry_delay:.1f}s",
+                )
+                await asyncio.sleep(retry_delay)
+
+        raise RuntimeError(
+            f"{config.bot_name} did not acknowledge the numbered button after "
+            f"{MUSIC_HUNTERS_CLICK_ATTEMPTS} attempts."
+        )
+
     new_message_event = events.NewMessage(chats=bot_chat)
     edited_message_event = events.MessageEdited(chats=bot_chat)
     client.add_event_handler(handle_bot_message, new_message_event)
@@ -1250,16 +1342,29 @@ async def request_and_download_deezer(
                     f"text={result_button[2]!r}",
                 )
                 stage = "clicking the track result"
-                await click_message_button(config, track, response, result_button, "track result")
-                stage = "waiting for the selected track media"
-                remaining = deadline - loop.time()
-                if remaining <= 0:
-                    raise asyncio.TimeoutError
-                write_deezer_log(config, track, f"Track callback sent; waiting up to {remaining:.1f}s for media")
-                response = await asyncio.wait_for(
-                    asyncio.shield(download_future),
-                    timeout=remaining,
-                )
+                media_after_click = None
+                if config.bot_strategy == "music_hunters":
+                    media_after_click = await click_music_hunters_result(response, result_button)
+                    deadline = loop.time() + config.response_timeout
+                else:
+                    await click_message_button(config, track, response, result_button, "track result")
+
+                if media_after_click is not None:
+                    response = media_after_click
+                else:
+                    stage = "waiting for the selected track media"
+                    remaining = deadline - loop.time()
+                    if remaining <= 0:
+                        raise asyncio.TimeoutError
+                    write_deezer_log(
+                        config,
+                        track,
+                        f"Confirmed callback; waiting up to {remaining:.1f}s for media",
+                    )
+                    response = await asyncio.wait_for(
+                        asyncio.shield(download_future),
+                        timeout=remaining,
+                    )
 
         stage = "downloading Telegram media"
         source_name = getattr(getattr(response, "file", None), "name", "") or "unknown"
