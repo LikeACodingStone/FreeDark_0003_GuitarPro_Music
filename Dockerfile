@@ -6,16 +6,12 @@ ENV PIP_NO_CACHE_DIR=1
 WORKDIR /app
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends ca-certificates git nodejs npm \
+    && apt-get install -y --no-install-recommends ca-certificates git \
     && rm -rf /var/lib/apt/lists/*
 
 COPY DownloadScript/requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
-COPY DownloadScript/package.json /app/package.json
-RUN npm install --omit=dev
-
 COPY DownloadScript/telegram_downloader.py /app/telegram_downloader.py
-COPY DownloadScript/musicn_auto_downloader.mjs /app/musicn_auto_downloader.mjs
 
 CMD ["python", "/app/telegram_downloader.py"]

@@ -1,24 +1,16 @@
 # TelegramDownload
 
-这个项目用于按网易云歌单补齐下载音乐文件。程序总是先读取或生成网易云歌单 txt，然后根据 `DownloadPlatform` 选择下载后端。
-
-当前支持：
-
-- `Telegram`：使用原来的 Telegram bot 下载逻辑。
-- `Musicn`：使用基于开源项目 `musicn` 的自动搜索/下载逻辑。
-- `Other`：兼容入口，目前也走 Musicn 后端，后续可替换成新的下载平台。
+这个项目用于按网易云歌单补齐下载音乐文件。程序会先读取或生成网易云歌单 txt，再通过 Telegram bot 下载缺少的歌曲。
 
 ## 工程文件
 
-- `config.ini`：主配置，包含下载平台、歌单 ID、歌单文件、已有歌曲列表和 Musicn 参数。
+- `config.ini`：主配置，包含下载平台、歌单 ID、歌单文件和已有歌曲列表。
 - `.env`：Telegram API 和运行参数。第一次运行部署脚本时自动创建。
 - `.env.example`：`.env` 示例。
 - `Dockerfile` / `docker-compose.yml`：Docker 运行环境。
 - `deploy.sh` / `deploy.ps1`：Linux/macOS 和 Windows 启动脚本。
 - `DownloadScript/telegram_downloader.py`：主程序。
-- `DownloadScript/musicn_auto_downloader.mjs`：Musicn 自动下载辅助脚本。
 - `DownloadScript/requirements.txt`：Python 依赖。
-- `DownloadScript/package.json`：Node/Musicn 依赖。
 - `halp_path_list_1779699672.txt`：已有歌曲路径列表。
 
 ## config.ini
@@ -26,28 +18,23 @@
 示例：
 
 ```ini
-DownloadPlatform=Musicn
+DownloadPlatform=Telegram
+DownloadChannel=@DeezerMusicBot
 ResetAccount=False
 PlaylistId=17961590701
 PlaylistFile=2026-07-24_一部只有金属乐和乡村布鲁斯的听歌机器.txt
 ExistingListFile=halp_path_list_1779699672.txt
-MusicnService=migu
-MusicnServices=migu,wangyi,kuwo,kugou
-MusicnSearchSize=10
 ```
 
 参数说明：
 
 - `DownloadPlatform=Telegram`：使用 Telegram 下载。
-- `DownloadPlatform=Musicn`：使用 Musicn 后端下载。
-- `DownloadPlatform=Other`：当前等同于 Musicn，后续可改为其它平台。
-- `ResetAccount=True`：仅对 Telegram 有意义，会删除本地 Telegram session 和冷却标记，重新写入 `.env`。
+- `DownloadChannel=t.me/SQMP3`：保留原来的 `/music 歌手 - 歌名` 请求方式。
+- `DownloadChannel=@DeezerMusicBot`：发送普通搜索词，自动识别并点击匹配歌曲；没有结果且 `Tracks` 未选中时会先点击 `Tracks`。
+- `ResetAccount=True`：删除本地 Telegram session 和冷却标记，重新写入 `.env`。
 - `PlaylistId`：网易云音乐歌单 ID。
 - `PlaylistFile`：歌单 txt。文件不存在时，程序会先用 `PlaylistId` 自动生成。
 - `ExistingListFile`：已有歌曲路径列表，匹配到歌手和歌名后跳过。
-- `MusicnService`：旧配置，保留兼容；如果没有 `MusicnServices`，会使用这个单服务。
-- `MusicnServices`：Musicn 搜索服务列表，按顺序遍历。支持 `migu`、`wangyi`、`kuwo`、`kugou`，也可以写 `auto` 或 `all`。
-- `MusicnSearchSize`：每首歌搜索候选数量，默认 10。
 
 ## .env
 
@@ -59,6 +46,8 @@ TG_API_HASH=0123456789abcdef0123456789abcdef
 TG_PHONE=+819012345678
 TG_BOT_USERNAME=SQMP3
 ```
+
+`DownloadChannel` 有值时优先使用它；旧配置没有该字段时，继续使用 `.env` 中的 `TG_BOT_USERNAME`。
 
 通用运行参数：
 
@@ -106,35 +95,6 @@ Windows PowerShell：
 .\deploy.ps1 -ResetAccount
 ```
 
-## 切换到 Musicn 下载
-
-修改 `config.ini`：
-
-```ini
-DownloadPlatform=Musicn
-MusicnService=migu
-MusicnServices=migu,wangyi,kuwo,kugou
-MusicnSearchSize=10
-```
-
-然后先检查待下载列表：
-
-```bash
-./deploy.sh dry-run
-```
-
-确认后开始下载：
-
-```bash
-./deploy.sh restart
-```
-
-如果想调整遍历顺序，比如优先试酷我和酷狗，可以改成：
-
-```ini
-MusicnServices=kuwo,kugou,migu,wangyi
-```
-
 ## 下载流程
 
 1. 读取 `config.ini`。
@@ -142,11 +102,12 @@ MusicnServices=kuwo,kugou,migu,wangyi
 3. 读取歌单、`ExistingListFile` 和当前 `TMDownload/`。
 4. 只下载缺少的歌曲。
 5. 每首歌请求前再次扫描 `TMDownload/`，防止运行中重复下载。
-6. Musicn 后端会按 `MusicnServices` 逐个服务尝试；全部服务都失败后，才算这首歌请求失败。
-7. 任何歌曲最终请求失败立即停止，并把失败歌曲写入 `DownloadScript/FailedDownload.txt`。
-8. 下次启动会优先重试失败歌曲，再继续下载新歌曲。
-9. 每累计请求 2 小时，随机休息 30-90 分钟。
-10. 每连续成功下载 500 首，必须输入 `yes` 才继续。
+6. `SQMP3` 发送 `/music` 命令；`DeezerMusicBot` 自动处理按钮菜单并等待音频。
+7. 下载完成后再次校验文件名中的歌手和歌名，不匹配的文件移动到 `TMDownload/rejected/`。
+8. 任何歌曲最终请求失败立即停止，并把失败歌曲写入 `DownloadScript/FailedDownload.txt`。
+9. 下次启动会优先重试失败歌曲，再继续下载新歌曲。
+10. 每累计请求 2 小时，随机休息 30-90 分钟。
+11. 每连续成功下载 500 首，必须输入 `yes` 才继续。
 
 ## 运行状态文件
 
@@ -166,7 +127,7 @@ MusicnServices=kuwo,kugou,migu,wangyi
 You're banned from sending messages in supergroups/channels
 ```
 
-说明当前 Telegram 账号不能在目标 bot 或聊天中发消息。可以先切到 `DownloadPlatform=Musicn` 继续补齐，或者等 Telegram 权限恢复后再用：
+说明当前 Telegram 账号不能在目标 bot 或聊天中发消息。可以等 Telegram 权限恢复后再用：
 
 ```bash
 ./deploy.sh restart --force

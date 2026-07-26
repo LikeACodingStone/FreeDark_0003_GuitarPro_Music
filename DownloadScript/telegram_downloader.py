@@ -1,12 +1,10 @@
 import argparse
 import asyncio
 import getpass
-import json
 import os
 import random
 import re
 import shutil
-import subprocess
 import time
 import unicodedata
 from dataclasses import dataclass
@@ -27,7 +25,6 @@ DEFAULT_FAILED_FILE = PROJECT_ROOT / "DownloadScript" / "FailedDownload.txt"
 DEFAULT_BLOCKED_FILE = PROJECT_ROOT / "DownloadScript" / "SendBlockedUntil.txt"
 DEFAULT_CONFIG_FILE = PROJECT_ROOT / "config.ini"
 DEFAULT_ENV_FILE = PROJECT_ROOT / ".env"
-DEFAULT_MUSICN_SCRIPT = SCRIPT_DIR / "musicn_auto_downloader.mjs"
 
 AUDIO_EXTENSIONS = {
     ".aac",
@@ -71,19 +68,14 @@ STOP_WORDS = {
     "your",
 }
 
-MUSICN_ALL_SERVICES = ("migu", "wangyi", "kuwo", "kugou")
-
-
 @dataclass(frozen=True)
 class AppConfig:
     download_platform: str
+    download_channel: str
     reset_account: bool
     playlist_id: str
     playlist_file: Path
     existing_list_file: Path
-    musicn_service: str
-    musicn_services: tuple[str, ...]
-    musicn_search_size: int
 
 
 @dataclass(frozen=True)
@@ -129,10 +121,6 @@ class Config:
     stop_on_send_blocked: bool
     send_blocked_cooldown_hours: int
     success_confirm_every: int
-    musicn_service: str
-    musicn_services: tuple[str, ...]
-    musicn_search_size: int
-    musicn_script: Path
 
 
 def load_dotenv() -> None:
@@ -193,29 +181,6 @@ def parse_bool(value: str, default: bool = False) -> bool:
     return default
 
 
-def parse_musicn_services(value: str) -> tuple[str, ...]:
-    raw = value.strip().lower()
-    if raw in {"auto", "all", "*"}:
-        return MUSICN_ALL_SERVICES
-
-    services: list[str] = []
-    for item in re.split(r"[,;\s]+", raw):
-        service = item.strip().lower()
-        if not service:
-            continue
-        if service not in MUSICN_ALL_SERVICES:
-            raise SystemExit(
-                f"[CONFIG] Unsupported Musicn service: {service}. "
-                f"Use one or more of: {', '.join(MUSICN_ALL_SERVICES)}."
-            )
-        if service not in services:
-            services.append(service)
-
-    if not services:
-        raise SystemExit("[CONFIG] MusicnServices cannot be empty.")
-    return tuple(services)
-
-
 def resolve_path(raw: str | Path) -> Path:
     path = Path(raw).expanduser()
     if path.is_absolute():
@@ -239,25 +204,21 @@ def load_app_config(path: Path | None = None) -> tuple[AppConfig, Path]:
             config_path,
             AppConfig(
                 download_platform="Telegram",
+                download_channel="t.me/SQMP3",
                 reset_account=False,
                 playlist_id="17961590701",
                 playlist_file=default_playlist_file,
                 existing_list_file=default_existing_list_file,
-                musicn_service="migu",
-                musicn_services=MUSICN_ALL_SERVICES,
-                musicn_search_size=10,
             ),
         )
 
     values = {
         "DownloadPlatform": "Telegram",
+        "DownloadChannel": "",
         "ResetAccount": "False",
         "PlaylistId": "17961590701",
         "PlaylistFile": str(default_playlist_file),
         "ExistingListFile": str(default_existing_list_file),
-        "MusicnService": "migu",
-        "MusicnServices": "",
-        "MusicnSearchSize": "10",
     }
     for raw_line in config_path.read_text(encoding="utf-8", errors="replace").splitlines():
         line = raw_line.strip()
@@ -273,34 +234,17 @@ def load_app_config(path: Path | None = None) -> tuple[AppConfig, Path]:
     normalized_platform = platform.lower()
     if normalized_platform == "telegram":
         platform = "Telegram"
-    elif normalized_platform == "musicn":
-        platform = "Musicn"
-    elif normalized_platform == "other":
-        platform = "Other"
     else:
-        raise SystemExit("[CONFIG] DownloadPlatform must be Telegram, Musicn, or Other.")
-
-    musicn_services_raw = values["MusicnServices"].strip() or values["MusicnService"].strip()
-    musicn_services = parse_musicn_services(musicn_services_raw)
-    musicn_service = musicn_services[0]
-
-    try:
-        musicn_search_size = int(values["MusicnSearchSize"])
-    except ValueError as exc:
-        raise SystemExit("[CONFIG] MusicnSearchSize must be an integer.") from exc
-    if musicn_search_size <= 0:
-        raise SystemExit("[CONFIG] MusicnSearchSize must be greater than 0.")
+        raise SystemExit("[CONFIG] DownloadPlatform must be Telegram.")
 
     return (
         AppConfig(
             download_platform=platform,
+            download_channel=values["DownloadChannel"].strip(),
             reset_account=parse_bool(values["ResetAccount"]),
             playlist_id=values["PlaylistId"].strip(),
             playlist_file=resolve_config_path(values["PlaylistFile"], config_path),
             existing_list_file=resolve_config_path(values["ExistingListFile"], config_path),
-            musicn_service=musicn_service,
-            musicn_services=musicn_services,
-            musicn_search_size=musicn_search_size,
         ),
         config_path,
     )
@@ -310,13 +254,11 @@ def write_app_config(path: Path, app_config: AppConfig) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
         f"DownloadPlatform={app_config.download_platform}\n"
+        f"DownloadChannel={app_config.download_channel}\n"
         f"ResetAccount={'True' if app_config.reset_account else 'False'}\n"
         f"PlaylistId={app_config.playlist_id}\n"
         f"PlaylistFile={app_config.playlist_file}\n"
-        f"ExistingListFile={app_config.existing_list_file}\n"
-        f"MusicnService={app_config.musicn_service}\n"
-        f"MusicnServices={','.join(app_config.musicn_services)}\n"
-        f"MusicnSearchSize={app_config.musicn_search_size}\n",
+        f"ExistingListFile={app_config.existing_list_file}\n",
         encoding="utf-8",
     )
 
@@ -418,13 +360,10 @@ def reset_telegram_account(config_path: Path, app_config: AppConfig) -> None:
 def load_config(app_config: AppConfig) -> Config:
     load_dotenv()
 
-    api_id: int | None = None
-    api_hash: str | None = None
-    if app_config.download_platform == "Telegram":
-        api_id = env_int("TG_API_ID", required=True)
-        api_hash = env_value("TG_API_HASH", required=True)
-        assert api_hash is not None
-        validate_telegram_api_config(api_id, api_hash)
+    api_id = env_int("TG_API_ID", required=True)
+    api_hash = env_value("TG_API_HASH", required=True)
+    assert api_hash is not None
+    validate_telegram_api_config(api_id, api_hash)
 
     min_delay = env_int("MIN_DELAY", 60)
     max_delay = env_int("MAX_DELAY", 150)
@@ -442,7 +381,7 @@ def load_config(app_config: AppConfig) -> Config:
         api_id=api_id,
         api_hash=api_hash,
         phone=env_value("TG_PHONE"),
-        bot_username=env_value("TG_BOT_USERNAME", "SQMP3") or "SQMP3",
+        bot_username=app_config.download_channel or env_value("TG_BOT_USERNAME", "SQMP3") or "SQMP3",
         playlist_file=app_config.playlist_file,
         existing_list_file=app_config.existing_list_file,
         pending_file=resolve_path(env_value("PENDING_FILE", str(DEFAULT_PENDING_FILE)) or DEFAULT_PENDING_FILE),
@@ -464,10 +403,6 @@ def load_config(app_config: AppConfig) -> Config:
         stop_on_send_blocked=env_bool("STOP_ON_SEND_BLOCKED", True),
         send_blocked_cooldown_hours=env_int("SEND_BLOCKED_COOLDOWN_HOURS", 6),
         success_confirm_every=env_int("SUCCESS_CONFIRM_EVERY", 500),
-        musicn_service=app_config.musicn_service,
-        musicn_services=app_config.musicn_services,
-        musicn_search_size=app_config.musicn_search_size,
-        musicn_script=resolve_path(env_value("MUSICN_SCRIPT", str(DEFAULT_MUSICN_SCRIPT)) or DEFAULT_MUSICN_SCRIPT),
     )
 
 
@@ -595,6 +530,23 @@ def track_matches_text(track: Track, text: str) -> bool:
         return matched_title_count >= max(3, needed_title_count)
 
     return True
+
+
+def deezer_track_matches_text(track: Track, text: str) -> bool:
+    if track_matches_text(track, text):
+        return True
+
+    search_tokens = meaningful_tokens(text)
+    artist_tokens = meaningful_tokens(track.artist)
+    if not search_tokens or (artist_tokens and artist_tokens.isdisjoint(search_tokens)):
+        return False
+
+    title_segments = re.split(r"\s*(?:-|:|\||/|\u2013|\u2014)\s*", track.title)
+    for segment in title_segments:
+        segment_tokens = meaningful_tokens(segment)
+        if len(segment_tokens) >= 2 and segment_tokens.issubset(search_tokens):
+            return True
+    return False
 
 
 def strip_number_prefix(value: str) -> str:
@@ -873,7 +825,7 @@ async def ensure_authorized(client: TelegramClient, config: Config) -> None:
     print("[SESSION] Telegram login completed.")
 
 
-def message_matches_track(message, track: Track) -> bool:
+def message_matches_track(message, track: Track, matcher=track_matches_text) -> bool:
     text_parts = [message.message or ""]
 
     document = getattr(message.media, "document", None) if message.media else None
@@ -884,7 +836,7 @@ def message_matches_track(message, track: Track) -> bool:
                 if value:
                     text_parts.append(value)
 
-    return track_matches_text(track, " ".join(text_parts))
+    return matcher(track, " ".join(text_parts))
 
 
 def unique_path(path: Path) -> Path:
@@ -906,12 +858,17 @@ def move_to_rejected(config: Config, downloaded_path: Path) -> Path:
     return target
 
 
-def accept_downloaded_file(config: Config, track: Track, downloaded_path_text: str) -> str:
+def accept_downloaded_file(
+    config: Config,
+    track: Track,
+    downloaded_path_text: str,
+    matcher=track_matches_text,
+) -> str:
     downloaded_path = Path(downloaded_path_text)
     if not downloaded_path.exists():
         raise RuntimeError(f"Downloaded path does not exist: {downloaded_path_text}")
 
-    if not track_matches_text(track, downloaded_path.name):
+    if not matcher(track, downloaded_path.name):
         rejected_path = move_to_rejected(config, downloaded_path)
         raise RuntimeError(f"Downloaded media did not match request; moved to rejected/{rejected_path.name}")
 
@@ -924,11 +881,76 @@ def accept_downloaded_file(config: Config, track: Track, downloaded_path_text: s
     return target_path.name
 
 
-async def request_and_download(client: TelegramClient, config: Config, track: Track) -> str:
+def telegram_chat_ref(value: str) -> str:
+    text = value.strip()
+    url_match = re.match(
+        r"^(?:https?://)?(?:www\.)?(?:t\.me|telegram\.me)/([^/?#]+)",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if url_match:
+        return f"@{url_match.group(1)}"
+
+    username = text.lstrip("@").strip()
+    if not username:
+        raise RuntimeError("DownloadChannel/TG_BOT_USERNAME cannot be empty.")
+    return f"@{username}"
+
+
+def is_deezer_music_bot(value: str) -> bool:
+    return telegram_chat_ref(value).lstrip("@").lower() == "deezermusicbot"
+
+
+def message_button_rows(message):
+    return getattr(message, "buttons", None) or []
+
+
+def find_button_by_label(message, expected_label: str):
+    normalized_expected = normalize_piece(expected_label)
+    for row_index, row in enumerate(message_button_rows(message)):
+        for column_index, button in enumerate(row):
+            text = getattr(button, "text", "") or ""
+            if normalize_piece(text) == normalized_expected:
+                return row_index, column_index, text
+    return None
+
+
+def find_deezer_track_button(message, track: Track):
+    filter_labels = {"tracks", "albums", "artists", "deezer", "soundcloud", "vk", "close"}
+    for row_index, row in enumerate(message_button_rows(message)):
+        for column_index, button in enumerate(row):
+            text = getattr(button, "text", "") or ""
+            if normalize_piece(text) in filter_labels:
+                continue
+            if deezer_track_matches_text(track, text):
+                return row_index, column_index, text
+    return None
+
+
+def button_is_selected(text: str) -> bool:
+    return "\u2705" in text
+
+
+async def click_message_button(message, button_location, purpose: str) -> None:
+    row_index, column_index, text = button_location
+    button = message_button_rows(message)[row_index][column_index]
+    if getattr(button, "url", None):
+        raise RuntimeError(f"{purpose} is a URL button and cannot trigger a Telegram bot callback: {text}")
+
+    print(f"[DEEZER] Clicking {purpose}: {text}")
+    await message.click(row_index, column_index)
+
+
+async def request_and_download_sqmp3(
+    client: TelegramClient,
+    config: Config,
+    track: Track,
+    bot_chat: str,
+) -> str:
     loop = asyncio.get_running_loop()
     download_future = loop.create_future()
 
-    @client.on(events.NewMessage(chats=config.bot_username))
+    @client.on(events.NewMessage(chats=bot_chat))
     async def handle_new_message(event):
         if not event.message.media:
             return
@@ -940,7 +962,7 @@ async def request_and_download(client: TelegramClient, config: Config, track: Tr
             download_future.set_result(event.message)
 
     try:
-        await client.send_message(config.bot_username, f"/music {track.query}")
+        await client.send_message(bot_chat, f"/music {track.query}")
         matched_message = await asyncio.wait_for(download_future, timeout=config.response_timeout)
         downloaded_path = await client.download_media(matched_message, file=str(config.incoming_dir))
         if not downloaded_path:
@@ -948,6 +970,132 @@ async def request_and_download(client: TelegramClient, config: Config, track: Tr
         return accept_downloaded_file(config, track, downloaded_path)
     finally:
         client.remove_event_handler(handle_new_message)
+
+
+async def request_and_download_deezer(
+    client: TelegramClient,
+    config: Config,
+    track: Track,
+    bot_chat: str,
+) -> str:
+    loop = asyncio.get_running_loop()
+    download_future = loop.create_future()
+    panel_event = asyncio.Event()
+    panel_message = None
+    panel_version = 0
+    deadline = loop.time() + config.response_timeout
+
+    async def handle_bot_message(event):
+        nonlocal panel_message, panel_version
+        message = event.message
+        if message.media and (message.audio or message.document) and message_matches_track(
+            message,
+            track,
+            deezer_track_matches_text,
+        ):
+            if not download_future.done():
+                download_future.set_result(message)
+
+        if message_button_rows(message):
+            panel_message = message
+            panel_version += 1
+            panel_event.set()
+
+    async def wait_for_media_or_panel(after_panel_version: int):
+        nonlocal panel_message, panel_version
+        while True:
+            if download_future.done():
+                return "media", download_future.result(), panel_version
+            if panel_version > after_panel_version and panel_message is not None:
+                return "panel", panel_message, panel_version
+
+            remaining = deadline - loop.time()
+            if remaining <= 0:
+                raise asyncio.TimeoutError
+
+            panel_event.clear()
+            if panel_version > after_panel_version:
+                continue
+
+            panel_wait = asyncio.create_task(panel_event.wait())
+            done, _ = await asyncio.wait(
+                {download_future, panel_wait},
+                timeout=remaining,
+                return_when=asyncio.FIRST_COMPLETED,
+            )
+            if download_future in done:
+                panel_wait.cancel()
+                await asyncio.gather(panel_wait, return_exceptions=True)
+                return "media", download_future.result(), panel_version
+            if panel_wait not in done:
+                panel_wait.cancel()
+                await asyncio.gather(panel_wait, return_exceptions=True)
+                raise asyncio.TimeoutError
+
+    new_message_event = events.NewMessage(chats=bot_chat)
+    edited_message_event = events.MessageEdited(chats=bot_chat)
+    client.add_event_handler(handle_bot_message, new_message_event)
+    client.add_event_handler(handle_bot_message, edited_message_event)
+
+    try:
+        print(f"[DEEZER] Searching: {track.query}")
+        await client.send_message(bot_chat, track.query)
+        response_kind, response, current_panel_version = await wait_for_media_or_panel(0)
+
+        if response_kind == "panel":
+            result_button = find_deezer_track_button(response, track)
+            if result_button is None:
+                tracks_button = find_button_by_label(response, "Tracks")
+                if tracks_button is None:
+                    raise RuntimeError(
+                        f'DeezerMusicBot returned buttons but no matching track result for "{track.query}".'
+                    )
+                if button_is_selected(tracks_button[2]):
+                    raise RuntimeError(
+                        f'DeezerMusicBot returned no matching track result for "{track.query}" '
+                        "while the Tracks filter was already selected."
+                    )
+
+                await click_message_button(response, tracks_button, "Tracks filter")
+                response_kind, response, current_panel_version = await wait_for_media_or_panel(
+                    current_panel_version
+                )
+                if response_kind == "panel":
+                    result_button = find_deezer_track_button(response, track)
+                    if result_button is None:
+                        raise RuntimeError(
+                            f'DeezerMusicBot returned no matching track result for "{track.query}" '
+                            "after selecting Tracks."
+                        )
+
+            if response_kind == "panel":
+                await click_message_button(response, result_button, "track result")
+                remaining = deadline - loop.time()
+                if remaining <= 0:
+                    raise asyncio.TimeoutError
+                response = await asyncio.wait_for(
+                    asyncio.shield(download_future),
+                    timeout=remaining,
+                )
+
+        downloaded_path = await client.download_media(response, file=str(config.incoming_dir))
+        if not downloaded_path:
+            raise RuntimeError("Telegram returned an empty download path.")
+        return accept_downloaded_file(
+            config,
+            track,
+            downloaded_path,
+            deezer_track_matches_text,
+        )
+    finally:
+        client.remove_event_handler(handle_bot_message)
+
+
+async def request_and_download(client: TelegramClient, config: Config, track: Track) -> str:
+    bot_chat = telegram_chat_ref(config.bot_username)
+    if is_deezer_music_bot(bot_chat):
+        return await request_and_download_deezer(client, config, track, bot_chat)
+    return await request_and_download_sqmp3(client, config, track, bot_chat)
 
 
 def is_send_blocked_error(exc: Exception) -> bool:
@@ -1056,104 +1204,6 @@ async def download_tracks(config: Config, queue: list[Track], failed_tracks: dic
         await client.disconnect()
 
 
-def request_and_download_musicn_service(config: Config, track: Track, service: str) -> str:
-    if not config.musicn_script.is_file():
-        raise RuntimeError(f"musicn helper script not found: {config.musicn_script}")
-
-    command = [
-        "node",
-        str(config.musicn_script),
-        "--service",
-        service,
-        "--size",
-        str(config.musicn_search_size),
-        "--incoming-dir",
-        str(config.incoming_dir),
-        "--artist",
-        track.artist,
-        "--title",
-        track.title,
-        "--query",
-        track.query,
-    ]
-    result = subprocess.run(
-        command,
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-        timeout=max(120, config.response_timeout + 60),
-    )
-
-    output_lines = [line for line in result.stdout.splitlines() if line.strip()]
-    payload = output_lines[-1] if output_lines else "{}"
-    try:
-        data = json.loads(payload)
-    except json.JSONDecodeError as exc:
-        details = result.stderr.strip() or result.stdout.strip() or "No output from musicn helper."
-        raise RuntimeError(f"musicn helper returned invalid output: {details}") from exc
-
-    if result.returncode != 0 or not data.get("ok"):
-        error = data.get("error") or result.stderr.strip() or "musicn helper failed."
-        raise RuntimeError(error)
-
-    return accept_downloaded_file(config, track, data["path"])
-
-
-def request_and_download_musicn(config: Config, track: Track) -> tuple[str, str]:
-    errors: list[str] = []
-    for service in config.musicn_services:
-        print(f"[MUSICN] Trying {service}: {track.query}")
-        try:
-            filename = request_and_download_musicn_service(config, track, service)
-            return filename, service
-        except Exception as exc:
-            message = f"{service}: {exc}"
-            print(f"[MUSICN] {message}")
-            errors.append(message)
-
-    raise RuntimeError("All Musicn services failed: " + " | ".join(errors))
-
-
-async def download_tracks_musicn(config: Config, queue: list[Track], failed_tracks: dict[tuple[str, str], Track]) -> None:
-    if not queue:
-        print("[DONE] Nothing to download.")
-        return
-
-    total = len(queue)
-    request_window_started = time.monotonic()
-    consecutive_successes = 0
-
-    for index, track in enumerate(queue, start=1):
-        if is_track_in_current_download_folder(config, track):
-            print(f"[{index}/{total}] SKIPPED (Already downloaded now): {track.query}")
-            failed_tracks.pop(track.key, None)
-            write_failed_file(config, failed_tracks)
-            continue
-
-        print(f"[{index}/{total}] Musicn requesting: {track.query}")
-        try:
-            filename, service = request_and_download_musicn(config, track)
-            print(f"[{index}/{total}] SUCCESS via {service}: {filename}")
-            write_log(config, "SUCCESS", track, f"(Musicn/{service} saved as: {filename})")
-            failed_tracks.pop(track.key, None)
-            write_failed_file(config, failed_tracks)
-            consecutive_successes += 1
-
-            if not confirm_after_success_batch(config, consecutive_successes):
-                break
-        except Exception as exc:
-            print(f"[{index}/{total}] FAILED: {track.query} ({exc})")
-            write_log(config, "FAILED", track, f"(Musicn error: {exc})")
-            failed_tracks[track.key] = track
-            write_failed_file(config, failed_tracks)
-            print(f"[STOP] Request failed. Remaining tracks are still listed in: {config.pending_file}")
-            break
-
-        if index < total:
-            request_window_started = await sleep_before_next_request(config, request_window_started)
-
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Download playlist tracks from a Telegram music bot.")
     parser.add_argument(
@@ -1183,30 +1233,22 @@ async def main() -> None:
     args = parse_args()
     app_config, app_config_path = load_app_config()
 
-    if (args.reset_account or args.reset_account_only or app_config.reset_account) and app_config.download_platform == "Telegram":
+    if args.reset_account or args.reset_account_only or app_config.reset_account:
         reset_telegram_account(app_config_path, app_config)
         if args.reset_account_only:
             return
-    elif args.reset_account_only:
-        print("[ACCOUNT] reset-account is only needed for Telegram. No account reset was performed.")
-        return
-    elif app_config.reset_account:
-        print("[ACCOUNT] ResetAccount=True is ignored because DownloadPlatform is not Telegram.")
-        set_config_reset_account_false(app_config_path)
 
-    if app_config.download_platform not in {"Telegram", "Musicn", "Other"}:
-        raise SystemExit("[CONFIG] DownloadPlatform must be Telegram, Musicn, or Other.")
+    if app_config.download_platform != "Telegram":
+        raise SystemExit("[CONFIG] DownloadPlatform must be Telegram.")
 
     playlist_file = ensure_playlist_file(app_config)
     app_config = AppConfig(
         download_platform=app_config.download_platform,
+        download_channel=app_config.download_channel,
         reset_account=app_config.reset_account,
         playlist_id=app_config.playlist_id,
         playlist_file=playlist_file,
         existing_list_file=app_config.existing_list_file,
-        musicn_service=app_config.musicn_service,
-        musicn_services=app_config.musicn_services,
-        musicn_search_size=app_config.musicn_search_size,
     )
 
     config = load_config(app_config)
@@ -1218,15 +1260,10 @@ async def main() -> None:
         print("[DRY-RUN] Skipping Telegram login and download.")
         return
 
-    if app_config.download_platform == "Telegram":
-        if not args.force and send_blocked_cooldown_active(config):
-            return
-
-        await download_tracks(config, queue, failed_tracks)
+    if not args.force and send_blocked_cooldown_active(config):
         return
 
-    print(f"[PLATFORM] DownloadPlatform={app_config.download_platform}; using Musicn backend.")
-    await download_tracks_musicn(config, queue, failed_tracks)
+    await download_tracks(config, queue, failed_tracks)
 
 
 if __name__ == "__main__":
