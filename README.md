@@ -19,7 +19,8 @@
 
 ```ini
 DownloadPlatform=Telegram
-DownloadChannel=@DeezerMusicBot
+# SQMP3 | DeezerMusicBot | MusicsHuntersbot
+DownloadBot=MusicsHuntersbot
 ResetAccount=False
 PlaylistId=17961590701
 PlaylistFile=2026-07-24_一部只有金属乐和乡村布鲁斯的听歌机器.txt
@@ -29,8 +30,11 @@ ExistingListFile=halp_path_list_1779699672.txt
 参数说明：
 
 - `DownloadPlatform=Telegram`：使用 Telegram 下载。
-- `DownloadChannel=t.me/SQMP3`：保留原来的 `/music 歌手 - 歌名` 请求方式。
-- `DownloadChannel=@DeezerMusicBot`：发送普通搜索词，自动识别并点击匹配歌曲；没有结果且 `Tracks` 未选中时会先点击 `Tracks`。
+- `DownloadBot`：三选一的机器人预设，填 `SQMP3`、`DeezerMusicBot` 或 `MusicsHuntersbot`。
+- `SQMP3`：保留原来的 `/music 歌手 - 歌名` 请求方式。
+- `DeezerMusicBot`：发送普通搜索词，自动识别并点击匹配歌曲；没有结果且 `Tracks` 未选中时会先点击 `Tracks`。
+- `MusicsHuntersbot`：发送普通搜索词；若机器人直接返回音频就下载，若先返回匹配歌曲按钮就自动点击。
+- `DownloadChannel`：旧版自定义机器人配置，只有 `DownloadBot` 留空时才会生效。
 - `ResetAccount=True`：删除本地 Telegram session 和冷却标记，重新写入 `.env`。
 - `PlaylistId`：网易云音乐歌单 ID。
 - `PlaylistFile`：歌单 txt。文件不存在时，程序会先用 `PlaylistId` 自动生成。
@@ -47,7 +51,7 @@ TG_PHONE=+819012345678
 TG_BOT_USERNAME=SQMP3
 ```
 
-`DownloadChannel` 有值时优先使用它；旧配置没有该字段时，继续使用 `.env` 中的 `TG_BOT_USERNAME`。
+`DownloadBot` 有值时优先使用预设；否则依次使用旧版 `DownloadChannel` 和 `.env` 中的 `TG_BOT_USERNAME`。
 
 通用运行参数：
 
@@ -117,7 +121,7 @@ Windows PowerShell：
 - `DownloadScript/NewDownload.txt`：当前还需要下载的歌曲。
 - `DownloadScript/FailedDownload.txt`：失败后下次优先重试的歌曲。
 - `DownloadScript/SendBlockedUntil.txt`：Telegram 拒绝发送后的本地冷却标记。
-- `download_summary.log`：下载日志；Deezer 搜索、按钮回调、媒体匹配和失败阶段会写入带时间戳的 `[DEEZER]` 记录。
+- `download_summary.log`：下载日志；支持按钮搜索的机器人会把搜索、按钮回调、媒体匹配和失败阶段写入带时间戳的 `[DEEZER]` 或 `[MUSIC_HUNTERS]` 记录。
 
 ## Telegram 账号被限制
 

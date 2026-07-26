@@ -68,9 +68,25 @@ STOP_WORDS = {
     "your",
 }
 
+
+@dataclass(frozen=True)
+class BotPreset:
+    name: str
+    username: str
+    strategy: str
+
+
+BOT_PRESETS = {
+    "sqmp3": BotPreset("SQMP3", "t.me/SQMP3", "sqmp3"),
+    "deezermusicbot": BotPreset("DeezerMusicBot", "@DeezerMusicBot", "deezer"),
+    "musicshuntersbot": BotPreset("MusicsHuntersbot", "@MusicsHuntersbot", "music_hunters"),
+}
+
+
 @dataclass(frozen=True)
 class AppConfig:
     download_platform: str
+    download_bot: str
     download_channel: str
     reset_account: bool
     playlist_id: str
@@ -99,6 +115,8 @@ class Config:
     api_id: int | None
     api_hash: str | None
     phone: str | None
+    bot_name: str
+    bot_strategy: str
     bot_username: str
     playlist_file: Path
     existing_list_file: Path
@@ -181,6 +199,36 @@ def parse_bool(value: str, default: bool = False) -> bool:
     return default
 
 
+def normalize_bot_choice(value: str) -> str:
+    username_match = re.match(
+        r"^(?:https?://)?(?:www\.)?(?:t\.me|telegram\.me)/([^/?#]+)",
+        value.strip(),
+        flags=re.IGNORECASE,
+    )
+    candidate = username_match.group(1) if username_match else value
+    return re.sub(r"[^a-z0-9]", "", candidate.lower())
+
+
+def resolve_bot_preset(value: str) -> BotPreset:
+    preset = BOT_PRESETS.get(normalize_bot_choice(value))
+    if preset is None:
+        choices = ", ".join(item.name for item in BOT_PRESETS.values())
+        raise SystemExit(f"[CONFIG] DownloadBot must be one of: {choices}.")
+    return preset
+
+
+def resolve_bot_selection(app_config: AppConfig) -> BotPreset:
+    if app_config.download_bot:
+        return resolve_bot_preset(app_config.download_bot)
+
+    configured_channel = app_config.download_channel or env_value("TG_BOT_USERNAME", "SQMP3") or "SQMP3"
+    normalized_channel = normalize_bot_choice(configured_channel)
+    return BOT_PRESETS.get(
+        normalized_channel,
+        BotPreset("Custom", configured_channel, "sqmp3"),
+    )
+
+
 def resolve_path(raw: str | Path) -> Path:
     path = Path(raw).expanduser()
     if path.is_absolute():
@@ -204,6 +252,7 @@ def load_app_config(path: Path | None = None) -> tuple[AppConfig, Path]:
             config_path,
             AppConfig(
                 download_platform="Telegram",
+                download_bot="SQMP3",
                 download_channel="t.me/SQMP3",
                 reset_account=False,
                 playlist_id="17961590701",
@@ -214,6 +263,7 @@ def load_app_config(path: Path | None = None) -> tuple[AppConfig, Path]:
 
     values = {
         "DownloadPlatform": "Telegram",
+        "DownloadBot": "",
         "DownloadChannel": "",
         "ResetAccount": "False",
         "PlaylistId": "17961590701",
@@ -240,6 +290,7 @@ def load_app_config(path: Path | None = None) -> tuple[AppConfig, Path]:
     return (
         AppConfig(
             download_platform=platform,
+            download_bot=values["DownloadBot"].strip(),
             download_channel=values["DownloadChannel"].strip(),
             reset_account=parse_bool(values["ResetAccount"]),
             playlist_id=values["PlaylistId"].strip(),
@@ -254,6 +305,7 @@ def write_app_config(path: Path, app_config: AppConfig) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
         f"DownloadPlatform={app_config.download_platform}\n"
+        f"DownloadBot={app_config.download_bot}\n"
         f"DownloadChannel={app_config.download_channel}\n"
         f"ResetAccount={'True' if app_config.reset_account else 'False'}\n"
         f"PlaylistId={app_config.playlist_id}\n"
@@ -376,12 +428,15 @@ def load_config(app_config: AppConfig) -> Config:
         raise SystemExit("[CONFIG] LONG_REST_MIN_MINUTES cannot be greater than LONG_REST_MAX_MINUTES.")
 
     download_dir = resolve_path(env_value("DOWNLOAD_DIR", str(PROJECT_ROOT / "TMDownload")) or PROJECT_ROOT / "TMDownload")
+    bot_preset = resolve_bot_selection(app_config)
 
     return Config(
         api_id=api_id,
         api_hash=api_hash,
         phone=env_value("TG_PHONE"),
-        bot_username=app_config.download_channel or env_value("TG_BOT_USERNAME", "SQMP3") or "SQMP3",
+        bot_name=bot_preset.name,
+        bot_strategy=bot_preset.strategy,
+        bot_username=bot_preset.username,
         playlist_file=app_config.playlist_file,
         existing_list_file=app_config.existing_list_file,
         pending_file=resolve_path(env_value("PENDING_FILE", str(DEFAULT_PENDING_FILE)) or DEFAULT_PENDING_FILE),
@@ -797,7 +852,11 @@ def write_log(config: Config, status: str, track: Track, details: str = "") -> N
 
 def write_deezer_log(config: Config, track: Track, details: str) -> None:
     timestamp = datetime.now().astimezone().isoformat(timespec="seconds")
-    line = f"[DEEZER] {track.query} | {details}"
+    label = {
+        "deezer": "DEEZER",
+        "music_hunters": "MUSIC_HUNTERS",
+    }.get(config.bot_strategy, "BOT")
+    line = f"[{label}] {track.query} | {details}"
     print(line)
     with config.log_file.open("a", encoding="utf-8") as handle:
         handle.write(f"[{timestamp}] {line}\n")
@@ -1014,6 +1073,7 @@ async def request_and_download_deezer(
     config: Config,
     track: Track,
     bot_chat: str,
+    allow_tracks_filter: bool,
 ) -> str:
     loop = asyncio.get_running_loop()
     download_future = loop.create_future()
@@ -1112,11 +1172,21 @@ async def request_and_download_deezer(
         if response_kind == "panel":
             result_button = find_deezer_track_button(response, track)
             if result_button is None:
+                if not allow_tracks_filter:
+                    write_deezer_log(
+                        config,
+                        track,
+                        f"{config.bot_name} returned no matching track button",
+                    )
+                    raise RuntimeError(
+                        f'{config.bot_name} returned no matching track result for "{track.query}".'
+                    )
+
                 tracks_button = find_button_by_label(response, "Tracks")
                 if tracks_button is None:
                     write_deezer_log(config, track, "No matching track button and no Tracks filter were found")
                     raise RuntimeError(
-                        f'DeezerMusicBot returned buttons but no matching track result for "{track.query}".'
+                        f'{config.bot_name} returned buttons but no matching track result for "{track.query}".'
                     )
                 if button_is_selected(tracks_button[2]):
                     write_deezer_log(
@@ -1125,7 +1195,7 @@ async def request_and_download_deezer(
                         "No matching track button was found while Tracks is already selected",
                     )
                     raise RuntimeError(
-                        f'DeezerMusicBot returned no matching track result for "{track.query}" '
+                        f'{config.bot_name} returned no matching track result for "{track.query}" '
                         "while the Tracks filter was already selected."
                     )
 
@@ -1140,7 +1210,7 @@ async def request_and_download_deezer(
                     result_button = find_deezer_track_button(response, track)
                     if result_button is None:
                         raise RuntimeError(
-                            f'DeezerMusicBot returned no matching track result for "{track.query}" '
+                            f'{config.bot_name} returned no matching track result for "{track.query}" '
                             "after selecting Tracks."
                         )
 
@@ -1184,13 +1254,15 @@ async def request_and_download_deezer(
         raise
     finally:
         client.remove_event_handler(handle_bot_message)
-        write_deezer_log(config, track, "Removed Deezer bot event handlers")
+        write_deezer_log(config, track, f"Removed {config.bot_name} event handlers")
 
 
 async def request_and_download(client: TelegramClient, config: Config, track: Track) -> str:
     bot_chat = telegram_chat_ref(config.bot_username)
-    if is_deezer_music_bot(bot_chat):
-        return await request_and_download_deezer(client, config, track, bot_chat)
+    if config.bot_strategy == "deezer":
+        return await request_and_download_deezer(client, config, track, bot_chat, allow_tracks_filter=True)
+    if config.bot_strategy == "music_hunters":
+        return await request_and_download_deezer(client, config, track, bot_chat, allow_tracks_filter=False)
     return await request_and_download_sqmp3(client, config, track, bot_chat)
 
 
@@ -1340,6 +1412,7 @@ async def main() -> None:
     playlist_file = ensure_playlist_file(app_config)
     app_config = AppConfig(
         download_platform=app_config.download_platform,
+        download_bot=app_config.download_bot,
         download_channel=app_config.download_channel,
         reset_account=app_config.reset_account,
         playlist_id=app_config.playlist_id,
