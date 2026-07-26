@@ -1004,6 +1004,24 @@ def find_deezer_track_button(message, track: Track):
     return None
 
 
+def find_numbered_track_button(message, track: Track):
+    message_text = getattr(message, "message", "") or ""
+    for line in message_text.splitlines():
+        match = re.match(r"^\s*(\d+)[.)]\s+(.+?)\s*$", line)
+        if not match:
+            continue
+
+        result_number = match.group(1)
+        candidate_text = re.sub(r"\s+\(\d{1,3}:\d{2}\)\s*$", "", match.group(2)).strip()
+        if not deezer_track_matches_text(track, candidate_text):
+            continue
+
+        button_location = find_button_by_label(message, result_number)
+        if button_location is not None:
+            return button_location, candidate_text
+    return None
+
+
 def button_is_selected(text: str) -> bool:
     return "\u2705" in text
 
@@ -1171,6 +1189,16 @@ async def request_and_download_deezer(
 
         if response_kind == "panel":
             result_button = find_deezer_track_button(response, track)
+            if result_button is None and config.bot_strategy == "music_hunters":
+                numbered_result = find_numbered_track_button(response, track)
+                if numbered_result is not None:
+                    result_button, candidate_text = numbered_result
+                    write_deezer_log(
+                        config,
+                        track,
+                        f"Mapped numbered result {result_button[2]!r} to matching candidate {candidate_text!r}",
+                    )
+
             if result_button is None:
                 if not allow_tracks_filter:
                     write_deezer_log(
