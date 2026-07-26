@@ -117,7 +117,7 @@ Windows PowerShell：
 - `DownloadScript/NewDownload.txt`：当前还需要下载的歌曲。
 - `DownloadScript/FailedDownload.txt`：失败后下次优先重试的歌曲。
 - `DownloadScript/SendBlockedUntil.txt`：Telegram 拒绝发送后的本地冷却标记。
-- `download_summary.log`：下载日志。
+- `download_summary.log`：下载日志；Deezer 搜索、按钮回调、媒体匹配和失败阶段会写入带时间戳的 `[DEEZER]` 记录。
 
 ## Telegram 账号被限制
 

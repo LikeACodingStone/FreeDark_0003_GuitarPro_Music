@@ -795,6 +795,14 @@ def write_log(config: Config, status: str, track: Track, details: str = "") -> N
         handle.write(f"[{status}] {track.query} {details}\n")
 
 
+def write_deezer_log(config: Config, track: Track, details: str) -> None:
+    timestamp = datetime.now().astimezone().isoformat(timespec="seconds")
+    line = f"[DEEZER] {track.query} | {details}"
+    print(line)
+    with config.log_file.open("a", encoding="utf-8") as handle:
+        handle.write(f"[{timestamp}] {line}\n")
+
+
 def write_failed_file(config: Config, failed_tracks: dict[tuple[str, str], Track]) -> None:
     ordered = sorted(failed_tracks.values(), key=lambda item: normalize_piece(item.query))
     write_track_file(config.failed_file, ordered)
@@ -905,6 +913,16 @@ def message_button_rows(message):
     return getattr(message, "buttons", None) or []
 
 
+def describe_deezer_panel(message) -> str:
+    labels = []
+    for row in message_button_rows(message):
+        for button in row:
+            text = " ".join((getattr(button, "text", "") or "").split())
+            if text:
+                labels.append(text[:120])
+    return f"message_id={getattr(message, 'id', '?')} buttons={len(labels)} labels={labels}"
+
+
 def find_button_by_label(message, expected_label: str):
     normalized_expected = normalize_piece(expected_label)
     for row_index, row in enumerate(message_button_rows(message)):
@@ -931,14 +949,33 @@ def button_is_selected(text: str) -> bool:
     return "\u2705" in text
 
 
-async def click_message_button(message, button_location, purpose: str) -> None:
+async def click_message_button(config: Config, track: Track, message, button_location, purpose: str):
     row_index, column_index, text = button_location
     button = message_button_rows(message)[row_index][column_index]
     if getattr(button, "url", None):
         raise RuntimeError(f"{purpose} is a URL button and cannot trigger a Telegram bot callback: {text}")
 
-    print(f"[DEEZER] Clicking {purpose}: {text}")
-    await message.click(row_index, column_index)
+    write_deezer_log(
+        config,
+        track,
+        f"Clicking {purpose}: row={row_index} column={column_index} text={text!r}",
+    )
+    try:
+        callback_answer = await message.click(row_index, column_index)
+    except Exception as exc:
+        write_deezer_log(
+            config,
+            track,
+            f"Click failed for {purpose}: {type(exc).__name__}: {exc}",
+        )
+        raise
+
+    callback_text = " ".join((getattr(callback_answer, "message", "") or "").split())
+    details = f"Callback completed for {purpose}"
+    if callback_text:
+        details += f"; bot reply={callback_text[:200]!r}"
+    write_deezer_log(config, track, details)
+    return callback_answer
 
 
 async def request_and_download_sqmp3(
@@ -984,22 +1021,39 @@ async def request_and_download_deezer(
     panel_message = None
     panel_version = 0
     deadline = loop.time() + config.response_timeout
+    stage = "registering bot event handlers"
 
     async def handle_bot_message(event):
         nonlocal panel_message, panel_version
         message = event.message
-        if message.media and (message.audio or message.document) and message_matches_track(
-            message,
-            track,
-            deezer_track_matches_text,
-        ):
-            if not download_future.done():
-                download_future.set_result(message)
+        if message.media and (message.audio or message.document):
+            if message_matches_track(message, track, deezer_track_matches_text):
+                file_name = getattr(getattr(message, "file", None), "name", "") or "unknown"
+                write_deezer_log(
+                    config,
+                    track,
+                    f"Matched media from {type(event).__name__}: message_id={message.id} file={file_name!r}",
+                )
+                if not download_future.done():
+                    download_future.set_result(message)
+            else:
+                file_name = getattr(getattr(message, "file", None), "name", "") or "unknown"
+                write_deezer_log(
+                    config,
+                    track,
+                    f"Ignored non-matching media from {type(event).__name__}: message_id={message.id} file={file_name!r}",
+                )
 
         if message_button_rows(message):
             panel_message = message
             panel_version += 1
             panel_event.set()
+            write_deezer_log(
+                config,
+                track,
+                f"Received {type(event).__name__} result panel version={panel_version}: "
+                f"{describe_deezer_panel(message)}",
+            )
 
     async def wait_for_media_or_panel(after_panel_version: int):
         nonlocal panel_message, panel_version
@@ -1038,25 +1092,47 @@ async def request_and_download_deezer(
     client.add_event_handler(handle_bot_message, edited_message_event)
 
     try:
-        print(f"[DEEZER] Searching: {track.query}")
+        write_deezer_log(
+            config,
+            track,
+            f"Registered message listeners for {bot_chat}; response timeout={config.response_timeout}s",
+        )
+        stage = "sending search query"
+        write_deezer_log(config, track, f"Sending search query to {bot_chat}")
         await client.send_message(bot_chat, track.query)
+        stage = "waiting for the search result panel"
+        write_deezer_log(config, track, "Search query sent; waiting for a result panel or matching media")
         response_kind, response, current_panel_version = await wait_for_media_or_panel(0)
+        write_deezer_log(
+            config,
+            track,
+            f"Search response received: kind={response_kind} panel_version={current_panel_version}",
+        )
 
         if response_kind == "panel":
             result_button = find_deezer_track_button(response, track)
             if result_button is None:
                 tracks_button = find_button_by_label(response, "Tracks")
                 if tracks_button is None:
+                    write_deezer_log(config, track, "No matching track button and no Tracks filter were found")
                     raise RuntimeError(
                         f'DeezerMusicBot returned buttons but no matching track result for "{track.query}".'
                     )
                 if button_is_selected(tracks_button[2]):
+                    write_deezer_log(
+                        config,
+                        track,
+                        "No matching track button was found while Tracks is already selected",
+                    )
                     raise RuntimeError(
                         f'DeezerMusicBot returned no matching track result for "{track.query}" '
                         "while the Tracks filter was already selected."
                     )
 
-                await click_message_button(response, tracks_button, "Tracks filter")
+                stage = "clicking the Tracks filter"
+                await click_message_button(config, track, response, tracks_button, "Tracks filter")
+                stage = "waiting for the Tracks-filtered result panel"
+                write_deezer_log(config, track, "Tracks filter clicked; waiting for the updated result panel")
                 response_kind, response, current_panel_version = await wait_for_media_or_panel(
                     current_panel_version
                 )
@@ -1069,26 +1145,46 @@ async def request_and_download_deezer(
                         )
 
             if response_kind == "panel":
-                await click_message_button(response, result_button, "track result")
+                write_deezer_log(
+                    config,
+                    track,
+                    f"Selected matching track button: row={result_button[0]} column={result_button[1]} "
+                    f"text={result_button[2]!r}",
+                )
+                stage = "clicking the track result"
+                await click_message_button(config, track, response, result_button, "track result")
+                stage = "waiting for the selected track media"
                 remaining = deadline - loop.time()
                 if remaining <= 0:
                     raise asyncio.TimeoutError
+                write_deezer_log(config, track, f"Track callback sent; waiting up to {remaining:.1f}s for media")
                 response = await asyncio.wait_for(
                     asyncio.shield(download_future),
                     timeout=remaining,
                 )
 
+        stage = "downloading Telegram media"
+        source_name = getattr(getattr(response, "file", None), "name", "") or "unknown"
+        write_deezer_log(config, track, f"Downloading matched Telegram media: {source_name!r}")
         downloaded_path = await client.download_media(response, file=str(config.incoming_dir))
         if not downloaded_path:
             raise RuntimeError("Telegram returned an empty download path.")
-        return accept_downloaded_file(
+        write_deezer_log(config, track, f"Telegram media downloaded to: {downloaded_path}")
+        stage = "validating and moving the downloaded file"
+        saved_name = accept_downloaded_file(
             config,
             track,
             downloaded_path,
             deezer_track_matches_text,
         )
+        write_deezer_log(config, track, f"SUCCESS: saved as {saved_name!r}")
+        return saved_name
+    except Exception as exc:
+        write_deezer_log(config, track, f"FAILED during {stage}: {type(exc).__name__}: {exc}")
+        raise
     finally:
         client.remove_event_handler(handle_bot_message)
+        write_deezer_log(config, track, "Removed Deezer bot event handlers")
 
 
 async def request_and_download(client: TelegramClient, config: Config, track: Track) -> str:
