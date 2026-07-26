@@ -1,0 +1,25 @@
+services:
+  telegram-downloader:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: telegram-music-downloader:local
+    env_file:
+      - .env
+    environment:
+      CONFIG_FILE: /data/config.ini
+      ENV_FILE: /data/.env
+      PENDING_FILE: /data/DownloadScript/NewDownload.txt
+      FAILED_FILE: /data/DownloadScript/FailedDownload.txt
+      BLOCKED_FILE: /data/DownloadScript/SendBlockedUntil.txt
+      LOG_FILE: /data/download_summary.log
+      DOWNLOAD_DIR: /data/TMDownload
+      INCOMING_DIR: /data/TMDownload/_incoming
+      REJECTED_DIR: /data/TMDownload/rejected
+      MUSICN_SCRIPT: /app/musicn_auto_downloader.mjs
+      SESSION_DIR: /data/telegram_session
+      SESSION_NAME: music_session
+    volumes:
+      - .:/data
+    stdin_open: true
+    tty: true
