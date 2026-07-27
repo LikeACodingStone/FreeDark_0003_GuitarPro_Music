@@ -23,6 +23,7 @@ DEFAULT_EXISTING_LIST_FILE = PROJECT_ROOT / "halp_path_list_1779699672.txt"
 DEFAULT_PENDING_FILE = PROJECT_ROOT / "DownloadScript" / "NewDownload.txt"
 DEFAULT_FAILED_FILE = PROJECT_ROOT / "DownloadScript" / "FailedDownload.txt"
 DEFAULT_REQUEST_FAILED_FILE = PROJECT_ROOT / "DownloadScript" / "RequestFailedDownload.txt"
+DEFAULT_ENGINE_STATE_FILE = PROJECT_ROOT / "DownloadScript" / "LastDownloadEngine.txt"
 DEFAULT_BLOCKED_FILE = PROJECT_ROOT / "DownloadScript" / "SendBlockedUntil.txt"
 DEFAULT_CONFIG_FILE = PROJECT_ROOT / "config.ini"
 DEFAULT_ENV_FILE = PROJECT_ROOT / ".env"
@@ -67,6 +68,7 @@ SAFETY_STOP_TEXT_PATTERNS = (
     "captcha",
     "flood",
     "internal server error",
+    "limit",
     "peer flood",
     "rate limit",
     "restricted",
@@ -189,6 +191,7 @@ class Config:
     pending_file: Path
     failed_file: Path
     request_failed_file: Path
+    engine_state_file: Path
     blocked_file: Path
     log_file: Path
     download_dir: Path
@@ -553,6 +556,9 @@ def load_config(app_config: AppConfig) -> Config:
         request_failed_file=resolve_path(
             env_value("REQUEST_FAILED_FILE", str(DEFAULT_REQUEST_FAILED_FILE)) or DEFAULT_REQUEST_FAILED_FILE
         ),
+        engine_state_file=resolve_path(
+            env_value("ENGINE_STATE_FILE", str(DEFAULT_ENGINE_STATE_FILE)) or DEFAULT_ENGINE_STATE_FILE
+        ),
         blocked_file=resolve_path(env_value("BLOCKED_FILE", str(DEFAULT_BLOCKED_FILE)) or DEFAULT_BLOCKED_FILE),
         log_file=resolve_path(env_value("LOG_FILE", str(PROJECT_ROOT / "download_summary.log")) or PROJECT_ROOT / "download_summary.log"),
         download_dir=download_dir,
@@ -852,6 +858,9 @@ def build_download_queue(config: Config) -> tuple[list[Track], dict[tuple[str, s
     known_tracks.update(scan_download_dir(config.download_dir))
     log_statuses = parse_status_log(config.log_file)
     request_failed_tracks = parse_optional_track_file(config.request_failed_file)
+    current_engine = download_engine_key(config)
+    previous_engine = read_download_engine(config.engine_state_file)
+    engine_changed = bool(previous_engine and previous_engine != current_engine)
 
     failed_from_log: dict[tuple[str, str], Track] = {}
     for key, (status, track) in log_statuses.items():
@@ -862,6 +871,7 @@ def build_download_queue(config: Config) -> tuple[list[Track], dict[tuple[str, s
         elif status != "SUCCESS":
             failed_from_log[key] = track
 
+    engine_retry_queue: list[Track] = []
     retry_queue: list[Track] = []
     new_queue: list[Track] = []
     unresolved_failures: dict[tuple[str, str], Track] = {}
@@ -869,6 +879,7 @@ def build_download_queue(config: Config) -> tuple[list[Track], dict[tuple[str, s
     skipped_existing = 0
     skipped_duplicate = 0
     skipped_request_failed = 0
+    retry_request_failed = 0
 
     for track in playlist_tracks:
         key = track.key
@@ -882,6 +893,10 @@ def build_download_queue(config: Config) -> tuple[list[Track], dict[tuple[str, s
             continue
 
         if key in request_failed_tracks:
+            if engine_changed:
+                engine_retry_queue.append(track)
+                retry_request_failed += 1
+                continue
             skipped_request_failed += 1
             continue
 
@@ -891,7 +906,7 @@ def build_download_queue(config: Config) -> tuple[list[Track], dict[tuple[str, s
         else:
             new_queue.append(track)
 
-    queue = retry_queue + new_queue
+    queue = engine_retry_queue + retry_queue + new_queue
 
     write_pending_file(config.pending_file, queue)
     write_track_file(config.failed_file, retry_queue)
@@ -905,6 +920,9 @@ def build_download_queue(config: Config) -> tuple[list[Track], dict[tuple[str, s
     print(f"[PLAN] Skipped already existing: {skipped_existing}")
     print(f"[PLAN] Skipped duplicate rows: {skipped_duplicate}")
     print(f"[PLAN] Skipped previous request failures: {skipped_request_failed}")
+    if engine_changed:
+        print(f"[PLAN] Download engine changed: {previous_engine} -> {current_engine}")
+        print(f"[PLAN] Retrying request-failed tracks first for the new engine: {retry_request_failed}")
     print(f"[PLAN] Retry failed tracks first: {len(retry_queue)}")
     print(f"[PLAN] Pending downloads: {len(queue)}")
     print(f"[PLAN] Pending list written to: {config.pending_file}")
@@ -926,12 +944,30 @@ def write_track_file(path: Path, tracks: list[Track]) -> None:
     path.write_text(content, encoding="utf-8")
 
 
+def download_engine_key(config: Config) -> str:
+    return f"{config.bot_strategy}:{normalize_bot_choice(config.bot_username)}"
+
+
+def read_download_engine(path: Path) -> str:
+    if not path.is_file():
+        return ""
+
+    first_line = path.read_text(encoding="utf-8", errors="replace").splitlines()[0:1]
+    return first_line[0].strip() if first_line else ""
+
+
+def write_download_engine(config: Config) -> None:
+    config.engine_state_file.parent.mkdir(parents=True, exist_ok=True)
+    config.engine_state_file.write_text(download_engine_key(config) + "\n", encoding="utf-8")
+
+
 def ensure_directories(config: Config) -> None:
     config.download_dir.mkdir(parents=True, exist_ok=True)
     config.incoming_dir.mkdir(parents=True, exist_ok=True)
     config.rejected_dir.mkdir(parents=True, exist_ok=True)
     config.session_dir.mkdir(parents=True, exist_ok=True)
     config.request_failed_file.parent.mkdir(parents=True, exist_ok=True)
+    config.engine_state_file.parent.mkdir(parents=True, exist_ok=True)
     config.log_file.parent.mkdir(parents=True, exist_ok=True)
 
 
@@ -1843,6 +1879,7 @@ async def main() -> None:
         return
 
     await download_tracks(config, queue, failed_tracks)
+    write_download_engine(config)
 
 
 if __name__ == "__main__":
