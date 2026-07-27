@@ -108,8 +108,8 @@ Windows PowerShell：
 5. 每首歌请求前再次扫描 `TMDownload/`，防止运行中重复下载。
 6. `SQMP3` 发送 `/music` 命令；`DeezerMusicBot` 自动处理按钮菜单并等待音频。
 7. 下载完成后再次校验文件名中的歌手和歌名，不匹配的文件移动到 `TMDownload/rejected/`。
-8. 任何歌曲最终请求失败立即停止，并把失败歌曲写入 `DownloadScript/FailedDownload.txt`。
-9. 下次启动会优先重试失败歌曲，再继续下载新歌曲。
+8. 单首歌曲无结果、未确认下载或等待媒体超时，会写入 `DownloadScript/RequestFailedDownload.txt` 并跳过，继续请求下一首。
+9. Telegram 发送受限、FloodWait、服务器错误或疑似自动化风控响应会立即停止；普通失败会写入 `DownloadScript/FailedDownload.txt` 供下次优先重试。
 10. 每累计请求 2 小时，随机休息 30-90 分钟。
 11. 每连续成功下载 500 首，必须输入 `yes` 才继续。
 
@@ -120,6 +120,7 @@ Windows PowerShell：
 - `TMDownload/rejected/`：下载到但不匹配或重复的文件。
 - `DownloadScript/NewDownload.txt`：当前还需要下载的歌曲。
 - `DownloadScript/FailedDownload.txt`：失败后下次优先重试的歌曲。
+- `DownloadScript/RequestFailedDownload.txt`：机器人无结果、未确认下载或等待媒体超时后跳过的歌曲。
 - `DownloadScript/SendBlockedUntil.txt`：Telegram 拒绝发送后的本地冷却标记。
 - `download_summary.log`：下载日志；支持按钮搜索的机器人会把搜索、按钮回调、媒体匹配和失败阶段写入带时间戳的 `[DEEZER]` 或 `[MUSIC_HUNTERS]` 记录。
 

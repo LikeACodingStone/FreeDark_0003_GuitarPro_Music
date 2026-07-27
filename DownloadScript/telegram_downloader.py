@@ -22,6 +22,7 @@ DEFAULT_PLAYLIST_FILE = PROJECT_ROOT / "2026-07-24_一部只有金属乐和乡�
 DEFAULT_EXISTING_LIST_FILE = PROJECT_ROOT / "halp_path_list_1779699672.txt"
 DEFAULT_PENDING_FILE = PROJECT_ROOT / "DownloadScript" / "NewDownload.txt"
 DEFAULT_FAILED_FILE = PROJECT_ROOT / "DownloadScript" / "FailedDownload.txt"
+DEFAULT_REQUEST_FAILED_FILE = PROJECT_ROOT / "DownloadScript" / "RequestFailedDownload.txt"
 DEFAULT_BLOCKED_FILE = PROJECT_ROOT / "DownloadScript" / "SendBlockedUntil.txt"
 DEFAULT_CONFIG_FILE = PROJECT_ROOT / "config.ini"
 DEFAULT_ENV_FILE = PROJECT_ROOT / ".env"
@@ -43,6 +44,58 @@ MUSIC_HUNTERS_CLICK_ATTEMPTS = 3
 MUSIC_HUNTERS_INITIAL_CLICK_DELAY = (3.0, 5.0)
 MUSIC_HUNTERS_MEDIA_GRACE_SECONDS = 8.0
 MUSIC_HUNTERS_RETRY_DELAY = (4.0, 7.0)
+
+REQUEST_FAILURE_TEXT_PATTERNS = (
+    "no results found",
+    "no matching track result",
+    "no matching musicn result",
+    "did not acknowledge the numbered button",
+    "timeout waiting for media",
+    "timed out waiting for media",
+    "telegram returned an empty download path",
+    "downloaded media did not match request",
+    "downloaded path does not exist",
+    "duplicate filename already exists",
+)
+
+SAFETY_STOP_TEXT_PATTERNS = (
+    "a wait of",
+    "abuse",
+    "automated",
+    "automation",
+    "banned from sending messages",
+    "captcha",
+    "flood",
+    "internal server error",
+    "peer flood",
+    "rate limit",
+    "restricted",
+    "rpc call fail",
+    "rpc_call_fail",
+    "server error",
+    "slow mode",
+    "spam",
+    "suspicious",
+    "too many requests",
+    "try again later",
+    "wait before",
+    "write forbidden",
+    "you can't write in this chat",
+)
+
+SAFETY_STOP_CLASS_PATTERNS = (
+    "AuthKey",
+    "ChatWriteForbidden",
+    "Flood",
+    "InternalServer",
+    "PeerFlood",
+    "PhoneNumberBanned",
+    "RpcCallFail",
+    "ServerError",
+    "SlowMode",
+    "UserBanned",
+    "UserRestricted",
+)
 
 STOP_WORDS = {
     "a",
@@ -88,6 +141,14 @@ BOT_PRESETS = {
 }
 
 
+class TrackRequestError(RuntimeError):
+    """A single track could not be requested or delivered, but the run can continue."""
+
+
+class SafetyStopError(RuntimeError):
+    """Telegram or the bot returned a response that should stop automation quickly."""
+
+
 @dataclass(frozen=True)
 class AppConfig:
     download_platform: str
@@ -127,6 +188,7 @@ class Config:
     existing_list_file: Path
     pending_file: Path
     failed_file: Path
+    request_failed_file: Path
     blocked_file: Path
     log_file: Path
     download_dir: Path
@@ -202,6 +264,48 @@ def parse_bool(value: str, default: bool = False) -> bool:
     if normalized in {"0", "false", "no", "off"}:
         return False
     return default
+
+
+def normalized_text(value: str) -> str:
+    return " ".join(value.lower().split())
+
+
+def text_matches_any(value: str, patterns: tuple[str, ...]) -> bool:
+    text = normalized_text(value)
+    return any(pattern in text for pattern in patterns)
+
+
+def text_indicates_request_failure(value: str) -> bool:
+    return text_matches_any(value, REQUEST_FAILURE_TEXT_PATTERNS)
+
+
+def text_indicates_safety_stop(value: str) -> bool:
+    return text_matches_any(value, SAFETY_STOP_TEXT_PATTERNS)
+
+
+def exception_text_chain(exc: BaseException) -> str:
+    parts: list[str] = []
+    seen: set[int] = set()
+    current: BaseException | None = exc
+    while current is not None and id(current) not in seen:
+        seen.add(id(current))
+        parts.append(type(current).__name__)
+        message = str(current).strip()
+        if message:
+            parts.append(message)
+        current = current.__cause__ or current.__context__
+    return " | ".join(parts)
+
+
+def exception_class_indicates_safety_stop(exc: BaseException) -> bool:
+    names: list[str] = []
+    current: BaseException | None = exc
+    seen: set[int] = set()
+    while current is not None and id(current) not in seen:
+        seen.add(id(current))
+        names.append(type(current).__name__)
+        current = current.__cause__ or current.__context__
+    return any(pattern in name for name in names for pattern in SAFETY_STOP_CLASS_PATTERNS)
 
 
 def normalize_bot_choice(value: str) -> str:
@@ -446,6 +550,9 @@ def load_config(app_config: AppConfig) -> Config:
         existing_list_file=app_config.existing_list_file,
         pending_file=resolve_path(env_value("PENDING_FILE", str(DEFAULT_PENDING_FILE)) or DEFAULT_PENDING_FILE),
         failed_file=resolve_path(env_value("FAILED_FILE", str(DEFAULT_FAILED_FILE)) or DEFAULT_FAILED_FILE),
+        request_failed_file=resolve_path(
+            env_value("REQUEST_FAILED_FILE", str(DEFAULT_REQUEST_FAILED_FILE)) or DEFAULT_REQUEST_FAILED_FILE
+        ),
         blocked_file=resolve_path(env_value("BLOCKED_FILE", str(DEFAULT_BLOCKED_FILE)) or DEFAULT_BLOCKED_FILE),
         log_file=resolve_path(env_value("LOG_FILE", str(PROJECT_ROOT / "download_summary.log")) or PROJECT_ROOT / "download_summary.log"),
         download_dir=download_dir,
@@ -657,6 +764,23 @@ def parse_playlist(path: Path) -> list[Track]:
     return tracks
 
 
+def parse_optional_track_file(path: Path) -> dict[tuple[str, str], Track]:
+    tracks: dict[tuple[str, str], Track] = {}
+    if not path.is_file():
+        return tracks
+
+    for line_no, raw_line in enumerate(path.read_text(encoding="utf-8", errors="replace").splitlines(), start=1):
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+
+        track = split_artist_title(line, source=str(path), line_no=line_no)
+        if track:
+            tracks[track.key] = track
+
+    return tracks
+
+
 def parse_existing_list(path: Path) -> dict[tuple[str, str], Track]:
     existing: dict[tuple[str, str], Track] = {}
     if not path.is_file():
@@ -699,7 +823,7 @@ def parse_status_log(path: Path) -> dict[tuple[str, str], tuple[str, Track]]:
         return statuses
 
     for line_no, raw_line in enumerate(path.read_text(encoding="utf-8", errors="replace").splitlines(), start=1):
-        match = re.match(r"^\[(SUCCESS|FAILED|REJECTED)\]\s+(.+)$", raw_line.strip())
+        match = re.match(r"^\[(SUCCESS|FAILED|REJECTED|REQUEST_FAILED)\]\s+(.+)$", raw_line.strip())
         if not match:
             continue
 
@@ -715,6 +839,8 @@ def parse_status_log(path: Path) -> dict[tuple[str, str], tuple[str, Track]]:
             saved_match = re.search(r"Saved as:\s*(.+)$", details)
             if status == "SUCCESS" and saved_match and not track_matches_text(track, saved_match.group(1)):
                 status = "REJECTED"
+            if status == "FAILED" and text_indicates_request_failure(details):
+                status = "REQUEST_FAILED"
             statuses[track.key] = (status, track)
 
     return statuses
@@ -725,10 +851,15 @@ def build_download_queue(config: Config) -> tuple[list[Track], dict[tuple[str, s
     known_tracks = parse_existing_list(config.existing_list_file)
     known_tracks.update(scan_download_dir(config.download_dir))
     log_statuses = parse_status_log(config.log_file)
+    request_failed_tracks = parse_optional_track_file(config.request_failed_file)
 
     failed_from_log: dict[tuple[str, str], Track] = {}
     for key, (status, track) in log_statuses.items():
-        if status != "SUCCESS":
+        if status == "SUCCESS":
+            request_failed_tracks.pop(key, None)
+        elif status == "REQUEST_FAILED":
+            request_failed_tracks[key] = track
+        elif status != "SUCCESS":
             failed_from_log[key] = track
 
     retry_queue: list[Track] = []
@@ -737,6 +868,7 @@ def build_download_queue(config: Config) -> tuple[list[Track], dict[tuple[str, s
     seen_in_playlist: set[tuple[str, str]] = set()
     skipped_existing = 0
     skipped_duplicate = 0
+    skipped_request_failed = 0
 
     for track in playlist_tracks:
         key = track.key
@@ -749,6 +881,10 @@ def build_download_queue(config: Config) -> tuple[list[Track], dict[tuple[str, s
             skipped_existing += 1
             continue
 
+        if key in request_failed_tracks:
+            skipped_request_failed += 1
+            continue
+
         if key in failed_from_log:
             retry_queue.append(track)
             unresolved_failures[key] = track
@@ -759,15 +895,21 @@ def build_download_queue(config: Config) -> tuple[list[Track], dict[tuple[str, s
 
     write_pending_file(config.pending_file, queue)
     write_track_file(config.failed_file, retry_queue)
+    write_track_file(
+        config.request_failed_file,
+        sorted(request_failed_tracks.values(), key=lambda item: normalize_piece(item.query)),
+    )
 
     print(f"[PLAN] Playlist tracks parsed: {len(playlist_tracks)}")
     print(f"[PLAN] Known existing tracks: {len(known_tracks)}")
     print(f"[PLAN] Skipped already existing: {skipped_existing}")
     print(f"[PLAN] Skipped duplicate rows: {skipped_duplicate}")
+    print(f"[PLAN] Skipped previous request failures: {skipped_request_failed}")
     print(f"[PLAN] Retry failed tracks first: {len(retry_queue)}")
     print(f"[PLAN] Pending downloads: {len(queue)}")
     print(f"[PLAN] Pending list written to: {config.pending_file}")
     print(f"[PLAN] Failed retry list written to: {config.failed_file}")
+    print(f"[PLAN] Request-failed list written to: {config.request_failed_file}")
 
     return queue, unresolved_failures
 
@@ -789,6 +931,7 @@ def ensure_directories(config: Config) -> None:
     config.incoming_dir.mkdir(parents=True, exist_ok=True)
     config.rejected_dir.mkdir(parents=True, exist_ok=True)
     config.session_dir.mkdir(parents=True, exist_ok=True)
+    config.request_failed_file.parent.mkdir(parents=True, exist_ok=True)
     config.log_file.parent.mkdir(parents=True, exist_ok=True)
 
 
@@ -870,6 +1013,11 @@ def write_deezer_log(config: Config, track: Track, details: str) -> None:
 def write_failed_file(config: Config, failed_tracks: dict[tuple[str, str], Track]) -> None:
     ordered = sorted(failed_tracks.values(), key=lambda item: normalize_piece(item.query))
     write_track_file(config.failed_file, ordered)
+
+
+def write_request_failed_file(config: Config, request_failed_tracks: dict[tuple[str, str], Track]) -> None:
+    ordered = sorted(request_failed_tracks.values(), key=lambda item: normalize_piece(item.query))
+    write_track_file(config.request_failed_file, ordered)
 
 
 async def ensure_authorized(client: TelegramClient, config: Config) -> None:
@@ -987,6 +1135,15 @@ def describe_deezer_panel(message) -> str:
     return f"message_id={getattr(message, 'id', '?')} buttons={len(labels)} labels={labels}"
 
 
+def panel_indicates_no_results(message) -> bool:
+    for row in message_button_rows(message):
+        for button in row:
+            text = getattr(button, "text", "") or ""
+            if "no results" in normalize_piece(text):
+                return True
+    return False
+
+
 def find_button_by_label(message, expected_label: str):
     normalized_expected = normalize_piece(expected_label)
     for row_index, row in enumerate(message_button_rows(message)):
@@ -1075,6 +1232,12 @@ async def click_message_button(config: Config, track: Track, message, button_loc
     else:
         details += "; bot reply=<empty>"
     write_deezer_log(config, track, details)
+
+    if callback_text and text_indicates_safety_stop(callback_text):
+        raise SafetyStopError(f"{config.bot_name} returned a safety-stop callback: {callback_text[:200]}")
+    if callback_text and text_indicates_request_failure(callback_text):
+        raise TrackRequestError(f"{config.bot_name} could not request this track: {callback_text[:200]}")
+
     return callback_answer
 
 
@@ -1086,21 +1249,45 @@ async def request_and_download_sqmp3(
 ) -> str:
     loop = asyncio.get_running_loop()
     download_future = loop.create_future()
+    safety_future = loop.create_future()
 
     @client.on(events.NewMessage(chats=bot_chat))
     async def handle_new_message(event):
-        if not event.message.media:
+        if event.message.media and (event.message.audio or event.message.document):
+            if message_matches_track(event.message, track) and not download_future.done():
+                download_future.set_result(event.message)
             return
-        if not (event.message.audio or event.message.document):
+
+        if message_button_rows(event.message):
             return
-        if not message_matches_track(event.message, track):
+
+        message_text = " ".join((event.message.message or "").split())
+        if message_text and text_indicates_safety_stop(message_text) and not safety_future.done():
+            safety_future.set_exception(
+                SafetyStopError(f"{config.bot_name} returned a safety-stop message: {message_text[:200]}")
+            )
             return
-        if not download_future.done():
-            download_future.set_result(event.message)
+        if message_text and text_indicates_request_failure(message_text) and not safety_future.done():
+            safety_future.set_exception(
+                TrackRequestError(f"{config.bot_name} could not request this track: {message_text[:200]}")
+            )
 
     try:
         await client.send_message(bot_chat, f"/music {track.query}")
-        matched_message = await asyncio.wait_for(download_future, timeout=config.response_timeout)
+        done, pending = await asyncio.wait(
+            {download_future, safety_future},
+            timeout=config.response_timeout,
+            return_when=asyncio.FIRST_COMPLETED,
+        )
+        for pending_future in pending:
+            pending_future.cancel()
+
+        if safety_future in done:
+            raise safety_future.exception()
+        if download_future not in done:
+            raise asyncio.TimeoutError
+
+        matched_message = download_future.result()
         downloaded_path = await client.download_media(matched_message, file=str(config.incoming_dir))
         if not downloaded_path:
             raise RuntimeError("Telegram returned an empty download path.")
@@ -1118,6 +1305,7 @@ async def request_and_download_deezer(
 ) -> str:
     loop = asyncio.get_running_loop()
     download_future = loop.create_future()
+    safety_future = loop.create_future()
     panel_event = asyncio.Event()
     panel_message = None
     panel_version = 0
@@ -1144,6 +1332,7 @@ async def request_and_download_deezer(
                     track,
                     f"Ignored non-matching media from {type(event).__name__}: message_id={message.id} file={file_name!r}",
                 )
+            return
 
         if message_button_rows(message):
             panel_message = message
@@ -1155,10 +1344,34 @@ async def request_and_download_deezer(
                 f"Received {type(event).__name__} result panel version={panel_version}: "
                 f"{describe_deezer_panel(message)}",
             )
+            return
+
+        message_text = " ".join((message.message or "").split())
+        if message_text and text_indicates_safety_stop(message_text) and not safety_future.done():
+            write_deezer_log(
+                config,
+                track,
+                f"Received safety-stop text from {type(event).__name__}: {message_text[:200]!r}",
+            )
+            safety_future.set_exception(
+                SafetyStopError(f"{config.bot_name} returned a safety-stop message: {message_text[:200]}")
+            )
+            return
+        if message_text and text_indicates_request_failure(message_text) and not safety_future.done():
+            write_deezer_log(
+                config,
+                track,
+                f"Received request-failure text from {type(event).__name__}: {message_text[:200]!r}",
+            )
+            safety_future.set_exception(
+                TrackRequestError(f"{config.bot_name} could not request this track: {message_text[:200]}")
+            )
 
     async def wait_for_media_or_panel(after_panel_version: int):
         nonlocal panel_message, panel_version
         while True:
+            if safety_future.done():
+                raise safety_future.exception()
             if download_future.done():
                 return "media", download_future.result(), panel_version
             if panel_version > after_panel_version and panel_message is not None:
@@ -1174,10 +1387,14 @@ async def request_and_download_deezer(
 
             panel_wait = asyncio.create_task(panel_event.wait())
             done, _ = await asyncio.wait(
-                {download_future, panel_wait},
+                {download_future, safety_future, panel_wait},
                 timeout=remaining,
                 return_when=asyncio.FIRST_COMPLETED,
             )
+            if safety_future in done:
+                panel_wait.cancel()
+                await asyncio.gather(panel_wait, return_exceptions=True)
+                raise safety_future.exception()
             if download_future in done:
                 panel_wait.cancel()
                 await asyncio.gather(panel_wait, return_exceptions=True)
@@ -1190,13 +1407,19 @@ async def request_and_download_deezer(
     async def wait_for_matching_media(timeout_seconds: float):
         if download_future.done():
             return download_future.result()
-        try:
-            return await asyncio.wait_for(
-                asyncio.shield(download_future),
-                timeout=timeout_seconds,
-            )
-        except asyncio.TimeoutError:
-            return None
+        if safety_future.done():
+            raise safety_future.exception()
+
+        done, _ = await asyncio.wait(
+            {download_future, safety_future},
+            timeout=timeout_seconds,
+            return_when=asyncio.FIRST_COMPLETED,
+        )
+        if safety_future in done:
+            raise safety_future.exception()
+        if download_future in done:
+            return download_future.result()
+        return None
 
     async def click_music_hunters_result(message, button_location):
         initial_delay = random.uniform(*MUSIC_HUNTERS_INITIAL_CLICK_DELAY)
@@ -1251,7 +1474,7 @@ async def request_and_download_deezer(
                 )
                 await asyncio.sleep(retry_delay)
 
-        raise RuntimeError(
+        raise TrackRequestError(
             f"{config.bot_name} did not acknowledge the numbered button after "
             f"{MUSIC_HUNTERS_CLICK_ATTEMPTS} attempts."
         )
@@ -1298,14 +1521,16 @@ async def request_and_download_deezer(
                         track,
                         f"{config.bot_name} returned no matching track button",
                     )
-                    raise RuntimeError(
+                    if panel_indicates_no_results(response):
+                        raise TrackRequestError(f'{config.bot_name} returned no results for "{track.query}".')
+                    raise TrackRequestError(
                         f'{config.bot_name} returned no matching track result for "{track.query}".'
                     )
 
                 tracks_button = find_button_by_label(response, "Tracks")
                 if tracks_button is None:
                     write_deezer_log(config, track, "No matching track button and no Tracks filter were found")
-                    raise RuntimeError(
+                    raise TrackRequestError(
                         f'{config.bot_name} returned buttons but no matching track result for "{track.query}".'
                     )
                 if button_is_selected(tracks_button[2]):
@@ -1314,7 +1539,7 @@ async def request_and_download_deezer(
                         track,
                         "No matching track button was found while Tracks is already selected",
                     )
-                    raise RuntimeError(
+                    raise TrackRequestError(
                         f'{config.bot_name} returned no matching track result for "{track.query}" '
                         "while the Tracks filter was already selected."
                     )
@@ -1329,7 +1554,7 @@ async def request_and_download_deezer(
                 if response_kind == "panel":
                     result_button = find_deezer_track_button(response, track)
                     if result_button is None:
-                        raise RuntimeError(
+                        raise TrackRequestError(
                             f'{config.bot_name} returned no matching track result for "{track.query}" '
                             "after selecting Tracks."
                         )
@@ -1361,10 +1586,9 @@ async def request_and_download_deezer(
                         track,
                         f"Confirmed callback; waiting up to {remaining:.1f}s for media",
                     )
-                    response = await asyncio.wait_for(
-                        asyncio.shield(download_future),
-                        timeout=remaining,
-                    )
+                    response = await wait_for_matching_media(remaining)
+                    if response is None:
+                        raise asyncio.TimeoutError
 
         stage = "downloading Telegram media"
         source_name = getattr(getattr(response, "file", None), "name", "") or "unknown"
@@ -1400,13 +1624,29 @@ async def request_and_download(client: TelegramClient, config: Config, track: Tr
 
 
 def is_send_blocked_error(exc: Exception) -> bool:
-    text = str(exc).lower()
+    text = exception_text_chain(exc).lower()
     return (
         "banned from sending messages" in text
         or "write forbidden" in text
         or "you can't write in this chat" in text
         or "sendmessagerequest" in text and "banned" in text
     )
+
+
+def is_safety_stop_error(exc: Exception) -> bool:
+    if isinstance(exc, SafetyStopError):
+        return True
+    if isinstance(exc, (TrackRequestError, asyncio.TimeoutError)):
+        return False
+    return exception_class_indicates_safety_stop(exc) or text_indicates_safety_stop(exception_text_chain(exc))
+
+
+def is_recoverable_track_error(exc: Exception) -> bool:
+    if isinstance(exc, TrackRequestError):
+        return True
+    if isinstance(exc, asyncio.TimeoutError):
+        return True
+    return text_indicates_request_failure(exception_text_chain(exc))
 
 
 async def sleep_before_next_request(config: Config, window_started_at: float) -> float:
@@ -1443,6 +1683,20 @@ def is_track_in_current_download_folder(config: Config, track: Track) -> bool:
     return track.key in scan_download_dir(config.download_dir)
 
 
+def record_request_failed_track(
+    config: Config,
+    failed_tracks: dict[tuple[str, str], Track],
+    request_failed_tracks: dict[tuple[str, str], Track],
+    track: Track,
+    reason: str,
+) -> None:
+    write_log(config, "REQUEST_FAILED", track, f"({reason})")
+    failed_tracks.pop(track.key, None)
+    write_failed_file(config, failed_tracks)
+    request_failed_tracks[track.key] = track
+    write_request_failed_file(config, request_failed_tracks)
+
+
 async def download_tracks(config: Config, queue: list[Track], failed_tracks: dict[tuple[str, str], Track]) -> None:
     if not queue:
         print("[DONE] Nothing to download.")
@@ -1456,13 +1710,16 @@ async def download_tracks(config: Config, queue: list[Track], failed_tracks: dic
         await ensure_authorized(client, config)
 
         total = len(queue)
+        request_failed_tracks = parse_optional_track_file(config.request_failed_file)
         request_window_started = time.monotonic()
         consecutive_successes = 0
         for index, track in enumerate(queue, start=1):
             if is_track_in_current_download_folder(config, track):
                 print(f"[{index}/{total}] SKIPPED (Already downloaded now): {track.query}")
                 failed_tracks.pop(track.key, None)
+                request_failed_tracks.pop(track.key, None)
                 write_failed_file(config, failed_tracks)
+                write_request_failed_file(config, request_failed_tracks)
                 continue
 
             print(f"[{index}/{total}] Requesting: {track.query}")
@@ -1471,33 +1728,53 @@ async def download_tracks(config: Config, queue: list[Track], failed_tracks: dic
                 print(f"[{index}/{total}] SUCCESS: {filename}")
                 write_log(config, "SUCCESS", track, f"(Saved as: {filename})")
                 failed_tracks.pop(track.key, None)
+                request_failed_tracks.pop(track.key, None)
                 write_failed_file(config, failed_tracks)
+                write_request_failed_file(config, request_failed_tracks)
                 consecutive_successes += 1
 
                 if not confirm_after_success_batch(config, consecutive_successes):
                     break
             except asyncio.TimeoutError:
-                print(f"[{index}/{total}] TIMEOUT: {track.query}")
-                write_log(config, "FAILED", track, "(Timeout waiting for media)")
-                failed_tracks[track.key] = track
-                write_failed_file(config, failed_tracks)
-                print(f"[STOP] Request failed. Remaining tracks are still listed in: {config.pending_file}")
-                break
+                reason = "Timeout waiting for media"
+                print(f"[{index}/{total}] REQUEST FAILED: {track.query} ({reason})")
+                record_request_failed_track(config, failed_tracks, request_failed_tracks, track, reason)
+                print(f"[SKIP] Recorded request failure and continuing: {config.request_failed_file}")
             except Exception as exc:
-                print(f"[{index}/{total}] FAILED: {track.query} ({exc})")
-                write_log(config, "FAILED", track, f"({exc})")
-                failed_tracks[track.key] = track
-                write_failed_file(config, failed_tracks)
-
-                if config.stop_on_send_blocked and is_send_blocked_error(exc):
-                    mark_send_blocked(config)
-                    print("[STOP] Telegram refused message sending. Stop this run and retry later.")
-                    print(f"[STOP] Cooldown marker written to: {config.blocked_file}")
+                reason = " ".join((str(exc) or type(exc).__name__).split())
+                if is_safety_stop_error(exc):
+                    print(f"[{index}/{total}] SAFETY STOP: {track.query} ({reason})")
+                    write_log(config, "FAILED", track, f"({reason})")
+                    failed_tracks[track.key] = track
+                    write_failed_file(config, failed_tracks)
+                    if config.stop_on_send_blocked and is_send_blocked_error(exc):
+                        mark_send_blocked(config)
+                        print("[STOP] Telegram refused message sending. Stop this run and retry later.")
+                        print(f"[STOP] Cooldown marker written to: {config.blocked_file}")
+                    else:
+                        print("[STOP] Server/rate-limit/automation-risk response detected. Stop this run.")
                     print(f"[STOP] Remaining tracks are still listed in: {config.pending_file}")
                     break
 
-                print(f"[STOP] Request failed. Remaining tracks are still listed in: {config.pending_file}")
-                break
+                if is_recoverable_track_error(exc):
+                    print(f"[{index}/{total}] REQUEST FAILED: {track.query} ({reason})")
+                    record_request_failed_track(config, failed_tracks, request_failed_tracks, track, reason)
+                    print(f"[SKIP] Recorded request failure and continuing: {config.request_failed_file}")
+                else:
+                    print(f"[{index}/{total}] FAILED: {track.query} ({reason})")
+                    write_log(config, "FAILED", track, f"({reason})")
+                    failed_tracks[track.key] = track
+                    write_failed_file(config, failed_tracks)
+
+                    if config.stop_on_send_blocked and is_send_blocked_error(exc):
+                        mark_send_blocked(config)
+                        print("[STOP] Telegram refused message sending. Stop this run and retry later.")
+                        print(f"[STOP] Cooldown marker written to: {config.blocked_file}")
+                        print(f"[STOP] Remaining tracks are still listed in: {config.pending_file}")
+                        break
+
+                    print(f"[STOP] Request failed with an unclassified error. Remaining tracks are still listed in: {config.pending_file}")
+                    break
 
             if index < total:
                 request_window_started = await sleep_before_next_request(config, request_window_started)
