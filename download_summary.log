@@ -523,3 +523,164 @@
 [2026-07-26T14:57:59+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | FAILED during waiting for the selected track media: TimeoutError: 
 [2026-07-26T14:57:59+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Removed MusicsHuntersbot event handlers
 [FAILED] Stonewall Jackson - Pick Me Up On Your Way Down (Timeout waiting for media)
+[2026-07-26T15:05:55+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T15:05:55+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Sending search query to @MusicsHuntersbot
+[2026-07-26T15:05:55+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Search query sent; waiting for a result panel or matching media
+[2026-07-26T15:05:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Received Event result panel version=1: message_id=961 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T15:05:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Search response received: kind=panel panel_version=1
+[2026-07-26T15:05:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Pick Me Up On Your Way Down'
+[2026-07-26T15:05:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T15:05:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Waiting 4.7s before the first automatic click
+[2026-07-26T15:06:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Automatic click attempt 1/3
+[2026-07-26T15:06:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T15:06:01+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Callback completed for track result; bot reply='Download started...'
+[2026-07-26T15:06:01+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Bot confirmed that the download started
+[2026-07-26T15:06:01+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Confirmed callback; waiting up to 120.0s for media
+[2026-07-26T15:06:04+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Matched media from Event: message_id=962 file='05. Stonewall Jackson - Pick Me Up On Your Way Down.mp3'
+[2026-07-26T15:06:04+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Downloading matched Telegram media: '05. Stonewall Jackson - Pick Me Up On Your Way Down.mp3'
+[2026-07-26T15:06:28+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Telegram media downloaded to: /data/TMDownload/_incoming/05. Stonewall Jackson - Pick Me Up On Your Way Down.mp3
+[2026-07-26T15:06:28+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | SUCCESS: saved as '05. Stonewall Jackson - Pick Me Up On Your Way Down.mp3'
+[2026-07-26T15:06:28+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Pick Me Up On Your Way Down | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - Pick Me Up On Your Way Down (Saved as: 05. Stonewall Jackson - Pick Me Up On Your Way Down.mp3)
+[2026-07-26T15:08:39+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T15:08:39+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Sending search query to @MusicsHuntersbot
+[2026-07-26T15:08:39+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Search query sent; waiting for a result panel or matching media
+[2026-07-26T15:08:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Received Event result panel version=1: message_id=964 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T15:08:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Search response received: kind=panel panel_version=1
+[2026-07-26T15:08:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Mapped numbered result '1' to matching candidate 'The Vision Bleak - A Romance with the Grave'
+[2026-07-26T15:08:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T15:08:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Waiting 4.7s before the first automatic click
+[2026-07-26T15:08:44+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Automatic click attempt 1/3
+[2026-07-26T15:08:44+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T15:08:45+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Callback completed for track result; bot reply='Download started...'
+[2026-07-26T15:08:45+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Bot confirmed that the download started
+[2026-07-26T15:08:45+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Confirmed callback; waiting up to 120.0s for media
+[2026-07-26T15:08:45+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Matched media from Event: message_id=965 file='04. The Vision Bleak - A Romance with the Grave.mp3'
+[2026-07-26T15:08:45+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Downloading matched Telegram media: '04. The Vision Bleak - A Romance with the Grave.mp3'
+[2026-07-26T15:09:34+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Telegram media downloaded to: /data/TMDownload/_incoming/04. The Vision Bleak - A Romance with the Grave.mp3
+[2026-07-26T15:09:34+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | SUCCESS: saved as '04. The Vision Bleak - A Romance with the Grave.mp3'
+[2026-07-26T15:09:34+00:00] [MUSIC_HUNTERS] The Vision Bleak - A Romance with the Grave | Removed MusicsHuntersbot event handlers
+[SUCCESS] The Vision Bleak - A Romance with the Grave (Saved as: 04. The Vision Bleak - A Romance with the Grave.mp3)
+[2026-07-26T15:10:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T15:10:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Sending search query to @MusicsHuntersbot
+[2026-07-26T15:10:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Search query sent; waiting for a result panel or matching media
+[2026-07-26T15:10:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Received Event result panel version=1: message_id=967 buttons=15 labels=['1', '2', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T15:10:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Search response received: kind=panel panel_version=1
+[2026-07-26T15:10:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Mapped numbered result '1' to matching candidate 'Falkenbach - Heathen Foray'
+[2026-07-26T15:10:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T15:10:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Waiting 3.9s before the first automatic click
+[2026-07-26T15:10:49+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Automatic click attempt 1/3
+[2026-07-26T15:10:49+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T15:10:50+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Callback completed for track result; bot reply='Download started...'
+[2026-07-26T15:10:50+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Bot confirmed that the download started
+[2026-07-26T15:10:50+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Confirmed callback; waiting up to 120.0s for media
+[2026-07-26T15:10:50+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Matched media from Event: message_id=968 file='01 - Falkenbach - Heathen Foray.mp3'
+[2026-07-26T15:10:50+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Downloading matched Telegram media: '01 - Falkenbach - Heathen Foray.mp3'
+[2026-07-26T15:11:48+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Telegram media downloaded to: /data/TMDownload/_incoming/01 - Falkenbach - Heathen Foray.mp3
+[2026-07-26T15:11:48+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | SUCCESS: saved as '01 - Falkenbach - Heathen Foray.mp3'
+[2026-07-26T15:11:48+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Removed MusicsHuntersbot event handlers
+[SUCCESS] Falkenbach - Heathen Foray (Saved as: 01 - Falkenbach - Heathen Foray.mp3)
+[2026-07-26T15:13:01+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T15:13:01+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Sending search query to @MusicsHuntersbot
+[2026-07-26T15:13:01+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Search query sent; waiting for a result panel or matching media
+[2026-07-26T15:13:02+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Received Event result panel version=1: message_id=970 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T15:13:02+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Search response received: kind=panel panel_version=1
+[2026-07-26T15:13:02+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Mapped numbered result '1' to matching candidate 'Falkenbach - Wulfarweijd'
+[2026-07-26T15:13:02+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T15:13:02+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Waiting 3.4s before the first automatic click
+[2026-07-26T15:13:05+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Automatic click attempt 1/3
+[2026-07-26T15:13:05+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T15:13:05+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Callback completed for track result; bot reply='Download started...'
+[2026-07-26T15:13:05+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Bot confirmed that the download started
+[2026-07-26T15:13:05+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Confirmed callback; waiting up to 120.0s for media
+[2026-07-26T15:13:06+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Matched media from Event: message_id=971 file='02 - Falkenbach - Wulfarweijd.mp3'
+[2026-07-26T15:13:06+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Downloading matched Telegram media: '02 - Falkenbach - Wulfarweijd.mp3'
+[2026-07-26T15:13:39+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Telegram media downloaded to: /data/TMDownload/_incoming/02 - Falkenbach - Wulfarweijd.mp3
+[2026-07-26T15:13:39+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | SUCCESS: saved as '02 - Falkenbach - Wulfarweijd.mp3'
+[2026-07-26T15:13:39+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Removed MusicsHuntersbot event handlers
+[SUCCESS] Falkenbach - Wulfarweijd (Saved as: 02 - Falkenbach - Wulfarweijd.mp3)
+[2026-07-26T15:14:52+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T15:14:52+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Sending search query to @MusicsHuntersbot
+[2026-07-26T15:14:52+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Search query sent; waiting for a result panel or matching media
+[2026-07-26T15:14:52+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Received Event result panel version=1: message_id=973 buttons=19 labels=['1', '2', '3', '4', '5', '6', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T15:14:52+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Search response received: kind=panel panel_version=1
+[2026-07-26T15:14:52+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Mapped numbered result '1' to matching candidate 'Equilibrium - Heimat'
+[2026-07-26T15:14:52+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T15:14:52+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Waiting 4.9s before the first automatic click
+[2026-07-26T15:14:57+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Automatic click attempt 1/3
+[2026-07-26T15:14:57+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T15:14:58+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Callback completed for track result; bot reply='Download started...'
+[2026-07-26T15:14:58+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Bot confirmed that the download started
+[2026-07-26T15:14:58+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Confirmed callback; waiting up to 120.0s for media
+[2026-07-26T15:14:58+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Matched media from Event: message_id=974 file='04. Equilibrium - Heimat.mp3'
+[2026-07-26T15:14:58+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Downloading matched Telegram media: '04. Equilibrium - Heimat.mp3'
+[2026-07-26T15:15:35+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Telegram media downloaded to: /data/TMDownload/_incoming/04. Equilibrium - Heimat.mp3
+[2026-07-26T15:15:35+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | SUCCESS: saved as '04. Equilibrium - Heimat.mp3'
+[2026-07-26T15:15:35+00:00] [MUSIC_HUNTERS] Equilibrium - Heimat | Removed MusicsHuntersbot event handlers
+[SUCCESS] Equilibrium - Heimat (Saved as: 04. Equilibrium - Heimat.mp3)
+[2026-07-26T15:17:15+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T15:17:15+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Sending search query to @MusicsHuntersbot
+[2026-07-26T15:17:15+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Search query sent; waiting for a result panel or matching media
+[2026-07-26T15:17:16+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Received Event result panel version=1: message_id=977 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T15:17:16+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Search response received: kind=panel panel_version=1
+[2026-07-26T15:17:16+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Mapped numbered result '1' to matching candidate 'Equilibrium - Was lange währt'
+[2026-07-26T15:17:16+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T15:17:16+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Waiting 3.9s before the first automatic click
+[2026-07-26T15:17:19+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Automatic click attempt 1/3
+[2026-07-26T15:17:19+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T15:17:20+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Callback completed for track result; bot reply='Download started...'
+[2026-07-26T15:17:20+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Bot confirmed that the download started
+[2026-07-26T15:17:20+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Confirmed callback; waiting up to 120.0s for media
+[2026-07-26T15:17:20+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Matched media from Event: message_id=978 file='02. Equilibrium - Was lange währt.mp3'
+[2026-07-26T15:17:20+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Downloading matched Telegram media: '02. Equilibrium - Was lange währt.mp3'
+[2026-07-26T15:18:03+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Telegram media downloaded to: /data/TMDownload/_incoming/02. Equilibrium - Was lange währt.mp3
+[2026-07-26T15:18:03+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | SUCCESS: saved as '02. Equilibrium - Was lange währt.mp3'
+[2026-07-26T15:18:03+00:00] [MUSIC_HUNTERS] Equilibrium - Was Lange Währt | Removed MusicsHuntersbot event handlers
+[SUCCESS] Equilibrium - Was Lange Währt (Saved as: 02. Equilibrium - Was lange währt.mp3)
+[2026-07-26T15:20:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T15:20:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Sending search query to @MusicsHuntersbot
+[2026-07-26T15:20:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Search query sent; waiting for a result panel or matching media
+[2026-07-26T15:20:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Received Event result panel version=1: message_id=980 buttons=16 labels=['1', '2', '3', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T15:20:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Search response received: kind=panel panel_version=1
+[2026-07-26T15:20:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Mapped numbered result '1' to matching candidate "Doro - I'll Be Holding On"
+[2026-07-26T15:20:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T15:20:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Waiting 3.6s before the first automatic click
+[2026-07-26T15:20:37+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Automatic click attempt 1/3
+[2026-07-26T15:20:37+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T15:20:37+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Callback completed for track result; bot reply='Download started...'
+[2026-07-26T15:20:37+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Bot confirmed that the download started
+[2026-07-26T15:20:37+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Confirmed callback; waiting up to 120.0s for media
+[2026-07-26T15:20:37+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Matched media from Event: message_id=981 file="05 - Doro - I'll Be Holding On.mp3"
+[2026-07-26T15:20:37+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Downloading matched Telegram media: "05 - Doro - I'll Be Holding On.mp3"
+[2026-07-26T15:21:23+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Telegram media downloaded to: /data/TMDownload/_incoming/05 - Doro - I'll Be Holding On.mp3
+[2026-07-26T15:21:23+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | SUCCESS: saved as "05 - Doro - I'll Be Holding On.mp3"
+[2026-07-26T15:21:23+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Removed MusicsHuntersbot event handlers
+[SUCCESS] Doro - I'll Be Holding On (Saved as: 05 - Doro - I'll Be Holding On.mp3)
+[2026-07-26T15:23:33+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T15:23:33+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Sending search query to @MusicsHuntersbot
+[2026-07-26T15:23:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Search query sent; waiting for a result panel or matching media
+[2026-07-26T15:23:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Received Event result panel version=1: message_id=983 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T15:23:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Search response received: kind=panel panel_version=1
+[2026-07-26T15:23:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Mapped numbered result '1' to matching candidate 'Doro - Last Day Of My Life'
+[2026-07-26T15:23:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Selected matching track button: row=0 column=0 text='1'
+[2026-07-26T15:23:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Waiting 4.7s before the first automatic click
+[2026-07-26T15:23:39+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Automatic click attempt 1/3
+[2026-07-26T15:23:39+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Clicking track result: row=0 column=0 text='1'
+[2026-07-26T15:23:40+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Callback completed for track result; bot reply='Download started...'
+[2026-07-26T15:23:40+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Bot confirmed that the download started
+[2026-07-26T15:23:40+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Confirmed callback; waiting up to 120.0s for media
+[2026-07-26T15:23:40+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Matched media from Event: message_id=984 file='03 - Doro - Last Day Of My Life.mp3'
+[2026-07-26T15:23:40+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Downloading matched Telegram media: '03 - Doro - Last Day Of My Life.mp3'
+[2026-07-26T15:24:26+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Telegram media downloaded to: /data/TMDownload/_incoming/03 - Doro - Last Day Of My Life.mp3
+[2026-07-26T15:24:26+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | SUCCESS: saved as '03 - Doro - Last Day Of My Life.mp3'
+[2026-07-26T15:24:26+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Removed MusicsHuntersbot event handlers
+[SUCCESS] Doro - Last Day of My Life (Saved as: 03 - Doro - Last Day Of My Life.mp3)
+[2026-07-26T15:26:32+00:00] [MUSIC_HUNTERS] Doro - Fall for Me Again | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-26T15:26:32+00:00] [MUSIC_HUNTERS] Doro - Fall for Me Again | Sending search query to @MusicsHuntersbot
+[2026-07-26T15:26:32+00:00] [MUSIC_HUNTERS] Doro - Fall for Me Again | Search query sent; waiting for a result panel or matching media
+[2026-07-26T15:26:33+00:00] [MUSIC_HUNTERS] Doro - Fall for Me Again | Received Event result panel version=1: message_id=986 buttons=14 labels=['No results found 😕', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-26T15:26:33+00:00] [MUSIC_HUNTERS] Doro - Fall for Me Again | Search response received: kind=panel panel_version=1
+[2026-07-26T15:26:33+00:00] [MUSIC_HUNTERS] Doro - Fall for Me Again | MusicsHuntersbot returned no matching track button
+[2026-07-26T15:26:33+00:00] [MUSIC_HUNTERS] Doro - Fall for Me Again | FAILED during waiting for the search result panel: RuntimeError: MusicsHuntersbot returned no matching track result for "Doro - Fall for Me Again".
+[2026-07-26T15:26:33+00:00] [MUSIC_HUNTERS] Doro - Fall for Me Again | Removed MusicsHuntersbot event handlers
+[FAILED] Doro - Fall for Me Again (MusicsHuntersbot returned no matching track result for "Doro - Fall for Me Again".)
