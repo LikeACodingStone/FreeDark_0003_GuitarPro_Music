@@ -684,3 +684,1031 @@
 [2026-07-26T15:26:33+00:00] [MUSIC_HUNTERS] Doro - Fall for Me Again | FAILED during waiting for the search result panel: RuntimeError: MusicsHuntersbot returned no matching track result for "Doro - Fall for Me Again".
 [2026-07-26T15:26:33+00:00] [MUSIC_HUNTERS] Doro - Fall for Me Again | Removed MusicsHuntersbot event handlers
 [FAILED] Doro - Fall for Me Again (MusicsHuntersbot returned no matching track result for "Doro - Fall for Me Again".)
+[2026-07-27T00:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - There's No Short Cuts | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - There's No Short Cuts | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - There's No Short Cuts | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - There's No Short Cuts | Received Event result panel version=1: message_id=988 buttons=14 labels=['No results found 😕', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - There's No Short Cuts | Search response received: kind=panel panel_version=1
+[2026-07-27T00:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - There's No Short Cuts | MusicsHuntersbot returned no matching track button
+[2026-07-27T00:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - There's No Short Cuts | FAILED during waiting for the search result panel: TrackRequestError: MusicsHuntersbot returned no results for "Stonewall Jackson - There's No Short Cuts".
+[2026-07-27T00:39:31+00:00] [MUSIC_HUNTERS] Stonewall Jackson - There's No Short Cuts | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Stonewall Jackson - There's No Short Cuts (MusicsHuntersbot returned no results for "Stonewall Jackson - There's No Short Cuts".)
+[2026-07-27T00:40:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Ward of Broken Hearts | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:40:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Ward of Broken Hearts | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:40:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Ward of Broken Hearts | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:40:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Ward of Broken Hearts | Received Event result panel version=1: message_id=990 buttons=14 labels=['No results found 😕', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:40:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Ward of Broken Hearts | Search response received: kind=panel panel_version=1
+[2026-07-27T00:40:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Ward of Broken Hearts | MusicsHuntersbot returned no matching track button
+[2026-07-27T00:40:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Ward of Broken Hearts | FAILED during waiting for the search result panel: TrackRequestError: MusicsHuntersbot returned no results for "Stonewall Jackson - Ward of Broken Hearts".
+[2026-07-27T00:40:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Ward of Broken Hearts | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Stonewall Jackson - Ward of Broken Hearts (MusicsHuntersbot returned no results for "Stonewall Jackson - Ward of Broken Hearts".)
+[2026-07-27T00:41:53+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:41:53+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:41:53+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:41:54+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Received Event result panel version=1: message_id=992 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:41:54+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Search response received: kind=panel panel_version=1
+[2026-07-27T00:41:54+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Come On Home And Have Your Next Affair With Me'
+[2026-07-27T00:41:54+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T00:41:54+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Waiting 4.0s before the first automatic click
+[2026-07-27T00:41:57+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Automatic click attempt 1/3
+[2026-07-27T00:41:57+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T00:41:58+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T00:41:58+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Bot confirmed that the download started
+[2026-07-27T00:41:58+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T00:41:58+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Matched media from Event: message_id=993 file='02_Stonewall_Jackson_Come_On_Home_And_Have_Your_Next_Affair_With.mp3'
+[2026-07-27T00:41:58+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Downloading matched Telegram media: '02_Stonewall_Jackson_Come_On_Home_And_Have_Your_Next_Affair_With.mp3'
+[2026-07-27T00:42:21+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Telegram media downloaded to: /data/TMDownload/_incoming/02_Stonewall_Jackson_Come_On_Home_And_Have_Your_Next_Affair_With.mp3
+[2026-07-27T00:42:21+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | SUCCESS: saved as '02_Stonewall_Jackson_Come_On_Home_And_Have_Your_Next_Affair_With.mp3'
+[2026-07-27T00:42:21+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - Come On Home And Have Your Next Affair With Me (Saved as: 02_Stonewall_Jackson_Come_On_Home_And_Have_Your_Next_Affair_With.mp3)
+[2026-07-27T00:44:05+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Second Choice | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:44:05+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Second Choice | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:44:05+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Second Choice | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:44:05+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Second Choice | Received Event result panel version=1: message_id=995 buttons=14 labels=['No results found 😕', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:44:05+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Second Choice | Search response received: kind=panel panel_version=1
+[2026-07-27T00:44:05+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Second Choice | MusicsHuntersbot returned no matching track button
+[2026-07-27T00:44:05+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Second Choice | FAILED during waiting for the search result panel: TrackRequestError: MusicsHuntersbot returned no results for "Stonewall Jackson - Second Choice".
+[2026-07-27T00:44:05+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Second Choice | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Stonewall Jackson - Second Choice (MusicsHuntersbot returned no results for "Stonewall Jackson - Second Choice".)
+[2026-07-27T00:45:12+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:45:12+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:45:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:45:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Received Event result panel version=1: message_id=997 buttons=20 labels=['1', '2', '3', '4', '5', '6', '7', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:45:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Search response received: kind=panel panel_version=1
+[2026-07-27T00:45:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Mapped numbered result '1' to matching candidate "Stonewall Jackson - Why I'm Walkin'"
+[2026-07-27T00:45:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T00:45:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Waiting 4.4s before the first automatic click
+[2026-07-27T00:45:17+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Automatic click attempt 1/3
+[2026-07-27T00:45:17+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T00:45:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T00:45:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Bot confirmed that the download started
+[2026-07-27T00:45:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T00:45:20+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Matched media from Event: message_id=998 file="09. Stonewall Jackson - Why I'm Walkin'.mp3"
+[2026-07-27T00:45:20+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Downloading matched Telegram media: "09. Stonewall Jackson - Why I'm Walkin'.mp3"
+[2026-07-27T00:45:39+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Telegram media downloaded to: /data/TMDownload/_incoming/09. Stonewall Jackson - Why I'm Walkin'.mp3
+[2026-07-27T00:45:39+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | SUCCESS: saved as "09. Stonewall Jackson - Why I'm Walkin'.mp3"
+[2026-07-27T00:45:39+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Why I'm Walkin' | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - Why I'm Walkin' (Saved as: 09. Stonewall Jackson - Why I'm Walkin'.mp3)
+[2026-07-27T00:46:48+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:46:48+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:46:49+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:46:49+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Received Event result panel version=1: message_id=1000 buttons=15 labels=['1', '2', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:46:49+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Search response received: kind=panel panel_version=1
+[2026-07-27T00:46:49+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Mapped numbered result '1' to matching candidate "Stonewall Jackson - I Can't Help It (If I'm Still In Love With You)"
+[2026-07-27T00:46:49+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T00:46:49+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Waiting 4.2s before the first automatic click
+[2026-07-27T00:46:53+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Automatic click attempt 1/3
+[2026-07-27T00:46:53+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T00:46:54+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T00:46:54+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Bot confirmed that the download started
+[2026-07-27T00:46:54+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T00:46:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Matched media from Event: message_id=1001 file="08_Stonewall_Jackson_I_Can't_Help_It_If_I'm_Still_In_Love_With_You.mp3"
+[2026-07-27T00:46:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Downloading matched Telegram media: "08_Stonewall_Jackson_I_Can't_Help_It_If_I'm_Still_In_Love_With_You.mp3"
+[2026-07-27T00:47:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Telegram media downloaded to: /data/TMDownload/_incoming/08_Stonewall_Jackson_I_Can't_Help_It_If_I'm_Still_In_Love_With_You.mp3
+[2026-07-27T00:47:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | SUCCESS: saved as "08_Stonewall_Jackson_I_Can't_Help_It_If_I'm_Still_In_Love_With_You.mp3"
+[2026-07-27T00:47:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - I Can't Help It (If I'm Still In Love With You) (Saved as: 08_Stonewall_Jackson_I_Can't_Help_It_If_I'm_Still_In_Love_With_You.mp3)
+[2026-07-27T00:49:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:49:15+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:49:16+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:49:16+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Received Event result panel version=1: message_id=1003 buttons=21 labels=['1', '2', '3', '4', '5', '6', '7', '❌', '➡️', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:49:16+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Search response received: kind=panel panel_version=1
+[2026-07-27T00:49:16+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Have I Told You Lately That I Love You?'
+[2026-07-27T00:49:16+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T00:49:16+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Waiting 3.2s before the first automatic click
+[2026-07-27T00:49:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Automatic click attempt 1/3
+[2026-07-27T00:49:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T00:49:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T00:49:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Bot confirmed that the download started
+[2026-07-27T00:49:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T00:49:22+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Matched media from Event: message_id=1004 file='04_Stonewall_Jackson_Have_I_Told_You_Lately_That_I_Love_You_.mp3'
+[2026-07-27T00:49:22+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Downloading matched Telegram media: '04_Stonewall_Jackson_Have_I_Told_You_Lately_That_I_Love_You_.mp3'
+[2026-07-27T00:49:50+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Telegram media downloaded to: /data/TMDownload/_incoming/04_Stonewall_Jackson_Have_I_Told_You_Lately_That_I_Love_You_.mp3
+[2026-07-27T00:49:50+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | SUCCESS: saved as '04_Stonewall_Jackson_Have_I_Told_You_Lately_That_I_Love_You_.mp3'
+[2026-07-27T00:49:50+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Have I Told You Lately That I Love You | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - Have I Told You Lately That I Love You (Saved as: 04_Stonewall_Jackson_Have_I_Told_You_Lately_That_I_Love_You_.mp3)
+[2026-07-27T00:51:40+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:51:40+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:51:40+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:51:41+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Received Event result panel version=1: message_id=1006 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:51:41+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Search response received: kind=panel panel_version=1
+[2026-07-27T00:51:41+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Fraulein'
+[2026-07-27T00:51:41+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T00:51:41+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Waiting 3.2s before the first automatic click
+[2026-07-27T00:51:44+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Automatic click attempt 1/3
+[2026-07-27T00:51:44+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T00:51:44+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T00:51:44+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Bot confirmed that the download started
+[2026-07-27T00:51:44+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T00:51:46+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Matched media from Event: message_id=1007 file='05. Stonewall Jackson - Fraulein.mp3'
+[2026-07-27T00:51:46+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Downloading matched Telegram media: '05. Stonewall Jackson - Fraulein.mp3'
+[2026-07-27T00:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Telegram media downloaded to: /data/TMDownload/_incoming/05. Stonewall Jackson - Fraulein.mp3
+[2026-07-27T00:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | SUCCESS: saved as '05. Stonewall Jackson - Fraulein.mp3'
+[2026-07-27T00:52:11+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Fraulein | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - Fraulein (Saved as: 05. Stonewall Jackson - Fraulein.mp3)
+[2026-07-27T00:53:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:53:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:53:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:53:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Received Event result panel version=1: message_id=1009 buttons=15 labels=['1', '2', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:53:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Search response received: kind=panel panel_version=1
+[2026-07-27T00:53:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Mapped numbered result '1' to matching candidate "Stonewall Jackson - It's Such A Pretty World Today"
+[2026-07-27T00:53:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T00:53:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Waiting 4.8s before the first automatic click
+[2026-07-27T00:53:23+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Automatic click attempt 1/3
+[2026-07-27T00:53:23+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T00:53:24+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T00:53:24+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Bot confirmed that the download started
+[2026-07-27T00:53:24+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T00:53:26+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Matched media from Event: message_id=1010 file="05. Stonewall Jackson - It's Such A Pretty World Today.mp3"
+[2026-07-27T00:53:26+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Downloading matched Telegram media: "05. Stonewall Jackson - It's Such A Pretty World Today.mp3"
+[2026-07-27T00:53:46+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Telegram media downloaded to: /data/TMDownload/_incoming/05. Stonewall Jackson - It's Such A Pretty World Today.mp3
+[2026-07-27T00:53:46+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | SUCCESS: saved as "05. Stonewall Jackson - It's Such A Pretty World Today.mp3"
+[2026-07-27T00:53:46+00:00] [MUSIC_HUNTERS] Stonewall Jackson - It's Such A Pretty World Today | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - It's Such A Pretty World Today (Saved as: 05. Stonewall Jackson - It's Such A Pretty World Today.mp3)
+[2026-07-27T00:55:49+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:55:49+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:55:49+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:55:50+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Received Event result panel version=1: message_id=1012 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:55:50+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Search response received: kind=panel panel_version=1
+[2026-07-27T00:55:50+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - The Minute Men (Are Turning In Their Graves)'
+[2026-07-27T00:55:50+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T00:55:50+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Waiting 3.4s before the first automatic click
+[2026-07-27T00:55:53+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Automatic click attempt 1/3
+[2026-07-27T00:55:53+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T00:55:53+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T00:55:53+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Bot confirmed that the download started
+[2026-07-27T00:55:53+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T00:55:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Matched media from Event: message_id=1013 file='01_Stonewall_Jackson_The_Minute_Men_Are_Turning_In_Their_Graves.mp3'
+[2026-07-27T00:55:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Downloading matched Telegram media: '01_Stonewall_Jackson_The_Minute_Men_Are_Turning_In_Their_Graves.mp3'
+[2026-07-27T00:56:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Telegram media downloaded to: /data/TMDownload/_incoming/01_Stonewall_Jackson_The_Minute_Men_Are_Turning_In_Their_Graves.mp3
+[2026-07-27T00:56:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | SUCCESS: saved as '01_Stonewall_Jackson_The_Minute_Men_Are_Turning_In_Their_Graves.mp3'
+[2026-07-27T00:56:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - The Minute Men (Are Turning In Their Graves) (Saved as: 01_Stonewall_Jackson_The_Minute_Men_Are_Turning_In_Their_Graves.mp3)
+[2026-07-27T00:57:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T00:57:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Sending search query to @MusicsHuntersbot
+[2026-07-27T00:57:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Search query sent; waiting for a result panel or matching media
+[2026-07-27T00:57:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Received Event result panel version=1: message_id=1015 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T00:57:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Search response received: kind=panel panel_version=1
+[2026-07-27T00:57:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - I Love You Because'
+[2026-07-27T00:57:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T00:57:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Waiting 4.2s before the first automatic click
+[2026-07-27T00:57:55+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Automatic click attempt 1/3
+[2026-07-27T00:57:55+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T00:57:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T00:57:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Bot confirmed that the download started
+[2026-07-27T00:57:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T00:57:59+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Matched media from Event: message_id=1016 file='10. Stonewall Jackson - I Love You Because.mp3'
+[2026-07-27T00:57:59+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Downloading matched Telegram media: '10. Stonewall Jackson - I Love You Because.mp3'
+[2026-07-27T00:58:23+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Telegram media downloaded to: /data/TMDownload/_incoming/10. Stonewall Jackson - I Love You Because.mp3
+[2026-07-27T00:58:23+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | SUCCESS: saved as '10. Stonewall Jackson - I Love You Because.mp3'
+[2026-07-27T00:58:23+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Love You Because | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - I Love You Because (Saved as: 10. Stonewall Jackson - I Love You Because.mp3)
+[2026-07-27T01:00:26+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:00:26+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:00:26+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:00:26+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Received Event result panel version=1: message_id=1018 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:00:26+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Search response received: kind=panel panel_version=1
+[2026-07-27T01:00:26+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Joy to the World'
+[2026-07-27T01:00:26+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:00:26+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Waiting 3.1s before the first automatic click
+[2026-07-27T01:00:29+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Automatic click attempt 1/3
+[2026-07-27T01:00:29+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:00:30+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:00:30+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Bot confirmed that the download started
+[2026-07-27T01:00:30+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:00:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Matched media from Event: message_id=1019 file='03. Stonewall Jackson - Joy to the World.mp3'
+[2026-07-27T01:00:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Downloading matched Telegram media: '03. Stonewall Jackson - Joy to the World.mp3'
+[2026-07-27T01:00:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Telegram media downloaded to: /data/TMDownload/_incoming/03. Stonewall Jackson - Joy to the World.mp3
+[2026-07-27T01:00:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | SUCCESS: saved as '03. Stonewall Jackson - Joy to the World.mp3'
+[2026-07-27T01:00:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Joy to the World | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - Joy to the World (Saved as: 03. Stonewall Jackson - Joy to the World.mp3)
+[2026-07-27T01:02:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:02:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:02:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:02:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Received Event result panel version=1: message_id=1021 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:02:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Search response received: kind=panel panel_version=1
+[2026-07-27T01:02:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - I Wish I Had a Girl'
+[2026-07-27T01:02:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:02:33+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Waiting 3.5s before the first automatic click
+[2026-07-27T01:02:37+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Automatic click attempt 1/3
+[2026-07-27T01:02:37+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:02:37+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:02:37+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Bot confirmed that the download started
+[2026-07-27T01:02:37+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:02:39+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Matched media from Event: message_id=1022 file='02. Stonewall Jackson - I Wish I Had a Girl.mp3'
+[2026-07-27T01:02:39+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Downloading matched Telegram media: '02. Stonewall Jackson - I Wish I Had a Girl.mp3'
+[2026-07-27T01:03:04+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Telegram media downloaded to: /data/TMDownload/_incoming/02. Stonewall Jackson - I Wish I Had a Girl.mp3
+[2026-07-27T01:03:04+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | SUCCESS: saved as '02. Stonewall Jackson - I Wish I Had a Girl.mp3'
+[2026-07-27T01:03:04+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I Wish I Had A Girl | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - I Wish I Had A Girl (Saved as: 02. Stonewall Jackson - I Wish I Had a Girl.mp3)
+[2026-07-27T01:05:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:05:13+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:05:14+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:05:14+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Received Event result panel version=1: message_id=1024 buttons=15 labels=['1', '2', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:05:14+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Search response received: kind=panel panel_version=1
+[2026-07-27T01:05:14+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Mapped numbered result '1' to matching candidate "Stonewall Jackson - I'm Just An Old Chunk Of Coal (But I'm Gonna Be A Diamond Someday)"
+[2026-07-27T01:05:14+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:05:14+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Waiting 4.6s before the first automatic click
+[2026-07-27T01:05:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Automatic click attempt 1/3
+[2026-07-27T01:05:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:05:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:05:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Bot confirmed that the download started
+[2026-07-27T01:05:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:05:29+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Matched media from Event: message_id=1025 file="01_Stonewall_Jackson_I'm_Just_An_Old_Chunk_Of_Coal_But_I'm_Gonna.mp3"
+[2026-07-27T01:05:29+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Downloading matched Telegram media: "01_Stonewall_Jackson_I'm_Just_An_Old_Chunk_Of_Coal_But_I'm_Gonna.mp3"
+[2026-07-27T01:05:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Telegram media downloaded to: /data/TMDownload/_incoming/01_Stonewall_Jackson_I'm_Just_An_Old_Chunk_Of_Coal_But_I'm_Gonna.mp3
+[2026-07-27T01:05:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | SUCCESS: saved as "01_Stonewall_Jackson_I'm_Just_An_Old_Chunk_Of_Coal_But_I'm_Gonna.mp3"
+[2026-07-27T01:05:51+00:00] [MUSIC_HUNTERS] Stonewall Jackson - I'm Just An Old Chunk Of Coal | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - I'm Just An Old Chunk Of Coal (Saved as: 01_Stonewall_Jackson_I'm_Just_An_Old_Chunk_Of_Coal_But_I'm_Gonna.mp3)
+[2026-07-27T01:07:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Bare Necessities | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:07:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Bare Necessities | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:07:18+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Bare Necessities | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:07:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Bare Necessities | Received Event result panel version=1: message_id=1027 buttons=14 labels=['No results found 😕', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:07:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Bare Necessities | Search response received: kind=panel panel_version=1
+[2026-07-27T01:07:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Bare Necessities | MusicsHuntersbot returned no matching track button
+[2026-07-27T01:07:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Bare Necessities | FAILED during waiting for the search result panel: TrackRequestError: MusicsHuntersbot returned no results for "Stonewall Jackson - Bare Necessities".
+[2026-07-27T01:07:19+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Bare Necessities | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Stonewall Jackson - Bare Necessities (MusicsHuntersbot returned no results for "Stonewall Jackson - Bare Necessities".)
+[2026-07-27T01:08:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:08:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:08:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:08:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Received Event result panel version=1: message_id=1029 buttons=16 labels=['1', '2', '3', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:08:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Search response received: kind=panel panel_version=1
+[2026-07-27T01:08:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Old Showboat'
+[2026-07-27T01:08:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:08:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Waiting 4.0s before the first automatic click
+[2026-07-27T01:09:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Automatic click attempt 1/3
+[2026-07-27T01:09:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:09:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:09:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Bot confirmed that the download started
+[2026-07-27T01:09:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:09:03+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Matched media from Event: message_id=1030 file='18. Stonewall Jackson - Old Showboat.mp3'
+[2026-07-27T01:09:03+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Downloading matched Telegram media: '18. Stonewall Jackson - Old Showboat.mp3'
+[2026-07-27T01:09:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Telegram media downloaded to: /data/TMDownload/_incoming/18. Stonewall Jackson - Old Showboat.mp3
+[2026-07-27T01:09:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | SUCCESS: saved as '18. Stonewall Jackson - Old Showboat.mp3'
+[2026-07-27T01:09:32+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Old Showboat | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - Old Showboat (Saved as: 18. Stonewall Jackson - Old Showboat.mp3)
+[2026-07-27T01:10:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:10:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:10:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:10:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Received Event result panel version=1: message_id=1032 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:10:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Search response received: kind=panel panel_version=1
+[2026-07-27T01:10:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Mapped numbered result '1' to matching candidate 'Stonewall Jackson - Push the Panic Button'
+[2026-07-27T01:10:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:10:56+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Waiting 4.1s before the first automatic click
+[2026-07-27T01:11:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Automatic click attempt 1/3
+[2026-07-27T01:11:00+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:11:01+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:11:01+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Bot confirmed that the download started
+[2026-07-27T01:11:01+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:11:03+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Matched media from Event: message_id=1033 file='07. Stonewall Jackson - Push the Panic Button.mp3'
+[2026-07-27T01:11:03+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Downloading matched Telegram media: '07. Stonewall Jackson - Push the Panic Button.mp3'
+[2026-07-27T01:11:28+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Telegram media downloaded to: /data/TMDownload/_incoming/07. Stonewall Jackson - Push the Panic Button.mp3
+[2026-07-27T01:11:28+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | SUCCESS: saved as '07. Stonewall Jackson - Push the Panic Button.mp3'
+[2026-07-27T01:11:28+00:00] [MUSIC_HUNTERS] Stonewall Jackson - Push the Panic Button | Removed MusicsHuntersbot event handlers
+[SUCCESS] Stonewall Jackson - Push the Panic Button (Saved as: 07. Stonewall Jackson - Push the Panic Button.mp3)
+[2026-07-27T01:13:35+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:13:35+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:13:35+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:13:36+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Received Event result panel version=1: message_id=1035 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:13:36+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Search response received: kind=panel panel_version=1
+[2026-07-27T01:13:36+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Mapped numbered result '1' to matching candidate 'The Vision Bleak - The Night of the Living Dead'
+[2026-07-27T01:13:36+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:13:36+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Waiting 3.8s before the first automatic click
+[2026-07-27T01:13:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Automatic click attempt 1/3
+[2026-07-27T01:13:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:13:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:13:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Bot confirmed that the download started
+[2026-07-27T01:13:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:13:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Matched media from Event: message_id=1036 file='02 - The Vision Bleak - The Night of the Living Dead.mp3'
+[2026-07-27T01:13:40+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Downloading matched Telegram media: '02 - The Vision Bleak - The Night of the Living Dead.mp3'
+[2026-07-27T01:14:11+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Telegram media downloaded to: /data/TMDownload/_incoming/02 - The Vision Bleak - The Night of the Living Dead.mp3
+[2026-07-27T01:14:11+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | SUCCESS: saved as '02 - The Vision Bleak - The Night of the Living Dead.mp3'
+[2026-07-27T01:14:11+00:00] [MUSIC_HUNTERS] The Vision Bleak - The Night of the Living Dead | Removed MusicsHuntersbot event handlers
+[SUCCESS] The Vision Bleak - The Night of the Living Dead (Saved as: 02 - The Vision Bleak - The Night of the Living Dead.mp3)
+[2026-07-27T01:16:35+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:16:35+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:16:36+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:16:36+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Received Event result panel version=1: message_id=1038 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:16:36+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Search response received: kind=panel panel_version=1
+[2026-07-27T01:16:36+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Mapped numbered result '1' to matching candidate 'Agathodaimon - Mother of All Gods Feat. Vlad Dracul'
+[2026-07-27T01:16:36+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:16:36+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Waiting 5.0s before the first automatic click
+[2026-07-27T01:16:41+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Automatic click attempt 1/3
+[2026-07-27T01:16:41+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:16:41+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:16:41+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Bot confirmed that the download started
+[2026-07-27T01:16:41+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:16:41+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Matched media from Event: message_id=1039 file='05 - Agathodaimon - Mother of All Gods Feat. Vlad Dracul.mp3'
+[2026-07-27T01:16:41+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Downloading matched Telegram media: '05 - Agathodaimon - Mother of All Gods Feat. Vlad Dracul.mp3'
+[2026-07-27T01:17:35+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Telegram media downloaded to: /data/TMDownload/_incoming/05 - Agathodaimon - Mother of All Gods Feat. Vlad Dracul.mp3
+[2026-07-27T01:17:35+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | SUCCESS: saved as '05 - Agathodaimon - Mother of All Gods Feat. Vlad Dracul.mp3'
+[2026-07-27T01:17:35+00:00] [MUSIC_HUNTERS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul | Removed MusicsHuntersbot event handlers
+[SUCCESS] Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul (Saved as: 05 - Agathodaimon - Mother of All Gods Feat. Vlad Dracul.mp3)
+[2026-07-27T01:19:48+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:19:48+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:19:48+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:19:48+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Received Event result panel version=1: message_id=1041 buttons=15 labels=['1', '2', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:19:48+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Search response received: kind=panel panel_version=1
+[2026-07-27T01:19:48+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Mapped numbered result '1' to matching candidate 'Agathodaimon - Alone in the Dark'
+[2026-07-27T01:19:48+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:19:48+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Waiting 3.8s before the first automatic click
+[2026-07-27T01:19:52+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Automatic click attempt 1/3
+[2026-07-27T01:19:52+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:19:53+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:19:53+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Bot confirmed that the download started
+[2026-07-27T01:19:53+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:19:53+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Matched media from Event: message_id=1042 file='14 - Agathodaimon - Alone in the Dark.mp3'
+[2026-07-27T01:19:53+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Downloading matched Telegram media: '14 - Agathodaimon - Alone in the Dark.mp3'
+[2026-07-27T01:20:31+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Telegram media downloaded to: /data/TMDownload/_incoming/14 - Agathodaimon - Alone in the Dark.mp3
+[2026-07-27T01:20:31+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | SUCCESS: saved as '14 - Agathodaimon - Alone in the Dark.mp3'
+[2026-07-27T01:20:31+00:00] [MUSIC_HUNTERS] Agathodaimon - Alone in the Dark | Removed MusicsHuntersbot event handlers
+[SUCCESS] Agathodaimon - Alone in the Dark (Saved as: 14 - Agathodaimon - Alone in the Dark.mp3)
+[2026-07-27T01:22:40+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:22:40+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:22:40+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:22:40+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Received Event result panel version=1: message_id=1044 buttons=15 labels=['1', '2', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:22:40+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Search response received: kind=panel panel_version=1
+[2026-07-27T01:22:40+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Mapped numbered result '1' to matching candidate 'Falkenbach - Heathen Foray'
+[2026-07-27T01:22:40+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:22:40+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Waiting 4.5s before the first automatic click
+[2026-07-27T01:22:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Automatic click attempt 1/3
+[2026-07-27T01:22:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:22:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:22:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Bot confirmed that the download started
+[2026-07-27T01:22:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:22:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Matched media from Event: message_id=1045 file='01 - Falkenbach - Heathen Foray.mp3'
+[2026-07-27T01:22:45+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Downloading matched Telegram media: '01 - Falkenbach - Heathen Foray.mp3'
+[2026-07-27T01:23:43+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Telegram media downloaded to: /data/TMDownload/_incoming/01 - Falkenbach - Heathen Foray.mp3
+[2026-07-27T01:23:43+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | FAILED during validating and moving the downloaded file: RuntimeError: Duplicate filename already exists; moved to rejected/01 - Falkenbach - Heathen Foray.mp3
+[2026-07-27T01:23:43+00:00] [MUSIC_HUNTERS] Falkenbach - Heathen Foray | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Falkenbach - Heathen Foray (Duplicate filename already exists; moved to rejected/01 - Falkenbach - Heathen Foray.mp3)
+[2026-07-27T01:25:41+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:25:41+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:25:41+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:25:42+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Received Event result panel version=1: message_id=1047 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:25:42+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Search response received: kind=panel panel_version=1
+[2026-07-27T01:25:42+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Mapped numbered result '1' to matching candidate 'Falkenbach - Wulfarweijd'
+[2026-07-27T01:25:42+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:25:42+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Waiting 3.1s before the first automatic click
+[2026-07-27T01:25:45+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Automatic click attempt 1/3
+[2026-07-27T01:25:45+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:25:45+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:25:45+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Bot confirmed that the download started
+[2026-07-27T01:25:45+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:25:45+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Matched media from Event: message_id=1048 file='02 - Falkenbach - Wulfarweijd.mp3'
+[2026-07-27T01:25:45+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Downloading matched Telegram media: '02 - Falkenbach - Wulfarweijd.mp3'
+[2026-07-27T01:26:16+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Telegram media downloaded to: /data/TMDownload/_incoming/02 - Falkenbach - Wulfarweijd.mp3
+[2026-07-27T01:26:16+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | FAILED during validating and moving the downloaded file: RuntimeError: Duplicate filename already exists; moved to rejected/02 - Falkenbach - Wulfarweijd.mp3
+[2026-07-27T01:26:16+00:00] [MUSIC_HUNTERS] Falkenbach - Wulfarweijd | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Falkenbach - Wulfarweijd (Duplicate filename already exists; moved to rejected/02 - Falkenbach - Wulfarweijd.mp3)
+[2026-07-27T01:27:53+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:27:53+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:27:54+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:27:54+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Received Event result panel version=1: message_id=1050 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:27:54+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Search response received: kind=panel panel_version=1
+[2026-07-27T01:27:54+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Mapped numbered result '1' to matching candidate 'Equilibrium - Katharsis'
+[2026-07-27T01:27:54+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:27:54+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Waiting 3.0s before the first automatic click
+[2026-07-27T01:27:57+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Automatic click attempt 1/3
+[2026-07-27T01:27:57+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:27:57+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:27:57+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Bot confirmed that the download started
+[2026-07-27T01:27:57+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:27:57+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Matched media from Event: message_id=1051 file='03 - Equilibrium - Katharsis.mp3'
+[2026-07-27T01:27:57+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Downloading matched Telegram media: '03 - Equilibrium - Katharsis.mp3'
+[2026-07-27T01:28:39+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Telegram media downloaded to: /data/TMDownload/_incoming/03 - Equilibrium - Katharsis.mp3
+[2026-07-27T01:28:39+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | SUCCESS: saved as '03 - Equilibrium - Katharsis.mp3'
+[2026-07-27T01:28:39+00:00] [MUSIC_HUNTERS] Equilibrium - Katharsis | Removed MusicsHuntersbot event handlers
+[SUCCESS] Equilibrium - Katharsis (Saved as: 03 - Equilibrium - Katharsis.mp3)
+[2026-07-27T01:30:41+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:30:41+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:30:41+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:30:41+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Received Event result panel version=1: message_id=1053 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:30:41+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Search response received: kind=panel panel_version=1
+[2026-07-27T01:30:41+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Mapped numbered result '1' to matching candidate 'Equilibrium - Wellengang'
+[2026-07-27T01:30:41+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:30:41+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Waiting 3.5s before the first automatic click
+[2026-07-27T01:30:45+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Automatic click attempt 1/3
+[2026-07-27T01:30:45+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:30:45+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:30:45+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Bot confirmed that the download started
+[2026-07-27T01:30:45+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:30:45+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Matched media from Event: message_id=1054 file='10 - Equilibrium - Wellengang.mp3'
+[2026-07-27T01:30:45+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Downloading matched Telegram media: '10 - Equilibrium - Wellengang.mp3'
+[2026-07-27T01:31:27+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Telegram media downloaded to: /data/TMDownload/_incoming/10 - Equilibrium - Wellengang.mp3
+[2026-07-27T01:31:27+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | SUCCESS: saved as '10 - Equilibrium - Wellengang.mp3'
+[2026-07-27T01:31:27+00:00] [MUSIC_HUNTERS] Equilibrium - Wellengang | Removed MusicsHuntersbot event handlers
+[SUCCESS] Equilibrium - Wellengang (Saved as: 10 - Equilibrium - Wellengang.mp3)
+[2026-07-27T01:32:44+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:32:44+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:32:44+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:32:45+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Received Event result panel version=1: message_id=1056 buttons=16 labels=['1', '2', '3', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:32:45+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Search response received: kind=panel panel_version=1
+[2026-07-27T01:32:45+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Mapped numbered result '1' to matching candidate "Doro - I'll Be Holding On"
+[2026-07-27T01:32:45+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:32:45+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Waiting 3.3s before the first automatic click
+[2026-07-27T01:32:48+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Automatic click attempt 1/3
+[2026-07-27T01:32:48+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:32:48+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:32:48+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Bot confirmed that the download started
+[2026-07-27T01:32:48+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:32:48+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Matched media from Event: message_id=1057 file="05 - Doro - I'll Be Holding On.mp3"
+[2026-07-27T01:32:48+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Downloading matched Telegram media: "05 - Doro - I'll Be Holding On.mp3"
+[2026-07-27T01:33:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Telegram media downloaded to: /data/TMDownload/_incoming/05 - Doro - I'll Be Holding On.mp3
+[2026-07-27T01:33:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | FAILED during validating and moving the downloaded file: RuntimeError: Duplicate filename already exists; moved to rejected/05 - Doro - I'll Be Holding On.mp3
+[2026-07-27T01:33:33+00:00] [MUSIC_HUNTERS] Doro - I'll Be Holding On | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Doro - I'll Be Holding On (Duplicate filename already exists; moved to rejected/05 - Doro - I'll Be Holding On.mp3)
+[2026-07-27T01:35:29+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:35:29+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:35:29+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:35:29+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Received Event result panel version=1: message_id=1059 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:35:29+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Search response received: kind=panel panel_version=1
+[2026-07-27T01:35:29+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Mapped numbered result '1' to matching candidate 'Doro - Last Day Of My Life'
+[2026-07-27T01:35:29+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:35:29+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Waiting 4.1s before the first automatic click
+[2026-07-27T01:35:33+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Automatic click attempt 1/3
+[2026-07-27T01:35:33+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:35:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:35:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Bot confirmed that the download started
+[2026-07-27T01:35:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:35:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Matched media from Event: message_id=1060 file='03 - Doro - Last Day Of My Life.mp3'
+[2026-07-27T01:35:34+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Downloading matched Telegram media: '03 - Doro - Last Day Of My Life.mp3'
+[2026-07-27T01:36:26+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Telegram media downloaded to: /data/TMDownload/_incoming/03 - Doro - Last Day Of My Life.mp3
+[2026-07-27T01:36:26+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | FAILED during validating and moving the downloaded file: RuntimeError: Duplicate filename already exists; moved to rejected/03 - Doro - Last Day Of My Life.mp3
+[2026-07-27T01:36:26+00:00] [MUSIC_HUNTERS] Doro - Last Day of My Life | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Doro - Last Day of My Life (Duplicate filename already exists; moved to rejected/03 - Doro - Last Day Of My Life.mp3)
+[2026-07-27T01:37:48+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:37:48+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:37:48+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:37:48+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Received Event result panel version=1: message_id=1062 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:37:48+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Search response received: kind=panel panel_version=1
+[2026-07-27T01:37:48+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Mapped numbered result '1' to matching candidate 'Primal Fear - Bleed for Me (By Primal Fear)'
+[2026-07-27T01:37:48+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:37:48+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Waiting 4.9s before the first automatic click
+[2026-07-27T01:37:53+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Automatic click attempt 1/3
+[2026-07-27T01:37:53+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:37:54+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:37:54+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Bot confirmed that the download started
+[2026-07-27T01:37:54+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:37:54+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Matched media from Event: message_id=1063 file='07. Primal Fear - Bleed for Me (By Primal Fear).mp3'
+[2026-07-27T01:37:54+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Downloading matched Telegram media: '07. Primal Fear - Bleed for Me (By Primal Fear).mp3'
+[2026-07-27T01:38:35+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Telegram media downloaded to: /data/TMDownload/_incoming/07. Primal Fear - Bleed for Me (By Primal Fear).mp3
+[2026-07-27T01:38:35+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | SUCCESS: saved as '07. Primal Fear - Bleed for Me (By Primal Fear).mp3'
+[2026-07-27T01:38:35+00:00] [MUSIC_HUNTERS] Primal Fear - Bleed for Me | Removed MusicsHuntersbot event handlers
+[SUCCESS] Primal Fear - Bleed for Me (Saved as: 07. Primal Fear - Bleed for Me (By Primal Fear).mp3)
+[2026-07-27T01:40:49+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:40:49+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:40:50+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:40:50+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Received Event result panel version=1: message_id=1072 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:40:50+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Search response received: kind=panel panel_version=1
+[2026-07-27T01:40:50+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Mapped numbered result '1' to matching candidate 'Primal Fear - Kill the King (By Primal Fear)'
+[2026-07-27T01:40:50+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:40:50+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Waiting 3.4s before the first automatic click
+[2026-07-27T01:40:53+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Automatic click attempt 1/3
+[2026-07-27T01:40:53+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:40:54+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:40:54+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Bot confirmed that the download started
+[2026-07-27T01:40:54+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:40:54+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Matched media from Event: message_id=1073 file='12. Primal Fear - Kill the King (By Primal Fear).mp3'
+[2026-07-27T01:40:54+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Downloading matched Telegram media: '12. Primal Fear - Kill the King (By Primal Fear).mp3'
+[2026-07-27T01:41:40+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Telegram media downloaded to: /data/TMDownload/_incoming/12. Primal Fear - Kill the King (By Primal Fear).mp3
+[2026-07-27T01:41:40+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | SUCCESS: saved as '12. Primal Fear - Kill the King (By Primal Fear).mp3'
+[2026-07-27T01:41:40+00:00] [MUSIC_HUNTERS] Primal Fear - Kill the King | Removed MusicsHuntersbot event handlers
+[SUCCESS] Primal Fear - Kill the King (Saved as: 12. Primal Fear - Kill the King (By Primal Fear).mp3)
+[2026-07-27T01:43:48+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:43:48+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:43:48+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:43:49+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Received Event result panel version=1: message_id=1086 buttons=16 labels=['1', '2', '3', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:43:49+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Search response received: kind=panel panel_version=1
+[2026-07-27T01:43:49+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Mapped numbered result '1' to matching candidate 'Primal Fear - Battalions of Hate (Remastered 2022)'
+[2026-07-27T01:43:49+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:43:49+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Waiting 3.5s before the first automatic click
+[2026-07-27T01:43:52+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Automatic click attempt 1/3
+[2026-07-27T01:43:52+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:43:52+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:43:52+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Bot confirmed that the download started
+[2026-07-27T01:43:52+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:43:53+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Matched media from Event: message_id=1089 file='10. Primal Fear - Battalions of Hate (Remastered 2022).mp3'
+[2026-07-27T01:43:53+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Downloading matched Telegram media: '10. Primal Fear - Battalions of Hate (Remastered 2022).mp3'
+[2026-07-27T01:44:35+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Telegram media downloaded to: /data/TMDownload/_incoming/10. Primal Fear - Battalions of Hate (Remastered 2022).mp3
+[2026-07-27T01:44:35+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | SUCCESS: saved as '10. Primal Fear - Battalions of Hate (Remastered 2022).mp3'
+[2026-07-27T01:44:35+00:00] [MUSIC_HUNTERS] Primal Fear - Battalions Of Hate | Removed MusicsHuntersbot event handlers
+[SUCCESS] Primal Fear - Battalions Of Hate (Saved as: 10. Primal Fear - Battalions of Hate (Remastered 2022).mp3)
+[2026-07-27T01:45:39+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:45:39+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:45:40+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:45:40+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Received Event result panel version=1: message_id=1098 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:45:40+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Search response received: kind=panel panel_version=1
+[2026-07-27T01:45:40+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Mapped numbered result '1' to matching candidate 'Gamma Ray - Blood Religion (Live)'
+[2026-07-27T01:45:40+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:45:40+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Waiting 3.2s before the first automatic click
+[2026-07-27T01:45:43+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Automatic click attempt 1/3
+[2026-07-27T01:45:43+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:45:43+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:45:43+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Bot confirmed that the download started
+[2026-07-27T01:45:43+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:45:46+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Matched media from Event: message_id=1099 file='06. Gamma Ray - Blood Religion (Live).mp3'
+[2026-07-27T01:45:46+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Downloading matched Telegram media: '06. Gamma Ray - Blood Religion (Live).mp3'
+[2026-07-27T01:47:05+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Telegram media downloaded to: /data/TMDownload/_incoming/06. Gamma Ray - Blood Religion (Live).mp3
+[2026-07-27T01:47:05+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | SUCCESS: saved as '06. Gamma Ray - Blood Religion (Live).mp3'
+[2026-07-27T01:47:05+00:00] [MUSIC_HUNTERS] Gamma Ray - Blood Religion | Removed MusicsHuntersbot event handlers
+[SUCCESS] Gamma Ray - Blood Religion (Saved as: 06. Gamma Ray - Blood Religion (Live).mp3)
+[2026-07-27T01:48:59+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:48:59+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:48:59+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:49:00+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Received Event result panel version=1: message_id=1101 buttons=17 labels=['1', '2', '3', '4', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:49:00+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Search response received: kind=panel panel_version=1
+[2026-07-27T01:49:00+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Mapped numbered result '1' to matching candidate 'Gamma Ray - Fight (Live)'
+[2026-07-27T01:49:00+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:49:00+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Waiting 3.1s before the first automatic click
+[2026-07-27T01:49:03+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Automatic click attempt 1/3
+[2026-07-27T01:49:03+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:49:03+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:49:03+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Bot confirmed that the download started
+[2026-07-27T01:49:03+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:49:05+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Matched media from Event: message_id=1102 file='05. Gamma Ray - Fight (Live).mp3'
+[2026-07-27T01:49:05+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Downloading matched Telegram media: '05. Gamma Ray - Fight (Live).mp3'
+[2026-07-27T01:49:42+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Telegram media downloaded to: /data/TMDownload/_incoming/05. Gamma Ray - Fight (Live).mp3
+[2026-07-27T01:49:42+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | SUCCESS: saved as '05. Gamma Ray - Fight (Live).mp3'
+[2026-07-27T01:49:42+00:00] [MUSIC_HUNTERS] Gamma Ray - Fight | Removed MusicsHuntersbot event handlers
+[SUCCESS] Gamma Ray - Fight (Saved as: 05. Gamma Ray - Fight (Live).mp3)
+[2026-07-27T01:50:43+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:50:43+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:50:43+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:50:43+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Received Event result panel version=1: message_id=1104 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:50:43+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Search response received: kind=panel panel_version=1
+[2026-07-27T01:50:43+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Mapped numbered result '1' to matching candidate "Blind Guardian - Don't Talk to Strangers (Remastered 2007)"
+[2026-07-27T01:50:43+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:50:43+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Waiting 3.2s before the first automatic click
+[2026-07-27T01:50:46+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Automatic click attempt 1/3
+[2026-07-27T01:50:46+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:50:47+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:50:47+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Bot confirmed that the download started
+[2026-07-27T01:50:47+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:50:47+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Matched media from Event: message_id=1105 file="16_Blind_Guardian_Don't_Talk_to_Strangers_Remastered_2007.mp3"
+[2026-07-27T01:50:47+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Downloading matched Telegram media: "16_Blind_Guardian_Don't_Talk_to_Strangers_Remastered_2007.mp3"
+[2026-07-27T01:51:37+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Telegram media downloaded to: /data/TMDownload/_incoming/16_Blind_Guardian_Don't_Talk_to_Strangers_Remastered_2007.mp3
+[2026-07-27T01:51:37+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | SUCCESS: saved as "16_Blind_Guardian_Don't_Talk_to_Strangers_Remastered_2007.mp3"
+[2026-07-27T01:51:37+00:00] [MUSIC_HUNTERS] Blind Guardian - Don't Talk to Strangers | Removed MusicsHuntersbot event handlers
+[SUCCESS] Blind Guardian - Don't Talk to Strangers (Saved as: 16_Blind_Guardian_Don't_Talk_to_Strangers_Remastered_2007.mp3)
+[2026-07-27T01:53:38+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:53:38+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:53:38+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:53:39+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Received Event result panel version=1: message_id=1112 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:53:39+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Search response received: kind=panel panel_version=1
+[2026-07-27T01:53:39+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Mapped numbered result '1' to matching candidate 'Gamma Ray - Empathy (Live from the Final Studio Sessions)'
+[2026-07-27T01:53:39+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:53:39+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Waiting 5.0s before the first automatic click
+[2026-07-27T01:53:44+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Automatic click attempt 1/3
+[2026-07-27T01:53:44+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:53:44+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:53:44+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Bot confirmed that the download started
+[2026-07-27T01:53:44+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:53:44+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Matched media from Event: message_id=1113 file='02_Gamma_Ray_Empathy_Live_from_the_Final_Studio_Sessions.mp3'
+[2026-07-27T01:53:44+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Downloading matched Telegram media: '02_Gamma_Ray_Empathy_Live_from_the_Final_Studio_Sessions.mp3'
+[2026-07-27T01:54:30+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Telegram media downloaded to: /data/TMDownload/_incoming/02_Gamma_Ray_Empathy_Live_from_the_Final_Studio_Sessions.mp3
+[2026-07-27T01:54:30+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | SUCCESS: saved as '02_Gamma_Ray_Empathy_Live_from_the_Final_Studio_Sessions.mp3'
+[2026-07-27T01:54:30+00:00] [MUSIC_HUNTERS] Gamma Ray - Empathy | Removed MusicsHuntersbot event handlers
+[SUCCESS] Gamma Ray - Empathy (Saved as: 02_Gamma_Ray_Empathy_Live_from_the_Final_Studio_Sessions.mp3)
+[2026-07-27T01:55:40+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:55:40+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:55:40+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:55:41+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Received Event result panel version=1: message_id=1115 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:55:41+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Search response received: kind=panel panel_version=1
+[2026-07-27T01:55:41+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Mapped numbered result '1' to matching candidate 'Gamma Ray - Man On A Mission (Live)'
+[2026-07-27T01:55:41+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:55:41+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Waiting 5.0s before the first automatic click
+[2026-07-27T01:55:46+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Automatic click attempt 1/3
+[2026-07-27T01:55:46+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:55:46+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:55:46+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Bot confirmed that the download started
+[2026-07-27T01:55:46+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:55:47+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Matched media from Event: message_id=1116 file='04. Gamma Ray - Man On A Mission (Live).mp3'
+[2026-07-27T01:55:47+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Downloading matched Telegram media: '04. Gamma Ray - Man On A Mission (Live).mp3'
+[2026-07-27T01:56:33+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Telegram media downloaded to: /data/TMDownload/_incoming/04. Gamma Ray - Man On A Mission (Live).mp3
+[2026-07-27T01:56:33+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | SUCCESS: saved as '04. Gamma Ray - Man On A Mission (Live).mp3'
+[2026-07-27T01:56:33+00:00] [MUSIC_HUNTERS] Gamma Ray - Man on a Mission (Live) | Removed MusicsHuntersbot event handlers
+[SUCCESS] Gamma Ray - Man on a Mission (Live) (Saved as: 04. Gamma Ray - Man On A Mission (Live).mp3)
+[2026-07-27T01:58:35+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T01:58:35+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Sending search query to @MusicsHuntersbot
+[2026-07-27T01:58:35+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Search query sent; waiting for a result panel or matching media
+[2026-07-27T01:58:35+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Received Event result panel version=1: message_id=1118 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T01:58:35+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Search response received: kind=panel panel_version=1
+[2026-07-27T01:58:35+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Mapped numbered result '1' to matching candidate 'Gamma Ray - New World Order (Live)'
+[2026-07-27T01:58:35+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T01:58:35+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Waiting 3.7s before the first automatic click
+[2026-07-27T01:58:39+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Automatic click attempt 1/3
+[2026-07-27T01:58:39+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T01:58:39+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T01:58:39+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Bot confirmed that the download started
+[2026-07-27T01:58:39+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T01:58:40+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Matched media from Event: message_id=1119 file='03. Gamma Ray - New World Order (Live).mp3'
+[2026-07-27T01:58:40+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Downloading matched Telegram media: '03. Gamma Ray - New World Order (Live).mp3'
+[2026-07-27T01:59:40+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Telegram media downloaded to: /data/TMDownload/_incoming/03. Gamma Ray - New World Order (Live).mp3
+[2026-07-27T01:59:40+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | SUCCESS: saved as '03. Gamma Ray - New World Order (Live).mp3'
+[2026-07-27T01:59:40+00:00] [MUSIC_HUNTERS] Gamma Ray - New World Order (Live) | Removed MusicsHuntersbot event handlers
+[SUCCESS] Gamma Ray - New World Order (Live) (Saved as: 03. Gamma Ray - New World Order (Live).mp3)
+[2026-07-27T02:01:02+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:01:02+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:01:02+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:01:03+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Received Event result panel version=1: message_id=1121 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:01:03+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Search response received: kind=panel panel_version=1
+[2026-07-27T02:01:03+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Mapped numbered result '1' to matching candidate 'Gamma Ray - Gardens Of The Sinner (Live)'
+[2026-07-27T02:01:03+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:01:03+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Waiting 4.4s before the first automatic click
+[2026-07-27T02:01:07+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Automatic click attempt 1/3
+[2026-07-27T02:01:07+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:01:08+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:01:08+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Bot confirmed that the download started
+[2026-07-27T02:01:08+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:01:09+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Matched media from Event: message_id=1122 file='02. Gamma Ray - Gardens Of The Sinner (Live).mp3'
+[2026-07-27T02:01:09+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Downloading matched Telegram media: '02. Gamma Ray - Gardens Of The Sinner (Live).mp3'
+[2026-07-27T02:02:07+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Telegram media downloaded to: /data/TMDownload/_incoming/02. Gamma Ray - Gardens Of The Sinner (Live).mp3
+[2026-07-27T02:02:07+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | SUCCESS: saved as '02. Gamma Ray - Gardens Of The Sinner (Live).mp3'
+[2026-07-27T02:02:07+00:00] [MUSIC_HUNTERS] Gamma Ray - Gardens of the Sinner (Live) | Removed MusicsHuntersbot event handlers
+[SUCCESS] Gamma Ray - Gardens of the Sinner (Live) (Saved as: 02. Gamma Ray - Gardens Of The Sinner (Live).mp3)
+[2026-07-27T02:03:07+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:03:07+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:03:08+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:03:08+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Received Event result panel version=1: message_id=1124 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:03:08+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Search response received: kind=panel panel_version=1
+[2026-07-27T02:03:08+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Mapped numbered result '1' to matching candidate 'Gamma Ray - Demonseed (Live from the Final Studio Sessions)'
+[2026-07-27T02:03:08+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:03:08+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Waiting 4.7s before the first automatic click
+[2026-07-27T02:03:12+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Automatic click attempt 1/3
+[2026-07-27T02:03:12+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:03:13+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:03:13+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Bot confirmed that the download started
+[2026-07-27T02:03:13+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:03:13+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Matched media from Event: message_id=1125 file='02_Gamma_Ray_Demonseed_Live_from_the_Final_Studio_Sessions.mp3'
+[2026-07-27T02:03:13+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Downloading matched Telegram media: '02_Gamma_Ray_Demonseed_Live_from_the_Final_Studio_Sessions.mp3'
+[2026-07-27T02:04:41+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Telegram media downloaded to: /data/TMDownload/_incoming/02_Gamma_Ray_Demonseed_Live_from_the_Final_Studio_Sessions.mp3
+[2026-07-27T02:04:41+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | SUCCESS: saved as '02_Gamma_Ray_Demonseed_Live_from_the_Final_Studio_Sessions.mp3'
+[2026-07-27T02:04:41+00:00] [MUSIC_HUNTERS] Gamma Ray - Demonseed | Removed MusicsHuntersbot event handlers
+[SUCCESS] Gamma Ray - Demonseed (Saved as: 02_Gamma_Ray_Demonseed_Live_from_the_Final_Studio_Sessions.mp3)
+[2026-07-27T02:06:41+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:06:41+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:06:41+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:06:41+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Received Event result panel version=1: message_id=1127 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:06:41+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Search response received: kind=panel panel_version=1
+[2026-07-27T02:06:41+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Mapped numbered result '1' to matching candidate 'Running Wild - Freewind Rider'
+[2026-07-27T02:06:41+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:06:41+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Waiting 4.3s before the first automatic click
+[2026-07-27T02:06:45+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Automatic click attempt 1/3
+[2026-07-27T02:06:45+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:06:46+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:06:46+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Bot confirmed that the download started
+[2026-07-27T02:06:46+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:06:47+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Matched media from Event: message_id=1128 file='08. Running Wild - Freewind Rider.mp3'
+[2026-07-27T02:06:47+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Downloading matched Telegram media: '08. Running Wild - Freewind Rider.mp3'
+[2026-07-27T02:07:40+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Telegram media downloaded to: /data/TMDownload/_incoming/08. Running Wild - Freewind Rider.mp3
+[2026-07-27T02:07:40+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | SUCCESS: saved as '08. Running Wild - Freewind Rider.mp3'
+[2026-07-27T02:07:40+00:00] [MUSIC_HUNTERS] Running Wild - Freewind Rider | Removed MusicsHuntersbot event handlers
+[SUCCESS] Running Wild - Freewind Rider (Saved as: 08. Running Wild - Freewind Rider.mp3)
+[2026-07-27T02:09:05+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:09:05+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:09:05+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:09:05+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Received Event result panel version=1: message_id=1130 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:09:05+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Search response received: kind=panel panel_version=1
+[2026-07-27T02:09:05+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Mapped numbered result '1' to matching candidate 'Running Wild - Fight The Fire Of Hate'
+[2026-07-27T02:09:05+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:09:05+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Waiting 3.3s before the first automatic click
+[2026-07-27T02:09:09+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Automatic click attempt 1/3
+[2026-07-27T02:09:09+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:09:09+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:09:09+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Bot confirmed that the download started
+[2026-07-27T02:09:09+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:09:15+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Matched media from Event: message_id=1131 file='06. Running Wild - Fight The Fire Of Hate.mp3'
+[2026-07-27T02:09:15+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Downloading matched Telegram media: '06. Running Wild - Fight The Fire Of Hate.mp3'
+[2026-07-27T02:10:24+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Telegram media downloaded to: /data/TMDownload/_incoming/06. Running Wild - Fight The Fire Of Hate.mp3
+[2026-07-27T02:10:24+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | SUCCESS: saved as '06. Running Wild - Fight The Fire Of Hate.mp3'
+[2026-07-27T02:10:24+00:00] [MUSIC_HUNTERS] Running Wild - Fight The Fire Of Hate | Removed MusicsHuntersbot event handlers
+[SUCCESS] Running Wild - Fight The Fire Of Hate (Saved as: 06. Running Wild - Fight The Fire Of Hate.mp3)
+[2026-07-27T02:11:24+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:11:24+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:11:24+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:11:24+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Received Event result panel version=1: message_id=1133 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:11:24+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Search response received: kind=panel panel_version=1
+[2026-07-27T02:11:24+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Mapped numbered result '1' to matching candidate 'Running Wild - Lead Or Gold'
+[2026-07-27T02:11:24+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:11:24+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Waiting 3.1s before the first automatic click
+[2026-07-27T02:11:27+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Automatic click attempt 1/3
+[2026-07-27T02:11:27+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:11:28+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:11:28+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Bot confirmed that the download started
+[2026-07-27T02:11:28+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:11:28+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Matched media from Event: message_id=1134 file='08. Running Wild - Lead Or Gold.mp3'
+[2026-07-27T02:11:28+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Downloading matched Telegram media: '08. Running Wild - Lead Or Gold.mp3'
+[2026-07-27T02:12:21+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Telegram media downloaded to: /data/TMDownload/_incoming/08. Running Wild - Lead Or Gold.mp3
+[2026-07-27T02:12:21+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | SUCCESS: saved as '08. Running Wild - Lead Or Gold.mp3'
+[2026-07-27T02:12:21+00:00] [MUSIC_HUNTERS] Running Wild - Lead Or Gold | Removed MusicsHuntersbot event handlers
+[SUCCESS] Running Wild - Lead Or Gold (Saved as: 08. Running Wild - Lead Or Gold.mp3)
+[2026-07-27T02:14:08+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:14:08+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:14:08+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:14:09+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Received Event result panel version=1: message_id=1136 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:14:09+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Search response received: kind=panel panel_version=1
+[2026-07-27T02:14:09+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Mapped numbered result '1' to matching candidate 'Running Wild - Whirlwind (Rerecorded / Version 2003)'
+[2026-07-27T02:14:09+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:14:09+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Waiting 4.0s before the first automatic click
+[2026-07-27T02:14:13+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Automatic click attempt 1/3
+[2026-07-27T02:14:13+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:14:13+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:14:13+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Bot confirmed that the download started
+[2026-07-27T02:14:13+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:14:14+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Matched media from Event: message_id=1137 file='02. Running Wild - Whirlwind (Rerecorded _ Version 2003).mp3'
+[2026-07-27T02:14:14+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Downloading matched Telegram media: '02. Running Wild - Whirlwind (Rerecorded _ Version 2003).mp3'
+[2026-07-27T02:15:07+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Telegram media downloaded to: /data/TMDownload/_incoming/02. Running Wild - Whirlwind (Rerecorded _ Version 2003).mp3
+[2026-07-27T02:15:07+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | SUCCESS: saved as '02. Running Wild - Whirlwind (Rerecorded _ Version 2003).mp3'
+[2026-07-27T02:15:07+00:00] [MUSIC_HUNTERS] Running Wild - Whirlwind (Rerecorded / Version 2003) | Removed MusicsHuntersbot event handlers
+[SUCCESS] Running Wild - Whirlwind (Rerecorded / Version 2003) (Saved as: 02. Running Wild - Whirlwind (Rerecorded _ Version 2003).mp3)
+[2026-07-27T02:16:39+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:16:39+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:16:39+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:16:40+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Received Event result panel version=1: message_id=1139 buttons=21 labels=['1', '2', '3', '4', '5', '6', '7', '❌', '➡️', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:16:40+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Search response received: kind=panel panel_version=1
+[2026-07-27T02:16:40+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Mapped numbered result '1' to matching candidate 'Edguy - Vain Glory Opera'
+[2026-07-27T02:16:40+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:16:40+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Waiting 3.0s before the first automatic click
+[2026-07-27T02:16:43+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Automatic click attempt 1/3
+[2026-07-27T02:16:43+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:16:43+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:16:43+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Bot confirmed that the download started
+[2026-07-27T02:16:43+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:16:43+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Matched media from Event: message_id=1140 file='06 - Edguy - Vain Glory Opera.mp3'
+[2026-07-27T02:16:43+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Downloading matched Telegram media: '06 - Edguy - Vain Glory Opera.mp3'
+[2026-07-27T02:17:32+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Telegram media downloaded to: /data/TMDownload/_incoming/06 - Edguy - Vain Glory Opera.mp3
+[2026-07-27T02:17:32+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | SUCCESS: saved as '06 - Edguy - Vain Glory Opera.mp3'
+[2026-07-27T02:17:32+00:00] [MUSIC_HUNTERS] Edguy - Vain Glory Opera | Removed MusicsHuntersbot event handlers
+[SUCCESS] Edguy - Vain Glory Opera (Saved as: 06 - Edguy - Vain Glory Opera.mp3)
+[2026-07-27T02:19:51+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:19:51+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:19:51+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:19:51+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Received Event result panel version=1: message_id=1142 buttons=17 labels=['1', '2', '3', '4', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:19:51+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Search response received: kind=panel panel_version=1
+[2026-07-27T02:19:51+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Mapped numbered result '1' to matching candidate 'Edguy - Avantasia (Live)'
+[2026-07-27T02:19:51+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:19:51+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Waiting 3.8s before the first automatic click
+[2026-07-27T02:19:55+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Automatic click attempt 1/3
+[2026-07-27T02:19:55+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:19:55+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:19:55+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Bot confirmed that the download started
+[2026-07-27T02:19:55+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:19:55+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Matched media from Event: message_id=1143 file='06 - Edguy - Avantasia (Live).mp3'
+[2026-07-27T02:19:55+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Downloading matched Telegram media: '06 - Edguy - Avantasia (Live).mp3'
+[2026-07-27T02:20:47+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Telegram media downloaded to: /data/TMDownload/_incoming/06 - Edguy - Avantasia (Live).mp3
+[2026-07-27T02:20:47+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | SUCCESS: saved as '06 - Edguy - Avantasia (Live).mp3'
+[2026-07-27T02:20:47+00:00] [MUSIC_HUNTERS] Edguy - Avantasia | Removed MusicsHuntersbot event handlers
+[SUCCESS] Edguy - Avantasia (Saved as: 06 - Edguy - Avantasia (Live).mp3)
+[2026-07-27T02:22:30+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:22:30+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:22:30+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:22:30+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Received Event result panel version=1: message_id=1145 buttons=15 labels=['1', '2', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:22:30+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Search response received: kind=panel panel_version=1
+[2026-07-27T02:22:30+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Mapped numbered result '1' to matching candidate 'Edguy - Key to My Fate'
+[2026-07-27T02:22:30+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:22:30+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Waiting 3.5s before the first automatic click
+[2026-07-27T02:22:34+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Automatic click attempt 1/3
+[2026-07-27T02:22:34+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:22:34+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:22:34+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Bot confirmed that the download started
+[2026-07-27T02:22:34+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:22:34+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Matched media from Event: message_id=1146 file='03 - Edguy - Key to My Fate.mp3'
+[2026-07-27T02:22:34+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Downloading matched Telegram media: '03 - Edguy - Key to My Fate.mp3'
+[2026-07-27T02:23:13+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Telegram media downloaded to: /data/TMDownload/_incoming/03 - Edguy - Key to My Fate.mp3
+[2026-07-27T02:23:13+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | SUCCESS: saved as '03 - Edguy - Key to My Fate.mp3'
+[2026-07-27T02:23:13+00:00] [MUSIC_HUNTERS] Edguy - Key to My Fate | Removed MusicsHuntersbot event handlers
+[SUCCESS] Edguy - Key to My Fate (Saved as: 03 - Edguy - Key to My Fate.mp3)
+[2026-07-27T02:24:27+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:24:27+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:24:27+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:24:27+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Received Event result panel version=1: message_id=1148 buttons=15 labels=['1', '2', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:24:27+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Search response received: kind=panel panel_version=1
+[2026-07-27T02:24:27+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Mapped numbered result '1' to matching candidate 'Edguy - Robin Hood'
+[2026-07-27T02:24:27+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:24:27+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Waiting 4.6s before the first automatic click
+[2026-07-27T02:24:32+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Automatic click attempt 1/3
+[2026-07-27T02:24:32+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:24:32+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:24:32+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Bot confirmed that the download started
+[2026-07-27T02:24:32+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:24:32+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Matched media from Event: message_id=1149 file='01 - Edguy - Robin Hood.mp3'
+[2026-07-27T02:24:32+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Downloading matched Telegram media: '01 - Edguy - Robin Hood.mp3'
+[2026-07-27T02:25:36+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Telegram media downloaded to: /data/TMDownload/_incoming/01 - Edguy - Robin Hood.mp3
+[2026-07-27T02:25:36+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | SUCCESS: saved as '01 - Edguy - Robin Hood.mp3'
+[2026-07-27T02:25:36+00:00] [MUSIC_HUNTERS] Edguy - Robin Hood | Removed MusicsHuntersbot event handlers
+[SUCCESS] Edguy - Robin Hood (Saved as: 01 - Edguy - Robin Hood.mp3)
+[2026-07-27T02:27:25+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:27:25+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:27:25+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:27:25+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Received Event result panel version=1: message_id=1151 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:27:25+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Search response received: kind=panel panel_version=1
+[2026-07-27T02:27:25+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Mapped numbered result '1' to matching candidate 'Edguy - The Piper Never Dies'
+[2026-07-27T02:27:25+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:27:25+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Waiting 4.8s before the first automatic click
+[2026-07-27T02:27:30+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Automatic click attempt 1/3
+[2026-07-27T02:27:30+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:27:30+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:27:30+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Bot confirmed that the download started
+[2026-07-27T02:27:30+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:27:30+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Matched media from Event: message_id=1152 file='02 - Edguy - The Piper Never Dies.mp3'
+[2026-07-27T02:27:30+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Downloading matched Telegram media: '02 - Edguy - The Piper Never Dies.mp3'
+[2026-07-27T02:29:16+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Telegram media downloaded to: /data/TMDownload/_incoming/02 - Edguy - The Piper Never Dies.mp3
+[2026-07-27T02:29:16+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | SUCCESS: saved as '02 - Edguy - The Piper Never Dies.mp3'
+[2026-07-27T02:29:16+00:00] [MUSIC_HUNTERS] Edguy - The Piper Never Dies | Removed MusicsHuntersbot event handlers
+[SUCCESS] Edguy - The Piper Never Dies (Saved as: 02 - Edguy - The Piper Never Dies.mp3)
+[2026-07-27T02:30:53+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:30:53+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:30:53+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:30:53+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Received Event result panel version=1: message_id=1154 buttons=15 labels=['1', '2', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:30:53+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Search response received: kind=panel panel_version=1
+[2026-07-27T02:30:53+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Mapped numbered result '1' to matching candidate 'Edguy - Mysteria'
+[2026-07-27T02:30:53+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:30:53+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Waiting 4.2s before the first automatic click
+[2026-07-27T02:30:58+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Automatic click attempt 1/3
+[2026-07-27T02:30:58+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:30:58+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:30:58+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Bot confirmed that the download started
+[2026-07-27T02:30:58+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:30:58+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Matched media from Event: message_id=1155 file='01 - Edguy - Mysteria.mp3'
+[2026-07-27T02:30:58+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Downloading matched Telegram media: '01 - Edguy - Mysteria.mp3'
+[2026-07-27T02:31:48+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Telegram media downloaded to: /data/TMDownload/_incoming/01 - Edguy - Mysteria.mp3
+[2026-07-27T02:31:48+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | SUCCESS: saved as '01 - Edguy - Mysteria.mp3'
+[2026-07-27T02:31:48+00:00] [MUSIC_HUNTERS] Edguy - Mysteria | Removed MusicsHuntersbot event handlers
+[SUCCESS] Edguy - Mysteria (Saved as: 01 - Edguy - Mysteria.mp3)
+[2026-07-27T02:34:07+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:34:07+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:34:08+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:34:08+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Received Event result panel version=1: message_id=1158 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:34:08+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Search response received: kind=panel panel_version=1
+[2026-07-27T02:34:08+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Mapped numbered result '1' to matching candidate 'Edguy - Life and Times of a Bonustrack'
+[2026-07-27T02:34:08+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:34:08+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Waiting 3.5s before the first automatic click
+[2026-07-27T02:34:11+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Automatic click attempt 1/3
+[2026-07-27T02:34:11+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:34:12+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:34:12+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Bot confirmed that the download started
+[2026-07-27T02:34:12+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:34:12+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Matched media from Event: message_id=1159 file='05 - Edguy - Life and Times of a Bonustrack.mp3'
+[2026-07-27T02:34:12+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Downloading matched Telegram media: '05 - Edguy - Life and Times of a Bonustrack.mp3'
+[2026-07-27T02:34:40+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Telegram media downloaded to: /data/TMDownload/_incoming/05 - Edguy - Life and Times of a Bonustrack.mp3
+[2026-07-27T02:34:40+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | SUCCESS: saved as '05 - Edguy - Life and Times of a Bonustrack.mp3'
+[2026-07-27T02:34:40+00:00] [MUSIC_HUNTERS] Edguy - Life And Times Of A Bonus Track | Removed MusicsHuntersbot event handlers
+[SUCCESS] Edguy - Life And Times Of A Bonus Track (Saved as: 05 - Edguy - Life and Times of a Bonustrack.mp3)
+[2026-07-27T02:37:02+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:37:02+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:37:03+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:37:03+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Received Event result panel version=1: message_id=1163 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:37:03+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Search response received: kind=panel panel_version=1
+[2026-07-27T02:37:03+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Mapped numbered result '1' to matching candidate 'Edguy - Holy Water'
+[2026-07-27T02:37:03+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:37:03+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Waiting 3.3s before the first automatic click
+[2026-07-27T02:37:06+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Automatic click attempt 1/3
+[2026-07-27T02:37:06+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:37:07+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:37:07+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Bot confirmed that the download started
+[2026-07-27T02:37:07+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:37:07+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Matched media from Event: message_id=1164 file='04 - Edguy - Holy Water.mp3'
+[2026-07-27T02:37:07+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Downloading matched Telegram media: '04 - Edguy - Holy Water.mp3'
+[2026-07-27T02:37:41+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Telegram media downloaded to: /data/TMDownload/_incoming/04 - Edguy - Holy Water.mp3
+[2026-07-27T02:37:41+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | SUCCESS: saved as '04 - Edguy - Holy Water.mp3'
+[2026-07-27T02:37:41+00:00] [MUSIC_HUNTERS] Edguy - Holy Water | Removed MusicsHuntersbot event handlers
+[SUCCESS] Edguy - Holy Water (Saved as: 04 - Edguy - Holy Water.mp3)
+[2026-07-27T02:40:05+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T02:40:05+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Sending search query to @MusicsHuntersbot
+[2026-07-27T02:40:06+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Search query sent; waiting for a result panel or matching media
+[2026-07-27T02:40:06+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Received Event result panel version=1: message_id=1168 buttons=14 labels=['1', '❌', '✅ Tracks', '☑️ Albums', '☑️ Playlists', '☑️ Artists', '✅ Deezer', '☑️ Spotify', '☑️ Qobuz', '☑️ Beatport', '☑️ Tidal', '☑️ Apple', '☑️ Soundcloud', '☑️ Amazon']
+[2026-07-27T02:40:06+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Search response received: kind=panel panel_version=1
+[2026-07-27T02:40:06+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Mapped numbered result '1' to matching candidate 'Edguy - New Age Messiah'
+[2026-07-27T02:40:06+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Selected matching track button: row=0 column=0 text='1'
+[2026-07-27T02:40:06+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Waiting 4.9s before the first automatic click
+[2026-07-27T02:40:11+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Automatic click attempt 1/3
+[2026-07-27T02:40:11+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Clicking track result: row=0 column=0 text='1'
+[2026-07-27T02:40:11+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Callback completed for track result; bot reply='Download started...'
+[2026-07-27T02:40:11+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Bot confirmed that the download started
+[2026-07-27T02:40:11+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Confirmed callback; waiting up to 120.0s for media
+[2026-07-27T02:40:11+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Matched media from Event: message_id=1169 file='02 - Edguy - New Age Messiah.mp3'
+[2026-07-27T02:40:11+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Downloading matched Telegram media: '02 - Edguy - New Age Messiah.mp3'
+[2026-07-27T02:41:00+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Telegram media downloaded to: /data/TMDownload/_incoming/02 - Edguy - New Age Messiah.mp3
+[2026-07-27T02:41:00+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | SUCCESS: saved as '02 - Edguy - New Age Messiah.mp3'
+[2026-07-27T02:41:00+00:00] [MUSIC_HUNTERS] Edguy - New Age Messiah | Removed MusicsHuntersbot event handlers
+[SUCCESS] Edguy - New Age Messiah (Saved as: 02 - Edguy - New Age Messiah.mp3)
+[2026-07-27T03:41:00+00:00] [MUSIC_HUNTERS] Edguy - King Of Fools | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T03:41:00+00:00] [MUSIC_HUNTERS] Edguy - King Of Fools | Sending search query to @MusicsHuntersbot
+[2026-07-27T03:41:00+00:00] [MUSIC_HUNTERS] Edguy - King Of Fools | Search query sent; waiting for a result panel or matching media
+[2026-07-27T03:43:00+00:00] [MUSIC_HUNTERS] Edguy - King Of Fools | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T03:43:00+00:00] [MUSIC_HUNTERS] Edguy - King Of Fools | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - King Of Fools (Timeout waiting for media)
+[2026-07-27T03:45:15+00:00] [MUSIC_HUNTERS] Edguy - I'll Cry For You | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T03:45:15+00:00] [MUSIC_HUNTERS] Edguy - I'll Cry For You | Sending search query to @MusicsHuntersbot
+[2026-07-27T03:45:15+00:00] [MUSIC_HUNTERS] Edguy - I'll Cry For You | Search query sent; waiting for a result panel or matching media
+[2026-07-27T03:47:15+00:00] [MUSIC_HUNTERS] Edguy - I'll Cry For You | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T03:47:15+00:00] [MUSIC_HUNTERS] Edguy - I'll Cry For You | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - I'll Cry For You (Timeout waiting for media)
+[2026-07-27T03:49:35+00:00] [MUSIC_HUNTERS] Edguy - Lavatory Love Machine (Acoustic Version) | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T03:49:35+00:00] [MUSIC_HUNTERS] Edguy - Lavatory Love Machine (Acoustic Version) | Sending search query to @MusicsHuntersbot
+[2026-07-27T03:49:35+00:00] [MUSIC_HUNTERS] Edguy - Lavatory Love Machine (Acoustic Version) | Search query sent; waiting for a result panel or matching media
+[2026-07-27T03:51:35+00:00] [MUSIC_HUNTERS] Edguy - Lavatory Love Machine (Acoustic Version) | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T03:51:35+00:00] [MUSIC_HUNTERS] Edguy - Lavatory Love Machine (Acoustic Version) | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Lavatory Love Machine (Acoustic Version) (Timeout waiting for media)
+[2026-07-27T03:52:37+00:00] [MUSIC_HUNTERS] Edguy - Lavatory Love Machine | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T03:52:37+00:00] [MUSIC_HUNTERS] Edguy - Lavatory Love Machine | Sending search query to @MusicsHuntersbot
+[2026-07-27T03:52:37+00:00] [MUSIC_HUNTERS] Edguy - Lavatory Love Machine | Search query sent; waiting for a result panel or matching media
+[2026-07-27T03:54:37+00:00] [MUSIC_HUNTERS] Edguy - Lavatory Love Machine | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T03:54:37+00:00] [MUSIC_HUNTERS] Edguy - Lavatory Love Machine | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Lavatory Love Machine (Timeout waiting for media)
+[2026-07-27T03:56:15+00:00] [MUSIC_HUNTERS] Edguy - Superheroes (Epic Version) | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T03:56:15+00:00] [MUSIC_HUNTERS] Edguy - Superheroes (Epic Version) | Sending search query to @MusicsHuntersbot
+[2026-07-27T03:56:15+00:00] [MUSIC_HUNTERS] Edguy - Superheroes (Epic Version) | Search query sent; waiting for a result panel or matching media
+[2026-07-27T03:58:15+00:00] [MUSIC_HUNTERS] Edguy - Superheroes (Epic Version) | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T03:58:15+00:00] [MUSIC_HUNTERS] Edguy - Superheroes (Epic Version) | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Superheroes (Epic Version) (Timeout waiting for media)
+[2026-07-27T04:00:35+00:00] [MUSIC_HUNTERS] Edguy - The Spirit | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:00:35+00:00] [MUSIC_HUNTERS] Edguy - The Spirit | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:00:35+00:00] [MUSIC_HUNTERS] Edguy - The Spirit | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:02:35+00:00] [MUSIC_HUNTERS] Edguy - The Spirit | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:02:35+00:00] [MUSIC_HUNTERS] Edguy - The Spirit | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - The Spirit (Timeout waiting for media)
+[2026-07-27T04:04:04+00:00] [MUSIC_HUNTERS] Edguy - Judas At The Opera | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:04:04+00:00] [MUSIC_HUNTERS] Edguy - Judas At The Opera | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:04:04+00:00] [MUSIC_HUNTERS] Edguy - Judas At The Opera | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:06:04+00:00] [MUSIC_HUNTERS] Edguy - Judas At The Opera | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:06:04+00:00] [MUSIC_HUNTERS] Edguy - Judas At The Opera | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Judas At The Opera (Timeout waiting for media)
+[2026-07-27T04:07:41+00:00] [MUSIC_HUNTERS] Edguy - Blessing In Disguise | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:07:41+00:00] [MUSIC_HUNTERS] Edguy - Blessing In Disguise | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:07:41+00:00] [MUSIC_HUNTERS] Edguy - Blessing In Disguise | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:09:41+00:00] [MUSIC_HUNTERS] Edguy - Blessing In Disguise | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:09:41+00:00] [MUSIC_HUNTERS] Edguy - Blessing In Disguise | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Blessing In Disguise (Timeout waiting for media)
+[2026-07-27T04:12:05+00:00] [MUSIC_HUNTERS] Edguy - Spooks In The Attic | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:12:05+00:00] [MUSIC_HUNTERS] Edguy - Spooks In The Attic | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:12:05+00:00] [MUSIC_HUNTERS] Edguy - Spooks In The Attic | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:14:05+00:00] [MUSIC_HUNTERS] Edguy - Spooks In The Attic | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:14:05+00:00] [MUSIC_HUNTERS] Edguy - Spooks In The Attic | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Spooks In The Attic (Timeout waiting for media)
+[2026-07-27T04:15:27+00:00] [MUSIC_HUNTERS] Edguy - Trinidad | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:15:27+00:00] [MUSIC_HUNTERS] Edguy - Trinidad | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:15:27+00:00] [MUSIC_HUNTERS] Edguy - Trinidad | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:17:27+00:00] [MUSIC_HUNTERS] Edguy - Trinidad | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:17:27+00:00] [MUSIC_HUNTERS] Edguy - Trinidad | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Trinidad (Timeout waiting for media)
+[2026-07-27T04:18:43+00:00] [MUSIC_HUNTERS] Edguy - Out Of Vogue | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:18:43+00:00] [MUSIC_HUNTERS] Edguy - Out Of Vogue | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:18:43+00:00] [MUSIC_HUNTERS] Edguy - Out Of Vogue | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:20:43+00:00] [MUSIC_HUNTERS] Edguy - Out Of Vogue | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:20:43+00:00] [MUSIC_HUNTERS] Edguy - Out Of Vogue | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Out Of Vogue (Timeout waiting for media)
+[2026-07-27T04:22:29+00:00] [MUSIC_HUNTERS] Edguy - Hymn (Ultravox cover) | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:22:29+00:00] [MUSIC_HUNTERS] Edguy - Hymn (Ultravox cover) | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:22:30+00:00] [MUSIC_HUNTERS] Edguy - Hymn (Ultravox cover) | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:24:29+00:00] [MUSIC_HUNTERS] Edguy - Hymn (Ultravox cover) | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:24:29+00:00] [MUSIC_HUNTERS] Edguy - Hymn (Ultravox cover) | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Hymn (Ultravox cover) (Timeout waiting for media)
+[2026-07-27T04:26:18+00:00] [MUSIC_HUNTERS] Edguy - No More Foolin' | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:26:18+00:00] [MUSIC_HUNTERS] Edguy - No More Foolin' | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:26:19+00:00] [MUSIC_HUNTERS] Edguy - No More Foolin' | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:28:18+00:00] [MUSIC_HUNTERS] Edguy - No More Foolin' | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:28:18+00:00] [MUSIC_HUNTERS] Edguy - No More Foolin' | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - No More Foolin' (Timeout waiting for media)
+[2026-07-27T04:29:43+00:00] [MUSIC_HUNTERS] Edguy - Catch Of The Century | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:29:43+00:00] [MUSIC_HUNTERS] Edguy - Catch Of The Century | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:29:43+00:00] [MUSIC_HUNTERS] Edguy - Catch Of The Century | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:31:43+00:00] [MUSIC_HUNTERS] Edguy - Catch Of The Century | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:31:43+00:00] [MUSIC_HUNTERS] Edguy - Catch Of The Century | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Catch Of The Century (Timeout waiting for media)
+[2026-07-27T04:33:40+00:00] [MUSIC_HUNTERS] Edguy - La Marche des Gendarmes | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:33:40+00:00] [MUSIC_HUNTERS] Edguy - La Marche des Gendarmes | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:33:41+00:00] [MUSIC_HUNTERS] Edguy - La Marche des Gendarmes | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:35:40+00:00] [MUSIC_HUNTERS] Edguy - La Marche des Gendarmes | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:35:40+00:00] [MUSIC_HUNTERS] Edguy - La Marche des Gendarmes | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - La Marche des Gendarmes (Timeout waiting for media)
+[2026-07-27T04:37:17+00:00] [MUSIC_HUNTERS] Edguy - Tomorrow | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:37:17+00:00] [MUSIC_HUNTERS] Edguy - Tomorrow | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:37:18+00:00] [MUSIC_HUNTERS] Edguy - Tomorrow | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:39:17+00:00] [MUSIC_HUNTERS] Edguy - Tomorrow | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:39:17+00:00] [MUSIC_HUNTERS] Edguy - Tomorrow | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Tomorrow (Timeout waiting for media)
+[2026-07-27T04:40:17+00:00] [MUSIC_HUNTERS] Edguy - Save Me | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:40:17+00:00] [MUSIC_HUNTERS] Edguy - Save Me | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:40:18+00:00] [MUSIC_HUNTERS] Edguy - Save Me | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:42:17+00:00] [MUSIC_HUNTERS] Edguy - Save Me | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:42:17+00:00] [MUSIC_HUNTERS] Edguy - Save Me | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Save Me (Timeout waiting for media)
+[2026-07-27T04:44:01+00:00] [MUSIC_HUNTERS] Edguy - Save Us Now | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:44:01+00:00] [MUSIC_HUNTERS] Edguy - Save Us Now | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:44:02+00:00] [MUSIC_HUNTERS] Edguy - Save Us Now | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:46:01+00:00] [MUSIC_HUNTERS] Edguy - Save Us Now | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:46:01+00:00] [MUSIC_HUNTERS] Edguy - Save Us Now | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - Save Us Now (Timeout waiting for media)
+[2026-07-27T04:47:31+00:00] [MUSIC_HUNTERS] Edguy - For a Trace of Life | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:47:31+00:00] [MUSIC_HUNTERS] Edguy - For a Trace of Life | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:47:31+00:00] [MUSIC_HUNTERS] Edguy - For a Trace of Life | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:49:31+00:00] [MUSIC_HUNTERS] Edguy - For a Trace of Life | FAILED during waiting for the search result panel: TimeoutError: 
+[2026-07-27T04:49:31+00:00] [MUSIC_HUNTERS] Edguy - For a Trace of Life | Removed MusicsHuntersbot event handlers
+[REQUEST_FAILED] Edguy - For a Trace of Life (Timeout waiting for media)
+[2026-07-27T04:51:54+00:00] [MUSIC_HUNTERS] Edguy - Walk on Fighting | Registered message listeners for @MusicsHuntersbot; response timeout=120s
+[2026-07-27T04:51:54+00:00] [MUSIC_HUNTERS] Edguy - Walk on Fighting | Sending search query to @MusicsHuntersbot
+[2026-07-27T04:51:54+00:00] [MUSIC_HUNTERS] Edguy - Walk on Fighting | Search query sent; waiting for a result panel or matching media
+[2026-07-27T04:52:26+00:00] [MUSIC_HUNTERS] Edguy - Walk on Fighting | Removed MusicsHuntersbot event handlers

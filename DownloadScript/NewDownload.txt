@@ -1,12 +1,3 @@
-Stonewall Jackson - Pick Me Up On Your Way Down
-The Vision Bleak - A Romance with the Grave
-Falkenbach - Heathen Foray
-Falkenbach - Wulfarweijd
-Equilibrium - Heimat
-Equilibrium - Was Lange Währt
-Doro - I'll Be Holding On
-Doro - Last Day of My Life
-Doro - Fall for Me Again
 Stonewall Jackson - There's No Short Cuts
 Stonewall Jackson - Ward of Broken Hearts
 Stonewall Jackson - Come On Home And Have Your Next Affair With Me
@@ -27,8 +18,12 @@ Stonewall Jackson - Push the Panic Button
 The Vision Bleak - The Night of the Living Dead
 Agathodaimon / Vlad Dracul - Mother of All Gods Feat. Vlad Dracul
 Agathodaimon - Alone in the Dark
+Falkenbach - Heathen Foray
+Falkenbach - Wulfarweijd
 Equilibrium - Katharsis
 Equilibrium - Wellengang
+Doro - I'll Be Holding On
+Doro - Last Day of My Life
 Primal Fear - Bleed for Me
 Primal Fear - Kill the King
 Primal Fear - Battalions Of Hate
